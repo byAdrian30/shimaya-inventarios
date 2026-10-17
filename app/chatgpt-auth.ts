@@ -45,8 +45,10 @@ export async function getChatGPTUser(): Promise<ChatGPTUser | null> {
   // Fallback for Vercel / standalone deployments without OpenAI header injection
   try {
     const cookieStore = await cookies();
-    const cookieUser = cookieStore.get("__sites_local_auth")?.value || cookieStore.get("auth_user")?.value;
-    const resolvedUser = (cookieUser && AUTH_USERS[cookieUser.toLowerCase()]) || DEFAULT_AUTH_USER;
+    const cookieUser = cookieStore.get("auth_user")?.value || cookieStore.get("__sites_local_auth")?.value;
+    if (!cookieUser) return null;
+    const resolvedUser = AUTH_USERS[cookieUser.toLowerCase()];
+    if (!resolvedUser) return null;
     return {
       userId: resolvedUser.userId,
       displayName: resolvedUser.fullName,
@@ -54,12 +56,7 @@ export async function getChatGPTUser(): Promise<ChatGPTUser | null> {
       fullName: resolvedUser.fullName,
     };
   } catch (_) {
-    return {
-      userId: DEFAULT_AUTH_USER.userId,
-      displayName: DEFAULT_AUTH_USER.fullName,
-      email: DEFAULT_AUTH_USER.email,
-      fullName: DEFAULT_AUTH_USER.fullName,
-    };
+    return null;
   }
 }
 
