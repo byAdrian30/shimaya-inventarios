@@ -15,13 +15,13 @@ export async function GET(req:Request,{params}:{params:Promise<{id:string}>}){
     if(photo) return new Response(photo.body,{headers:{'Content-Type':photo.httpMetadata?.contentType||'image/jpeg','Cache-Control':'private, max-age=3600','X-Content-Type-Options':'nosniff'}});
   } catch {}
   const candidates = [
-    resolve('C:/INVENTARIOS ALMACEN/datos/almacen_archivos', id),
+    resolve(process.cwd(), 'data/almacen_archivos', id),
     resolve(process.cwd(), '../datos/almacen_archivos', id),
     resolve(process.cwd(), 'datos/almacen_archivos', id),
   ];
   for (const candidate of candidates) {
-    if (existsSync(candidate)) {
-      const bytes = readFileSync(candidate);
+    if (existsSync(/*turbopackIgnore: true*/ candidate)) {
+      const bytes = readFileSync(/*turbopackIgnore: true*/ candidate);
       try { if (env.BUCKET) await env.BUCKET.put(u.userId+'/'+id, bytes, {httpMetadata:{contentType:'image/jpeg'}}); } catch {}
       return new Response(bytes, {headers:{'Content-Type':'image/jpeg','Cache-Control':'private, max-age=3600','X-Content-Type-Options':'nosniff'}});
     }
