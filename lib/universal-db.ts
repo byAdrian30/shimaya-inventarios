@@ -68,9 +68,12 @@ function getLocalSqlite() {
   for (const p of candidates) {
     if (existsSync(p)) {
       try {
-        const { DatabaseSync } = require('node:sqlite');
-        localSqliteDb = new DatabaseSync(p);
-        return localSqliteDb;
+        const sqliteModule = (process as any).getBuiltinModule?.('node:sqlite');
+        const DatabaseSync = sqliteModule?.DatabaseSync;
+        if (DatabaseSync) {
+          localSqliteDb = new DatabaseSync(p);
+          return localSqliteDb;
+        }
       } catch (e) {
         console.error('[universal-db] Error opening sqlite:', p, e);
       }
