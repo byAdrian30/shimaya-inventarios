@@ -1,0 +1,96 @@
+{
+  "generatedAt": "2026-10-17T23:27:28.030Z",
+  "days": [
+    {
+      "date": "2026-10-05",
+      "ordersCount": 75,
+      "ventaSinIgv": 5177.5,
+      "igv": 931.95,
+      "ventaConIgv": 6109.45
+    },
+    {
+      "date": "2026-10-06",
+      "ordersCount": 72,
+      "ventaSinIgv": 4897.9,
+      "igv": 881.62,
+      "ventaConIgv": 5779.52
+    },
+    {
+      "date": "2026-10-07",
+      "ordersCount": 90,
+      "ventaSinIgv": 6547,
+      "igv": 1178.46,
+      "ventaConIgv": 7725.46
+    },
+    {
+      "date": "2026-10-08",
+      "ordersCount": 90,
+      "ventaSinIgv": 7828.9,
+      "igv": 1409.2,
+      "ventaConIgv": 9238.1
+    },
+    {
+      "date": "2026-10-09",
+      "ordersCount": 72,
+      "ventaSinIgv": 5451.3,
+      "igv": 981.23,
+      "ventaConIgv": 6432.53
+    },
+    {
+      "date": "2026-10-10",
+      "ordersCount": 111,
+      "ventaSinIgv": 9546.4,
+      "igv": 1718.35,
+      "ventaConIgv": 11264.75
+    },
+    {
+      "date": "2026-10-11",
+      "ordersCount": 105,
+      "ventaSinIgv": 10612.7,
+      "igv": 1910.29,
+      "ventaConIgv": 12522.99
+    },
+    {
+      "date": "2026-10-12",
+      "ordersCount": 68,
+      "ventaSinIgv": 5067.5,
+      "igv": 912.15,
+      "ventaConIgv": 5979.65
+    },
+    {
+      "date": "2026-10-13",
+      "ordersCount": 84,
+      "ventaSinIgv": 5977.6,
+      "igv": 1075.97,
+      "ventaConIgv": 7053.57
+    },
+    {
+      "date": "2026-10-14",
+      "ordersCount": 72,
+      "ventaSinIgv": 4918.3,
+      "igv": 885.29,
+      "ventaConIgv": 5803.59
+    },
+    {
+      "date": "2026-10-15",
+      "ordersCount": 72,
+      "ventaSinIgv": 4683.8,
+      "igv": 843.08,
+      "ventaConIgv": 5526.88
+    },
+    {
+      "date": "2026-10-16",
+      "ordersCount": 91,
+      "ventaSinIgv": 7229.2,
+      "igv": 1301.26,
+      "ventaConIgv": 8530.46
+    },
+    {
+      "date": "2026-10-17",
+      "ordersCount": 34,
+      "ventaSinIgv": 3180,
+      "igv": 572.4,
+      "ventaConIgv": 3752.4
+    }
+  ]
+}
