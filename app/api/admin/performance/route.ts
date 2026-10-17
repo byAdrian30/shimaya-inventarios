@@ -120,69 +120,43 @@ export async function GET() {
 
     // Sales data
     const sales = getSalesData();
-    const days: any[] = sales.days || [];
+    const allDays: any[] = sales.days || [];
 
-    // Daily breakdown
-    const dailyBreakdown = days.map(d => {
-      const disp = dailyDispatches[d.date] || { grossCost: 0, netCost: 0, totalUnits: 0, lines: [] };
-      const ventaSinIgv = d.ventaSinIgv || 0;
-      const igv = d.igv || Math.round(ventaSinIgv * 0.18 * 100) / 100;
-      const ventaConIgv = d.ventaConIgv || Math.round((ventaSinIgv + igv) * 100) / 100;
-      const costoSinIgv = Math.round(disp.netCost * 100) / 100;
-      const costoConIgv = Math.round(disp.grossCost * 100) / 100;
+    // Determinar la fecha de inicio de los despachos de almacén
+    const dispatchDates = Object.keys(dailyDispatches).filter(d => dailyDispatches[d].totalUnits > 0).sort();
+    
+    // Los pedidos a almacén se hacen cada 2 días para abastecer el ciclo de 2 días.
+    // El primer despacho registrado (12 de Octubre) abasteció el ciclo del 11 y 12 de Octubre.
+    // Por lo tanto, el ciclo operativo con despachos inicia el 11 de Octubre de 2026.
+    let dispatchStartDate = '2026-10-11';
+    if (dispatchDates.length > 0 && dispatchDates[0] < dispatchStartDate) {
+      dispatchStartDate = dispatchDates[0];
+    }
 
-      const utilidadSinIgv = Math.round((ventaSinIgv - costoSinIgv) * 100) / 100;
-      const utilidadConIgv = Math.round((ventaConIgv - costoConIgv) * 100) / 100;
-      const margenPct = ventaSinIgv > 0 ? Math.round((utilidadSinIgv / ventaSinIgv) * 10000) / 100 : 0;
-      const foodCostPct = ventaSinIgv > 0 ? Math.round((costoSinIgv / ventaSinIgv) * 10000) / 100 : 0;
+    // Filtrar solo los días desde que se empezaron a hacer despachos
+    const activeDays = allDays.filter(d => d.date >= dispatchStartDate).sort((a, b) => a.date.localeCompare(b.date));
+    const priorDays = allDays.filter(d => d.date < dispatchStartDate).sort((a, b) => a.date.localeCompare(b.date));
 
-      return {
-        date: d.date,
-        ordersCount: d.ordersCount || 0,
-        ventaSinIgv,
-        igv,
-        ventaConIgv,
-        costoSinIgv,
-        costoConIgv,
-        utilidadSinIgv,
-        utilidadConIgv,
-        margenPct,
-        foodCostPct,
-        itemsDespachados: disp.totalUnits,
-        dispatchedLines: disp.lines,
-      };
-    });
-
-    // 2-Day Cycles (Cada 2 días se hace pedido a almacén)
+    // Construcción de Ciclos de 2 días con Promedio Diario para ambos días
     const cycles: any[] = [];
-    for (let i = 0; i < dailyBreakdown.length; i += 2) {
-      const day1 = dailyBreakdown[i];
-      const day2 = dailyBreakdown[i + 1];
+    const dailyWithAverages: any[] = [];
 
-      const periodDays = day2 ? [day1, day2] : [day1];
-      const startDate = day1.date;
-      const endDate = day2 ? day2.date : day1.date;
-      const label = day2 
-        ? `${formatDate(startDate)} - ${formatDate(endDate)}`
-        : `${formatDate(startDate)} (en curso)`;
+    for (let i = 0; i < activeDays.length; i += 2) {
+      const day1 = activeDays[i];
+      const day2 = activeDays[i + 1];
+      const isSingleDayIncomplete = !day2;
+      const cycleDays = day2 ? [day1, day2] : [day1];
 
-      const ventaSinIgv = Math.round(periodDays.reduce((acc, d) => acc + d.ventaSinIgv, 0) * 100) / 100;
-      const igv = Math.round(periodDays.reduce((acc, d) => acc + d.igv, 0) * 100) / 100;
-      const ventaConIgv = Math.round(periodDays.reduce((acc, d) => acc + d.ventaConIgv, 0) * 100) / 100;
-      const costoSinIgv = Math.round(periodDays.reduce((acc, d) => acc + d.costoSinIgv, 0) * 100) / 100;
-      const costoConIgv = Math.round(periodDays.reduce((acc, d) => acc + d.costoConIgv, 0) * 100) / 100;
-      const ordersCount = periodDays.reduce((acc, d) => acc + d.ordersCount, 0);
+      // Costo total de pedidos de almacén asociados a este ciclo de 2 días
+      const cycleDispatches = cycleDays.map(d => dailyDispatches[d.date] || { grossCost: 0, netCost: 0, totalUnits: 0, lines: [] });
+      const cycleGrossCost = Math.round(cycleDispatches.reduce((acc, cd) => acc + cd.grossCost, 0) * 100) / 100;
+      const cycleNetCost = Math.round(cycleDispatches.reduce((acc, cd) => acc + cd.netCost, 0) * 100) / 100;
+      const cycleTotalUnits = cycleDispatches.reduce((acc, cd) => acc + cd.totalUnits, 0);
 
-      const utilidadSinIgv = Math.round((ventaSinIgv - costoSinIgv) * 100) / 100;
-      const utilidadConIgv = Math.round((ventaConIgv - costoConIgv) * 100) / 100;
-      const margenPct = ventaSinIgv > 0 ? Math.round((utilidadSinIgv / ventaSinIgv) * 10000) / 100 : 0;
-      const foodCostPct = ventaSinIgv > 0 ? Math.round((costoSinIgv / ventaSinIgv) * 10000) / 100 : 0;
-      const rentabilidadMultiplo = costoSinIgv > 0 ? Math.round((ventaSinIgv / costoSinIgv) * 100) / 100 : 0;
-
-      // Consolidated lines
+      // Consolidar insumos despachados en este ciclo
       const lineMap = new Map<string, any>();
-      periodDays.forEach(d => {
-        (d.dispatchedLines || []).forEach((l: any) => {
+      cycleDispatches.forEach(cd => {
+        cd.lines.forEach((l: any) => {
           if (!lineMap.has(l.ingredientId)) {
             lineMap.set(l.ingredientId, { ...l });
           } else {
@@ -193,62 +167,140 @@ export async function GET() {
           }
         });
       });
+      const topInsumos = Array.from(lineMap.values()).sort((a, b) => b.totalCostGross - a.totalCostGross);
 
-      const topInsumos = Array.from(lineMap.values())
-        .sort((a, b) => b.totalCostGross - a.totalCostGross)
-        .slice(0, 15);
+      // Ventas acumuladas del ciclo
+      const cycleVentaSinIgv = Math.round(cycleDays.reduce((acc, d) => acc + (d.ventaSinIgv || 0), 0) * 100) / 100;
+      const cycleIgv = Math.round(cycleDays.reduce((acc, d) => acc + (d.igv || Math.round((d.ventaSinIgv || 0) * 0.18 * 100) / 100), 0) * 100) / 100;
+      const cycleVentaConIgv = Math.round(cycleDays.reduce((acc, d) => acc + (d.ventaConIgv || Math.round(((d.ventaSinIgv || 0) + (d.igv || 0)) * 100) / 100), 0) * 100) / 100;
+      const cycleOrdersCount = cycleDays.reduce((acc, d) => acc + (d.ordersCount || 0), 0);
+
+      // Rentabilidad del ciclo global (los 2 días juntos)
+      const cycleUtilidadSinIgv = Math.round((cycleVentaSinIgv - cycleNetCost) * 100) / 100;
+      const cycleUtilidadConIgv = Math.round((cycleVentaConIgv - cycleGrossCost) * 100) / 100;
+      const cycleMargenPct = cycleVentaSinIgv > 0 ? Math.round((cycleUtilidadSinIgv / cycleVentaSinIgv) * 10000) / 100 : 0;
+      const cycleFoodCostPct = cycleVentaSinIgv > 0 ? Math.round((cycleNetCost / cycleVentaSinIgv) * 10000) / 100 : 0;
+      const cycleMultiplo = cycleNetCost > 0 ? Math.round((cycleVentaSinIgv / cycleNetCost) * 100) / 100 : 0;
+
+      // PROMEDIO DIARIO: Dado que el pedido abastece 2 días, cada día recibe el 50% del costo del pedido.
+      // Si el ciclo solo tiene 1 día transcurrido (en curso), se le imputa el 50% de consumo estimado de ese día.
+      const dailyPromedioNetCost = Math.round((cycleNetCost / 2) * 100) / 100;
+      const dailyPromedioGrossCost = Math.round((cycleGrossCost / 2) * 100) / 100;
+      const dailyPromedioUnits = Math.round((cycleTotalUnits / 2) * 10) / 10;
+
+      const cycleId = `cycle-${Math.floor(i / 2) + 1}`;
+      const cycleLabel = day2
+        ? `${formatDate(day1.date)} - ${formatDate(day2.date)}`
+        : `${formatDate(day1.date)} (en curso)`;
+
+      // Procesar cada día asignándole el costo y rentabilidad promediada de ambos días
+      cycleDays.forEach((d, idx) => {
+        const dVentaSinIgv = d.ventaSinIgv || 0;
+        const dIgv = d.igv || Math.round(dVentaSinIgv * 0.18 * 100) / 100;
+        const dVentaConIgv = d.ventaConIgv || Math.round((dVentaSinIgv + dIgv) * 100) / 100;
+
+        const dCostoSinIgv = dailyPromedioNetCost;
+        const dCostoConIgv = dailyPromedioGrossCost;
+
+        const dUtilidadSinIgv = Math.round((dVentaSinIgv - dCostoSinIgv) * 100) / 100;
+        const dUtilidadConIgv = Math.round((dVentaConIgv - dCostoConIgv) * 100) / 100;
+        const dMargenPct = dVentaSinIgv > 0 ? Math.round((dUtilidadSinIgv / dVentaSinIgv) * 10000) / 100 : 0;
+        const dFoodCostPct = dVentaSinIgv > 0 ? Math.round((dCostoSinIgv / dVentaSinIgv) * 10000) / 100 : 0;
+
+        const physicalDisp = dailyDispatches[d.date] || { grossCost: 0, netCost: 0, totalUnits: 0, lines: [] };
+
+        dailyWithAverages.push({
+          date: d.date,
+          ordersCount: d.ordersCount || 0,
+          ventaSinIgv: dVentaSinIgv,
+          igv: dIgv,
+          ventaConIgv: dVentaConIgv,
+          costoSinIgv: dCostoSinIgv, // Costo promedio imputado al día
+          costoConIgv: dCostoConIgv,
+          utilidadSinIgv: dUtilidadSinIgv,
+          utilidadConIgv: dUtilidadConIgv,
+          margenPct: dMargenPct,
+          foodCostPct: dFoodCostPct,
+          itemsDespachados: dailyPromedioUnits,
+          // Datos del ciclo y física del pedido
+          cycleId,
+          cycleLabel,
+          dayInCycle: idx + 1,
+          cycleMargenPromedio: cycleMargenPct,
+          cycleFoodCostPromedio: cycleFoodCostPct,
+          pedidoFisicoMontoNeto: Math.round(physicalDisp.netCost * 100) / 100,
+          pedidoFisicoLlegado: physicalDisp.netCost > 0,
+          dispatchedLines: physicalDisp.lines,
+        });
+      });
 
       cycles.push({
-        id: `cycle-${i / 2 + 1}`,
+        id: cycleId,
         cycleNumber: Math.floor(i / 2) + 1,
-        label,
-        startDate,
-        endDate,
-        ordersCount,
-        ventaSinIgv,
-        igv,
-        ventaConIgv,
-        costoSinIgv,
-        costoConIgv,
-        utilidadSinIgv,
-        utilidadConIgv,
-        margenPct,
-        foodCostPct,
-        rentabilidadMultiplo,
-        totalItems: periodDays.reduce((acc, d) => acc + d.itemsDespachados, 0),
-        topInsumos,
+        label: cycleLabel,
+        startDate: day1.date,
+        endDate: day2 ? day2.date : day1.date,
+        isEnCurso: isSingleDayIncomplete,
+        ordersCount: cycleOrdersCount,
+        ventaSinIgv: cycleVentaSinIgv,
+        igv: cycleIgv,
+        ventaConIgv: cycleVentaConIgv,
+        costoSinIgv: cycleNetCost,
+        costoConIgv: cycleGrossCost,
+        costoPromedioPorDia: dailyPromedioNetCost,
+        utilidadSinIgv: cycleUtilidadSinIgv,
+        utilidadConIgv: cycleUtilidadConIgv,
+        margenPct: cycleMargenPct,
+        foodCostPct: cycleFoodCostPct,
+        rentabilidadMultiplo: cycleMultiplo,
+        totalItems: cycleTotalUnits,
+        topInsumos: topInsumos.slice(0, 20),
+        days: cycleDays.map(d => d.date),
       });
     }
 
-    // KPI Totals
-    const totalVentaSinIgv = Math.round(dailyBreakdown.reduce((acc, d) => acc + d.ventaSinIgv, 0) * 100) / 100;
+    // Totales calculados estrictamente desde el inicio de despachos
+    const totalVentaSinIgv = Math.round(dailyWithAverages.reduce((acc, d) => acc + d.ventaSinIgv, 0) * 100) / 100;
     const totalIgv = Math.round(totalVentaSinIgv * 0.18 * 100) / 100;
     const totalVentaConIgv = Math.round((totalVentaSinIgv + totalIgv) * 100) / 100;
-    const totalCostoSinIgv = Math.round(dailyBreakdown.reduce((acc, d) => acc + d.costoSinIgv, 0) * 100) / 100;
-    const totalCostoConIgv = Math.round(dailyBreakdown.reduce((acc, d) => acc + d.costoConIgv, 0) * 100) / 100;
-    const totalUtilidadSinIgv = Math.round((totalVentaSinIgv - totalCostoSinIgv) * 100) / 100;
-    const totalUtilidadConIgv = Math.round((totalVentaConIgv - totalCostoConIgv) * 100) / 100;
+
+    // Costo de insumos consumidos imputados a los días transcurridos
+    const totalCostoInsumosConsumidosSinIgv = Math.round(dailyWithAverages.reduce((acc, d) => acc + d.costoSinIgv, 0) * 100) / 100;
+    const totalCostoInsumosConsumidosConIgv = Math.round(dailyWithAverages.reduce((acc, d) => acc + d.costoConIgv, 0) * 100) / 100;
+
+    // Costo de insumos totales traídos de almacén
+    const totalCostoDespachadoSinIgv = Math.round(cycles.reduce((acc, c) => acc + c.costoSinIgv, 0) * 100) / 100;
+    const totalCostoDespachadoConIgv = Math.round(cycles.reduce((acc, c) => acc + c.costoConIgv, 0) * 100) / 100;
+
+    const totalUtilidadSinIgv = Math.round((totalVentaSinIgv - totalCostoInsumosConsumidosSinIgv) * 100) / 100;
+    const totalUtilidadConIgv = Math.round((totalVentaConIgv - totalCostoInsumosConsumidosConIgv) * 100) / 100;
+
     const margenPromedio = totalVentaSinIgv > 0 ? Math.round((totalUtilidadSinIgv / totalVentaSinIgv) * 10000) / 100 : 0;
-    const foodCostPromedio = totalVentaSinIgv > 0 ? Math.round((totalCostoSinIgv / totalVentaSinIgv) * 10000) / 100 : 0;
-    const totalOrders = dailyBreakdown.reduce((acc, d) => acc + d.ordersCount, 0);
+    const foodCostPromedio = totalVentaSinIgv > 0 ? Math.round((totalCostoInsumosConsumidosSinIgv / totalVentaSinIgv) * 10000) / 100 : 0;
+    const totalOrders = dailyWithAverages.reduce((acc, d) => acc + d.ordersCount, 0);
 
     return Response.json({
       summary: {
         totalVentaSinIgv,
         totalIgv,
         totalVentaConIgv,
-        totalCostoSinIgv,
-        totalCostoConIgv,
+        totalCostoSinIgv: totalCostoInsumosConsumidosSinIgv,
+        totalCostoConIgv: totalCostoInsumosConsumidosConIgv,
+        totalCostoDespachadoSinIgv,
+        totalCostoDespachadoConIgv,
         totalUtilidadSinIgv,
         totalUtilidadConIgv,
         margenPromedio,
         foodCostPromedio,
         totalOrders,
-        totalDays: dailyBreakdown.length,
+        totalDays: dailyWithAverages.length,
         totalCycles: cycles.length,
+        dispatchStartDate,
+        periodDescription: `Calculado desde el ${formatDate(dispatchStartDate)} (inicio de despachos de almacén). Insumos de pedidos de 2 días promediados al 50% diario.`,
       },
       cycles,
-      daily: dailyBreakdown,
+      daily: dailyWithAverages,
+      priorDaysCount: priorDays.length,
       generatedAt: new Date().toISOString(),
     });
   } catch (err: any) {

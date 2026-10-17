@@ -112,18 +112,45 @@ export default function PerformanceDashboard() {
 
   function exportCSV() {
     if (!data) return;
+    const s = data.summary || {};
     const rows = [
-      ['Ciclo / Fecha', 'Venta Sin IGV (S/)', 'IGV 18% (S/)', 'Venta Con IGV (S/)', 'Costo Insumos Sin IGV (S/)', 'Costo Insumos Con IGV (S/)', 'Utilidad Bruta (S/)', 'Margen (%)', 'Food Cost (%)'],
-      ...data.cycles.map((c: any) => [
+      ['--- REPORTE DE RENDIMIENTO Y RENTABILIDAD SHIMAYA RAMEN ---'],
+      ['Metodologia', 'Insumos promediados al 50% por dia de ciclo de 2 dias. Calculado desde inicio de despachos.'],
+      ['Ventas Periodo Activo Sin IGV (S/)', s.totalVentaSinIgv],
+      ['IGV 18% (S/)', s.totalIgv],
+      ['Ventas Periodo Activo Con IGV (S/)', s.totalVentaConIgv],
+      ['Insumos Consumidos Neto (S/)', s.totalCostoSinIgv],
+      ['Utilidad Bruta (S/)', s.totalUtilidadSinIgv],
+      ['Margen Promedio (%)', `${s.margenPromedio}%`],
+      ['Food Cost Promedio (%)', `${s.foodCostPromedio}%`],
+      [],
+      ['--- CICLOS DE ABASTECIMIENTO DE ALMACEN (2 DIAS) ---'],
+      ['Ciclo', 'Venta Sin IGV (S/)', 'IGV 18% (S/)', 'Venta Con IGV (S/)', 'Pedido Insumos (S/)', 'Promedio Diario 50% (S/)', 'Utilidad (S/)', 'Margen (%)', 'Food Cost (%)'],
+      ...(data.cycles || []).map((c: any) => [
         `"${c.label}"`,
         c.ventaSinIgv,
         c.igv,
         c.ventaConIgv,
         c.costoSinIgv,
-        c.costoConIgv,
+        c.costoPromedioPorDia,
         c.utilidadSinIgv,
         `${c.margenPct}%`,
         `${c.foodCostPct}%`
+      ]),
+      [],
+      ['--- DETALLE DIA POR DIA CON PROMEDIO DE INSUMOS ---'],
+      ['Fecha', 'Ciclo', 'Dia en Ciclo', 'Venta Sin IGV (S/)', 'Venta Con IGV (S/)', 'Insumos Promediados 50% (S/)', 'Utilidad Diaria (S/)', 'Margen Dia (%)', 'Food Cost Dia (%)', 'Margen Ciclo 2 Dias (%)'],
+      ...(data.daily || []).map((d: any) => [
+        d.date,
+        `"${d.cycleLabel}"`,
+        `${d.dayInCycle}/2`,
+        d.ventaSinIgv,
+        d.ventaConIgv,
+        d.costoSinIgv,
+        d.utilidadSinIgv,
+        `${d.margenPct}%`,
+        `${d.foodCostPct}%`,
+        `${d.cycleMargenPromedio}%`
       ])
     ];
     const csvContent = '\ufeff' + rows.map(r => r.join(',')).join('\r\n');
@@ -198,11 +225,22 @@ export default function PerformanceDashboard() {
         </div>
       )}
 
+      {/* Banner Informativo de Metodología */}
+      <div className="hint" style={{ background: '#f0f5fb', borderColor: '#bcd2ec', color: '#1a4971', margin: 0 }}>
+        <TrendingUp size={18} />
+        <div>
+          <strong>Cálculo de Rentabilidad desde el 11 de Octubre (Inicio de Despachos de Almacén)</strong>
+          <p style={{ margin: '3px 0 0', fontSize: '12px', opacity: 0.9 }}>
+            Cada pedido a almacén abastece un ciclo de 2 días: el costo de insumos se promedia al 50% diario para reflejar la rentabilidad real de ambos días de venta continuos, sin días vacíos.
+          </p>
+        </div>
+      </div>
+
       {/* Tarjetas de Métricas Principales (KPIs) */}
       <div className="stats">
         <section className="stat">
           <div>
-            <span>VENTAS CON IGV</span>
+            <span>VENTAS PERÍODO ACTIVO</span>
             <DollarSign size={18} />
           </div>
           <strong>{soles(s.totalVentaConIgv || 0)}</strong>
@@ -213,12 +251,12 @@ export default function PerformanceDashboard() {
 
         <section className="stat">
           <div>
-            <span>COSTO DE INSUMOS</span>
+            <span>INSUMOS CONSUMIDOS</span>
             <Package size={18} />
           </div>
           <strong style={{ color: '#ad492d' }}>{soles(s.totalCostoConIgv || 0)}</strong>
           <small>
-            Neto: {soles(s.totalCostoSinIgv || 0)} · Pedidos a almacén
+            Neto: {soles(s.totalCostoSinIgv || 0)} · Total traído: {soles(s.totalCostoDespachadoSinIgv || 0)}
           </small>
         </section>
 
@@ -228,7 +266,7 @@ export default function PerformanceDashboard() {
             <Coins size={18} />
           </div>
           <strong style={{ color: '#2b6338' }}>{soles(s.totalUtilidadSinIgv || 0)}</strong>
-          <small>Margen neto de ventas menos insumos</small>
+          <small>Ventas netas menos insumos promediados</small>
         </section>
 
         <section className="stat">
@@ -237,7 +275,7 @@ export default function PerformanceDashboard() {
             <TrendingUp size={18} />
           </div>
           <strong style={{ color: '#1f5b33' }}>{pct(s.margenPromedio || 0)}</strong>
-          <small>Food Cost insumos: {pct(s.foodCostPromedio || 0)}</small>
+          <small>Food Cost promedio: {pct(s.foodCostPromedio || 0)}</small>
         </section>
       </div>
 
@@ -257,7 +295,7 @@ export default function PerformanceDashboard() {
           style={{ fontSize: '12px' }}
         >
           <Calendar size={15} />
-          <span>Detalle Día por Día</span>
+          <span>Detalle Día por Día (Promediado de Ambos Días)</span>
         </button>
       </div>
 
@@ -267,22 +305,22 @@ export default function PerformanceDashboard() {
           <section className="panel">
             <div className="section-title">
               <div>
-                <h2>Rentabilidad por Ciclo de 2 Días</h2>
-                <p>Cruce directo entre la mercadería que se trae de almacén y las ventas de ese período.</p>
+                <h2>Rentabilidad por Ciclos de Abastecimiento (2 Días)</h2>
+                <p>Cruce directo entre la mercadería traída en cada pedido y las ventas acumuladas del ciclo.</p>
               </div>
             </div>
             <div className="table-wrap">
               <table>
                 <thead>
                   <tr>
-                    <th>PERÍODO (2 DÍAS)</th>
+                    <th>CICLO (2 DÍAS)</th>
                     <th>VENTA SIN IGV</th>
                     <th>IGV (+18%)</th>
                     <th>VENTA CON IGV</th>
-                    <th>COSTO INSUMOS</th>
+                    <th>PEDIDO INSUMOS</th>
+                    <th>PROMEDIO DÍA</th>
                     <th>UTILIDAD</th>
                     <th>MARGEN %</th>
-                    <th>ESTADO</th>
                     <th>DETALLE</th>
                   </tr>
                 </thead>
@@ -291,7 +329,6 @@ export default function PerformanceDashboard() {
                     const isSelected = selectedCycle?.id === c.id;
                     const margin = c.margenPct;
                     const statusClass = margin >= 75 ? 'ok' : margin >= 60 ? 'neutral' : 'low';
-                    const statusText = margin >= 75 ? 'Excelente' : margin >= 60 ? 'Saludable' : 'Por revisar';
 
                     return (
                       <tr
@@ -299,16 +336,20 @@ export default function PerformanceDashboard() {
                         style={{ background: isSelected ? '#f5f9f3' : undefined, cursor: 'pointer' }}
                         onClick={() => setSelectedCycle(c)}
                       >
-                        <td data-label="Período">
+                        <td data-label="Ciclo">
                           <strong>{c.label}</strong>
-                          <small>{c.ordersCount} órdenes</small>
+                          <small>{c.ordersCount} órdenes {c.isEnCurso && '· En curso'}</small>
                         </td>
                         <td data-label="Venta sin IGV"><strong>{soles(c.ventaSinIgv)}</strong></td>
                         <td data-label="IGV 18%"><span style={{ color: 'var(--muted)' }}>{soles(c.igv)}</span></td>
                         <td data-label="Venta con IGV"><strong>{soles(c.ventaConIgv)}</strong></td>
-                        <td data-label="Costo Insumos" style={{ color: '#ad492d' }}>
-                          <strong>{soles(c.costoConIgv)}</strong>
-                          <small>Neto: {soles(c.costoSinIgv)}</small>
+                        <td data-label="Pedido Insumos" style={{ color: '#ad492d' }}>
+                          <strong>{soles(c.costoSinIgv)}</strong>
+                          <small>Bruto: {soles(c.costoConIgv)}</small>
+                        </td>
+                        <td data-label="Promedio Diario">
+                          <span style={{ fontSize: '11px', color: '#1a4971', fontWeight: 600 }}>{soles(c.costoPromedioPorDia)} / día</span>
+                          <small>50% por día</small>
                         </td>
                         <td data-label="Utilidad Bruta" style={{ color: '#2b6338' }}>
                           <strong>{soles(c.utilidadSinIgv)}</strong>
@@ -316,9 +357,6 @@ export default function PerformanceDashboard() {
                         <td data-label="Margen %">
                           <strong style={{ fontSize: '13px' }}>{pct(c.margenPct)}</strong>
                           <small>Food cost: {pct(c.foodCostPct)}</small>
-                        </td>
-                        <td data-label="Estado">
-                          <span className={`status ${statusClass}`}>{statusText}</span>
                         </td>
                         <td data-label="Detalle">
                           <button
@@ -345,7 +383,7 @@ export default function PerformanceDashboard() {
               <div className="section-title">
                 <div>
                   <h2>Mercadería de Almacén · {selectedCycle.label}</h2>
-                  <p>Insumos pedidos y despachados para este ciclo de 2 días.</p>
+                  <p>Insumos traídos para abastecer ambos días del ciclo.</p>
                 </div>
               </div>
               <div style={{ padding: '0 20px 16px', display: 'flex', gap: '14px', borderBottom: '1px solid var(--line)' }}>
@@ -354,11 +392,11 @@ export default function PerformanceDashboard() {
                   <strong>{soles(selectedCycle.ventaSinIgv)}</strong>
                 </div>
                 <div>
-                  <small style={{ color: 'var(--muted)', display: 'block' }}>Costo Insumos</small>
-                  <strong style={{ color: '#ad492d' }}>{soles(selectedCycle.costoConIgv)}</strong>
+                  <small style={{ color: 'var(--muted)', display: 'block' }}>Total Insumos</small>
+                  <strong style={{ color: '#ad492d' }}>{soles(selectedCycle.costoSinIgv)}</strong>
                 </div>
                 <div>
-                  <small style={{ color: 'var(--muted)', display: 'block' }}>Margen</small>
+                  <small style={{ color: 'var(--muted)', display: 'block' }}>Margen Ciclo</small>
                   <strong style={{ color: '#2b6338' }}>{pct(selectedCycle.margenPct)}</strong>
                 </div>
               </div>
@@ -402,28 +440,31 @@ export default function PerformanceDashboard() {
         </div>
       )}
 
-      {/* VISTA 2: DETALLE DÍA POR DÍA */}
+      {/* VISTA 2: DETALLE DÍA POR DÍA (PROMEDIADO DE AMBOS DÍAS) */}
       {viewMode === 'daily' && (
         <section className="panel">
           <div className="section-title">
             <div>
-              <h2>Ventas Diarias vs Consumo Diario de Insumos</h2>
-              <p>Desglose completo por día de venta, cálculo de IGV y costo de insumos aplicados.</p>
+              <h2>Ventas Diarias con Rentabilidad Promediada de Insumos</h2>
+              <p>
+                Cada pedido de 2 días se divide al 50% entre ambos días para calcular el margen y food cost real de cada jornada.
+              </p>
             </div>
           </div>
           <div className="table-wrap">
             <table>
               <thead>
                 <tr>
-                  <th>FECHA</th>
+                  <th>FECHA & CICLO</th>
                   <th>ÓRDENES</th>
                   <th>VENTA SIN IGV</th>
-                  <th>IGV (18%)</th>
                   <th>VENTA CON IGV</th>
-                  <th>COSTO DESPACHOS</th>
-                  <th>UTILIDAD BRUTA</th>
-                  <th>MARGEN %</th>
-                  <th>RATIO FOOD COST</th>
+                  <th>INSUMOS IMPUTADOS (50%)</th>
+                  <th>UTILIDAD DIARIA</th>
+                  <th>MARGEN DÍA %</th>
+                  <th>FOOD COST DÍA %</th>
+                  <th>MARGEN CICLO (2 DÍAS)</th>
+                  <th>RECEPCIÓN FÍSICA</th>
                 </tr>
               </thead>
               <tbody>
@@ -431,23 +472,38 @@ export default function PerformanceDashboard() {
                   <tr key={d.date}>
                     <td data-label="Fecha">
                       <strong>{d.date}</strong>
+                      <small style={{ display: 'block', color: 'var(--muted)' }}>
+                        {d.cycleLabel} (Día {d.dayInCycle}/2)
+                      </small>
                     </td>
                     <td data-label="Órdenes">{d.ordersCount}</td>
                     <td data-label="Venta sin IGV"><strong>{soles(d.ventaSinIgv)}</strong></td>
-                    <td data-label="IGV 18%"><span style={{ color: 'var(--muted)' }}>{soles(d.igv)}</span></td>
                     <td data-label="Venta con IGV"><strong>{soles(d.ventaConIgv)}</strong></td>
-                    <td data-label="Costo Insumos" style={{ color: d.costoConIgv > 0 ? '#ad492d' : 'var(--muted)' }}>
-                      <strong>{d.costoConIgv > 0 ? soles(d.costoConIgv) : '—'}</strong>
-                      {d.costoSinIgv > 0 && <small>Neto: {soles(d.costoSinIgv)}</small>}
+                    <td data-label="Insumos Imputados" style={{ color: '#ad492d' }}>
+                      <strong>{soles(d.costoSinIgv)}</strong>
+                      <small>50% del pedido</small>
                     </td>
-                    <td data-label="Utilidad Bruta" style={{ color: '#2b6338' }}>
+                    <td data-label="Utilidad Diaria" style={{ color: '#2b6338' }}>
                       <strong>{soles(d.utilidadSinIgv)}</strong>
                     </td>
-                    <td data-label="Margen %">
-                      <strong>{pct(d.margenPct)}</strong>
+                    <td data-label="Margen Día %">
+                      <strong style={{ fontSize: '13px' }}>{pct(d.margenPct)}</strong>
                     </td>
-                    <td data-label="Food Cost">
-                      <span>{d.costoSinIgv > 0 ? pct(d.foodCostPct) : '0%'}</span>
+                    <td data-label="Food Cost Día %">
+                      <span>{pct(d.foodCostPct)}</span>
+                    </td>
+                    <td data-label="Margen Ciclo (2 días)">
+                      <strong style={{ color: '#1a4971' }}>{pct(d.cycleMargenPromedio)}</strong>
+                      <small>Promedio período</small>
+                    </td>
+                    <td data-label="Recepción Física">
+                      {d.pedidoFisicoLlegado ? (
+                        <span className="status ok" title={`Llegó pedido físico de almacén por ${soles(d.pedidoFisicoMontoNeto)}`}>
+                          📦 Llegó pedido: {soles(d.pedidoFisicoMontoNeto)}
+                        </span>
+                      ) : (
+                        <span style={{ fontSize: '11px', color: 'var(--muted)' }}>Abastecido por ciclo</span>
+                      )}
                     </td>
                   </tr>
                 ))}
