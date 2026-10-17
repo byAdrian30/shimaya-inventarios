@@ -1,8 +1,8 @@
-import workerUrl from 'pdfjs-dist/build/pdf.worker.mjs?url';
 import {pdfTextLines,type TextItem} from './pdf-text.ts';
 export async function readGoodsPdf(file:File,progress:(message:string)=>void){
  if(!file.name.toLowerCase().endsWith('.pdf')||file.size>10e6||!file.size)throw Error('Usa un PDF de hasta 10 MB.');
- const pdfjs=await import('pdfjs-dist');pdfjs.GlobalWorkerOptions.workerSrc=workerUrl;
+ const pdfjs=await import('pdfjs-dist');
+ pdfjs.GlobalWorkerOptions.workerSrc=`https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.mjs`;
  const bytes=new Uint8Array(await file.arrayBuffer());if(new TextDecoder().decode(bytes.slice(0,5))!=='%PDF-')throw Error('El archivo no es un PDF válido.');
  const task=pdfjs.getDocument({data:bytes,useSystemFonts:true});const pdf=await task.promise;
  let worker:Awaited<ReturnType<typeof import('tesseract.js')['createWorker']>>|undefined;

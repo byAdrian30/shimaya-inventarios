@@ -8,8 +8,7 @@ export async function GET(req:Request,{params}:{params:Promise<{id:string}>}){
   const u=await getChatGPTUser();if(!u)return new Response('Inicia sesión',{status:401});
   const scope = await workspaceFor(u);
   if(scope.role!=='admin')return new Response('Solo administración puede consultar comprobantes.',{status:403});
-  const resolved = typeof (params as any)?.then === 'function' ? await params : params;
-  const id = resolved?.id;
+  const { id } = await params;
   if(!id || !/^[a-f0-9]{64}$/.test(id))return new Response('No encontrada',{status:404});
   try {
     const photo=await env.BUCKET?.get(u.userId+'/'+id);

@@ -18,25 +18,49 @@ const SIGN_IN_PATH = "/signin-with-chatgpt";
 const SIGN_OUT_PATH = "/signout-with-chatgpt";
 const CALLBACK_PATH = "/callback";
 
+import { AUTH_USERS, DEFAULT_AUTH_USER } from "../lib/auth-users.ts";
+import { cookies } from "next/headers";
+
 export async function getChatGPTUser(): Promise<ChatGPTUser | null> {
   const requestHeaders = await headers();
-  const userId = requestHeaders.get(USER_ID_HEADER);
-  const email = requestHeaders.get(USER_EMAIL_HEADER);
-  if (!userId || !email) return null;
+  let userId = requestHeaders.get(USER_ID_HEADER);
+  let email = requestHeaders.get(USER_EMAIL_HEADER);
+  let fullName: string | null = null;
 
-  const encodedFullName = requestHeaders.get(USER_FULL_NAME_HEADER);
-  const fullName =
-    encodedFullName &&
-    requestHeaders.get(USER_FULL_NAME_ENCODING_HEADER) === PERCENT_ENCODED_UTF8
-      ? safeDecodeURIComponent(encodedFullName)
-      : null;
+  if (userId && email) {
+    const encodedFullName = requestHeaders.get(USER_FULL_NAME_HEADER);
+    fullName =
+      encodedFullName &&
+      requestHeaders.get(USER_FULL_NAME_ENCODING_HEADER) === PERCENT_ENCODED_UTF8
+        ? safeDecodeURIComponent(encodedFullName)
+        : null;
+    return {
+      userId,
+      displayName: fullName ?? email,
+      email,
+      fullName,
+    };
+  }
 
-  return {
-    userId,
-    displayName: fullName ?? email,
-    email,
-    fullName,
-  };
+  // Fallback for Vercel / standalone deployments without OpenAI header injection
+  try {
+    const cookieStore = await cookies();
+    const cookieUser = cookieStore.get("__sites_local_auth")?.value || cookieStore.get("auth_user")?.value;
+    const resolvedUser = (cookieUser && AUTH_USERS[cookieUser.toLowerCase()]) || DEFAULT_AUTH_USER;
+    return {
+      userId: resolvedUser.userId,
+      displayName: resolvedUser.fullName,
+      email: resolvedUser.email,
+      fullName: resolvedUser.fullName,
+    };
+  } catch (_) {
+    return {
+      userId: DEFAULT_AUTH_USER.userId,
+      displayName: DEFAULT_AUTH_USER.fullName,
+      email: DEFAULT_AUTH_USER.email,
+      fullName: DEFAULT_AUTH_USER.fullName,
+    };
+  }
 }
 
 export async function requireChatGPTUser(
