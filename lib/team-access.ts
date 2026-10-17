@@ -1,0 +1,9 @@
+export const TEAM_AREAS=['Barra','Salón','Makis','Ramen','Fritura','Salteado'];
+export type TeamRole='operator'|'staff'|'dispatch';
+export type TeamMember={email:string;userId:string|null;name:string;area:string;role:TeamRole;status:'pending'|'active'|'suspended';createdAt:string;updatedAt:string};
+export function cleanEmail(value:unknown){if(typeof value!=='string'||value.length>254)throw Error('Ingresa un correo válido.');const email=value.trim().toLowerCase();if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))throw Error('Ingresa un correo válido.');return email}
+export function cleanArea(value:unknown){if(value===''||value===undefined)return '';if(typeof value!=='string'||!TEAM_AREAS.includes(value))throw Error('Selecciona un área válida.');return value}
+export function cleanRole(value:unknown):TeamRole{if(value===undefined||value==='operator')return 'operator';if(value==='staff'||value==='dispatch')return value;throw Error('Selecciona un perfil válido.');}
+export function memberRole(userId:string,ownerId:string,member?:Pick<TeamMember,'userId'|'status'>&Partial<Pick<TeamMember,'role'>>|null){if(userId===ownerId)return 'admin';if(member?.status==='active'&&(!member.userId||member.userId===userId)){if(member.role===undefined||member.role==='operator')return 'operator';if(member.role==='dispatch'||member.role==='staff')return member.role}return 'guest'}
+export function canViewStock(role:string){return role==='admin'||role==='operator'}
+export function allowedTabs(role:string):string[]{if(role==='admin')return ['inicio','stock','valores','ingreso','pedido','despacho','ordenes','consulta','catalogo','historial','equipo'];if(role==='operator')return ['pedido','despacho','stock-consulta'];if(role==='staff')return ['pedido'];if(role==='dispatch')return ['despacho'];return []}

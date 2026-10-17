@@ -1,0 +1,1 @@
+ALTER TABLE `team_members` ADD `role` text DEFAULT 'staff' NOT NULL;
