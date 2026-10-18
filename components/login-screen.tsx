@@ -122,7 +122,8 @@ export default function LoginScreen({ onSuccess, initialError = '' }: LoginScree
               style={{
                 width: '100%',
                 padding: '12px 14px',
-                fontSize: '14px',
+                fontSize: '16px',
+                minHeight: '48px',
                 borderRadius: '8px',
                 border: '1px solid #c9d2c5',
                 background: '#fff',
@@ -155,7 +156,8 @@ export default function LoginScreen({ onSuccess, initialError = '' }: LoginScree
                   style={{
                     width: '100%',
                     padding: '12px 42px 12px 14px',
-                    fontSize: '14px',
+                    fontSize: '16px',
+                    minHeight: '48px',
                     borderRadius: '8px',
                     border: '1px solid #c9d2c5',
                   }}

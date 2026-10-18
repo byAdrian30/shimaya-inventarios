@@ -18,7 +18,8 @@ import {
   FileSpreadsheet,
   Layers,
   ArrowDownToLine,
-  Coins
+  Coins,
+  X
 } from 'lucide-react';
 
 const soles = (n: number, d = 2) =>
@@ -176,15 +177,15 @@ export default function PerformanceDashboard() {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-      {/* Barra de Acciones Superior */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
-        <div>
+      {/* Barra de Acciones Superior Optimizada para Móvil */}
+      <div className="perf-header">
+        <div className="perf-title-box">
           <h2 style={{ fontSize: '20px', fontWeight: 600 }}>Análisis de Rendimiento y Rentabilidad</h2>
           <p style={{ color: 'var(--muted)', fontSize: '12px', marginTop: '4px' }}>
             Cruce de ventas diarias (+18% IGV) contra insumos despachados de almacén cada 2 días.
           </p>
         </div>
-        <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+        <div className="perf-actions">
           <input
             type="file"
             ref={fileInputRef}
@@ -199,7 +200,8 @@ export default function PerformanceDashboard() {
             title="Subir nuevo Excel de ventas diarias"
           >
             <Upload size={15} />
-            <span>Cargar ventas Excel</span>
+            <span className="hide-mobile">Cargar ventas Excel</span>
+            <span className="show-mobile">Subir Excel</span>
           </button>
           <button className="btn secondary" onClick={exportCSV} title="Descargar reporte en CSV">
             <ArrowDownToLine size={15} />
@@ -279,29 +281,29 @@ export default function PerformanceDashboard() {
         </section>
       </div>
 
-      {/* Selector de Modo de Vista */}
-      <div style={{ display: 'flex', gap: '8px', borderBottom: '1px solid var(--line)', paddingBottom: '12px' }}>
+      {/* Selector de Modo de Vista con soporte para celular */}
+      <div className="perf-view-selector">
         <button
           className={viewMode === 'cycles' ? 'btn' : 'btn secondary'}
           onClick={() => setViewMode('cycles')}
-          style={{ fontSize: '12px' }}
         >
           <Layers size={15} />
-          <span>Ciclos de Pedido a Almacén (Cada 2 días)</span>
+          <span className="hide-mobile">Ciclos de Pedido a Almacén (Cada 2 días)</span>
+          <span className="show-mobile">Ciclos (2 días)</span>
         </button>
         <button
           className={viewMode === 'daily' ? 'btn' : 'btn secondary'}
           onClick={() => setViewMode('daily')}
-          style={{ fontSize: '12px' }}
         >
           <Calendar size={15} />
-          <span>Detalle Día por Día (Promediado de Ambos Días)</span>
+          <span className="hide-mobile">Detalle Día por Día (Promediado de Ambos Días)</span>
+          <span className="show-mobile">Día por día</span>
         </button>
       </div>
 
       {/* VISTA 1: CICLOS DE 2 DÍAS (PEDIDO A ALMACÉN) */}
       {viewMode === 'cycles' && (
-        <div style={{ display: 'grid', gridTemplateColumns: selectedCycle ? '1.4fr 1fr' : '1fr', gap: '20px', alignItems: 'start' }}>
+        <div className={`perf-cycles-grid ${!selectedCycle ? 'single' : ''}`}>
           <section className="panel">
             <div className="section-title">
               <div>
@@ -385,6 +387,15 @@ export default function PerformanceDashboard() {
                   <h2>Mercadería de Almacén · {selectedCycle.label}</h2>
                   <p>Insumos traídos para abastecer ambos días del ciclo.</p>
                 </div>
+                <button
+                  className="icon-btn"
+                  onClick={() => setSelectedCycle(null)}
+                  title="Cerrar detalle de insumos"
+                  aria-label="Cerrar detalle"
+                  style={{ minWidth: '36px', minHeight: '36px' }}
+                >
+                  <X size={18} />
+                </button>
               </div>
               <div style={{ padding: '0 20px 16px', display: 'flex', gap: '14px', borderBottom: '1px solid var(--line)' }}>
                 <div>
