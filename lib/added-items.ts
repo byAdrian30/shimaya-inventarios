@@ -1,6 +1,6 @@
 import { normalize, type State } from './inventory.ts';
 
-export const addedItemsVersion = 'manual-items-2026-10-17-v5-pedidos-reorganizados';
+export const addedItemsVersion = 'manual-items-2026-10-17-v6-arroz-maki-alias';
 
 export function withAddedItems(current: State): State {
   if (current.addedItemsVersion === addedItemsVersion) return current;
@@ -206,6 +206,11 @@ export function withAddedItems(current: State): State {
   if (vegIng) {
     vegIng.name = 'VEGETARIANA SIN SAZONAR';
     vegIng.aliases = [...new Set([...(vegIng.aliases || '').split(','), 'SALSA VEGETARIANA', 'VEGETARIANA'])].filter(Boolean).join(',');
+  }
+
+  const arrozIng = s.ingredients.find((i) => i.id === 'catalog-017');
+  if (arrozIng) {
+    arrozIng.aliases = [...new Set([...(arrozIng.aliases || '').split(','), 'ARROZ MYK', 'ARROZ MAKI', 'ARROZ JAPONES'])].filter(Boolean).join(',');
   }
 
   // Asegurar otros items previos
