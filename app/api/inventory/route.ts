@@ -18,10 +18,21 @@ export async function POST(req:Request){
  if(a.type==='eliminar-orden')a.deletedBy=scope.displayName;
  const row=await inventoryFor(scope.ownerId);
  if(scope.role!=='admin'&&a.type==='despachar'){a.dispatcher=scope.displayName;if(scope.area&&row.state.requests?.find(r=>r.id===a.requestId)?.area!==scope.area)return Response.json({error:'Solo puedes despachar pedidos del área '+scope.area+'.'},{status:403})}
- if(a.revision!==row.revision)return Response.json({error:'El inventario cambió en otro dispositivo. Recarga los datos y revisa las cantidades.'},{status:409});
+ if(a.revision!==row.revision&&a.type!=='solicitar')return Response.json({error:'El inventario cambió en otro dispositivo. Recarga los datos y revisa las cantidades.'},{status:409});
  if(a.type==='pedido')throw Error('Las salidas por foto fueron reemplazadas por Pedido y Despacho. Confirma la entrega desde Despacho.');
  if(a.type==='recepcion'&&a.document){if(!/^[a-f0-9]{64}$/.test(a.document.hash))throw Error('Documento inválido.');if(!await env.BUCKET!.head(scope.ownerId+'/receipts/'+a.document.hash+'.pdf'))throw Error('Sube primero el PDF del ingreso.');}
- const state=applyAction(row.state,a);const data=JSON.stringify(state);if(new TextEncoder().encode(data).length>1800000)throw Error('El historial alcanzó el límite de almacenamiento. Exporta tus datos y solicita ampliar el sistema.');
- const result=await env.DB!.prepare('UPDATE inventory_state SET data=?,revision=revision+1 WHERE id=? AND revision=? RETURNING revision').bind(data,scope.ownerId,row.revision).first<{revision:number}>();if(!result)return Response.json({error:'Otro dispositivo guardó cambios. Recarga y revisa nuevamente.'},{status:409});return Response.json({state:visibleInventory(state,scope.role,u.userId,scope.area),revision:result.revision});
+ let state=applyAction(row.state,a);let data=JSON.stringify(state);if(new TextEncoder().encode(data).length>1800000)throw Error('El historial alcanzó el límite de almacenamiento. Exporta tus datos y solicita ampliar el sistema.');
+ let result=await env.DB!.prepare('UPDATE inventory_state SET data=?,revision=revision+1 WHERE id=? AND revision=? RETURNING revision').bind(data,scope.ownerId,row.revision).first<{revision:number}>();
+ if(!result&&a.type==='solicitar'){
+  for(let retry=0;retry<3;retry++){
+   const freshRow=await inventoryFor(scope.ownerId);
+   state=applyAction(freshRow.state,a);
+   data=JSON.stringify(state);
+   result=await env.DB!.prepare('UPDATE inventory_state SET data=?,revision=revision+1 WHERE id=? AND revision=? RETURNING revision').bind(data,scope.ownerId,freshRow.revision).first<{revision:number}>();
+   if(result)break;
+  }
+ }
+ if(!result)return Response.json({error:'Otro dispositivo guardó cambios. Recarga y revisa nuevamente.'},{status:409});
+ return Response.json({state:visibleInventory(state,scope.role,u.userId,scope.area),revision:result.revision});
  }catch(e){return Response.json({error:e instanceof Error?e.message:'No se pudo guardar.'},{status:400})}
 }

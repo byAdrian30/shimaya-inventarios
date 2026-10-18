@@ -24,7 +24,7 @@ export async function inventoryFor(ownerId:string){
 export function visibleInventory(state:State,role:string,userId:string,area=''):State{
  if(role==='admin')return state;
  if(role==='dispatch'||role==='operator'){
-  const requests=(state.requests||[]).filter(r=>!r.deleted&&(!area||r.area===area)),itemIds=new Set(requests.flatMap(r=>r.lines.map(l=>l.itemId))),areaItems=(state.areaItems||[]).filter(i=>itemIds.has(i.id)||role==='operator'&&i.active!==false&&(!area||i.area===area));
+  const requests=(state.requests||[]).filter(r=>!r.deleted),itemIds=new Set(requests.flatMap(r=>r.lines.map(l=>l.itemId))),areaItems=(state.areaItems||[]).filter(i=>itemIds.has(i.id)||role==='operator'&&i.active!==false&&(!area||i.area===area));
   const stockIds=new Set(requests.flatMap(r=>r.lines.map(l=>dispatchIngredientId(state,l)))),ingredientIds=new Set([...stockIds,...(role==='operator'?areaItems.flatMap(i=>[i.ingredientId,...(i.ingredientOptions||[])]):[])]);
   return {...state,ingredients:state.ingredients.filter(i=>ingredientIds.has(i.id)).map(i=>({...i,stock:stockIds.has(i.id)?i.stock:0,minimum:0})),areaItems,requests,movements:[]};
  }
