@@ -1,6 +1,6 @@
 import { normalize, type State } from './inventory.ts';
 
-export const addedItemsVersion = 'manual-items-2026-10-17-v6-arroz-maki-alias';
+export const addedItemsVersion = 'manual-items-2026-10-17-v7-pulpa-mango-unificada';
 
 export function withAddedItems(current: State): State {
   if (current.addedItemsVersion === addedItemsVersion) return current;
@@ -211,6 +211,49 @@ export function withAddedItems(current: State): State {
   const arrozIng = s.ingredients.find((i) => i.id === 'catalog-017');
   if (arrozIng) {
     arrozIng.aliases = [...new Set([...(arrozIng.aliases || '').split(','), 'ARROZ MYK', 'ARROZ MAKI', 'ARROZ JAPONES'])].filter(Boolean).join(',');
+  }
+
+  // =========================================================================
+  // 5. BARRA: Consolidar PULPA DE MANGO (era fila 22 y 24, dejar uno solo y promediar cantidades)
+  // =========================================================================
+  s.areaItems!.forEach((a) => {
+    if (a.area.toLowerCase() === 'barra' && a.id === 'area-barra-24') {
+      a.active = false;
+    }
+  });
+
+  const mango22 = s.areaItems!.find((a) => a.id === 'area-barra-22');
+  if (mango22) {
+    mango22.active = true;
+    mango22.name = 'PULPA DE MANGO';
+    mango22.sourceName = 'PULPA DE MANGO';
+    mango22.ingredientId = 'catalog-214';
+    mango22.linkReviewed = true;
+  }
+
+  const mangoIng = s.ingredients.find((i) => i.id === 'catalog-214');
+  if (mangoIng) {
+    mangoIng.aliases = [...new Set([...(mangoIng.aliases || '').split(','), 'PULPA DE MANGO', 'PULPA MANGO'])].filter(Boolean).join(',');
+  }
+
+  // Si algún pedido histórico o activo incluyó ambas filas de pulpa de mango, promediar las cantidades
+  if (s.requests) {
+    s.requests.forEach((r) => {
+      if (r.area && r.area.toLowerCase() === 'barra' && r.lines) {
+        const line22 = r.lines.find((l) => l.itemId === 'area-barra-22');
+        const line24 = r.lines.find((l) => l.itemId === 'area-barra-24');
+
+        if (line22 && line24) {
+          line22.quantity = Math.round(((Number(line22.quantity || 0) + Number(line24.quantity || 0)) / 2) * 100) / 100;
+          if (typeof line22.delivered === 'number' || typeof line24.delivered === 'number') {
+            line22.delivered = Math.round(((Number(line22.delivered || 0) + Number(line24.delivered || 0)) / 2) * 100) / 100;
+          }
+          r.lines = r.lines.filter((l) => l.itemId !== 'area-barra-24');
+        } else if (line24 && !line22) {
+          line24.itemId = 'area-barra-22';
+        }
+      }
+    });
   }
 
   // Asegurar otros items previos
