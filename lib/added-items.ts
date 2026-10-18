@@ -1,31 +1,205 @@
-import {normalize,type State} from './inventory.ts';
-export const addedItemsVersion='manual-items-2026-10-17-v1';
-const requestedItems=[
- {catalogId:'catalog-217',name:'PULPA DE TAMARINDO',catalogName:'PULPA DE TAMARINDO X 1KG',area:'Barra',group:'Pulpas',unit:'und',sourceUnit:'Unidad',areaId:'manual-area-barra-pulpa-tamarindo'},
- {catalogId:'catalog-180',name:'PAQUETE DE PORO',catalogName:'PAQUETE DE PORO',area:'Ramen',group:'Verduras',unit:'paquete',sourceUnit:'Paquete',areaId:'manual-area-ramen-paquete-poro'},
-];
-export function withAddedItems(current:State):State{
- if(current.addedItemsVersion===addedItemsVersion)return current;
- const s=structuredClone(current),names=new Set(['arroz de personal','arroz personal']);
- const areaId='manual-area-makis-arroz-personal',stockId='manual-stock-arroz-personal';
- const existing=s.areaItems?.find(a=>a.id===areaId||a.area==='Makis'&&names.has(normalize(a.name)));
- let ingredient=s.ingredients.find(i=>i.id===existing?.ingredientId)||s.ingredients.find(i=>i.id===stockId||names.has(normalize(i.name)));
- if(!ingredient){ingredient={id:stockId,name:'Arroz de personal',category:'Abarrotes',unit:'kg',stock:0,minimum:0,configured:true,noOrder:false};s.ingredients.push(ingredient)}
- if(!ingredient.unit)ingredient.unit='kg';
- if(!ingredient.unitIssue)ingredient.configured=true;
- s.areaItems??=[];
- if(existing){existing.name='Arroz de personal';existing.sourceName=existing.name;existing.active=true;existing.ingredientId=ingredient.id;existing.referenceUnit=ingredient.sourceUnit||ingredient.unit;existing.linkReviewed=true;}
- else s.areaItems.push({id:areaId,area:'Makis',group:'Abarrotes',name:'Arroz de personal',sourceName:'Arroz de personal',referenceUnit:ingredient.sourceUnit||ingredient.unit,source:'AGREGADO POR ADMINISTRACIÓN',ingredientId:ingredient.id,active:true,linkReviewed:true});
- for(const item of requestedItems){
-  const names=new Set([normalize(item.name),normalize(item.catalogName)]);
-  let stock=s.ingredients.find(i=>i.catalogId===item.catalogId||i.id===item.catalogId)||s.ingredients.find(i=>names.has(normalize(i.name)));
-  if(!stock){stock={id:item.catalogId,catalogId:item.catalogId,name:item.catalogName,category:item.area==='Barra'?'Bebidas':'Vegetales',unit:item.unit,sourceUnit:item.sourceUnit,stock:0,minimum:0,configured:true,noOrder:false};s.ingredients.push(stock)}
-  if(!stock.unit)stock.unit=item.unit;
-  if(!stock.unitIssue)stock.configured=true;
-  const areaItem=s.areaItems.find(a=>a.id===item.areaId||a.area===item.area&&names.has(normalize(a.name)));
-  const fields={name:item.name,sourceName:item.name,ingredientId:stock.id,referenceUnit:stock.sourceUnit||stock.unit,ingredientOptions:undefined,suggestedIngredientId:'',active:true,linkReviewed:true,reason:''};
-  if(areaItem)Object.assign(areaItem,fields);
-  else s.areaItems.push({id:item.areaId,area:item.area,group:item.group,source:'AGREGADO POR ADMINISTRACIÓN',...fields});
- }
- s.addedItemsVersion=addedItemsVersion;return s;
+import { normalize, type State } from './inventory.ts';
+
+export const addedItemsVersion = 'manual-items-2026-10-17-v4-pedidos-reorganizados';
+
+export function withAddedItems(current: State): State {
+  if (current.addedItemsVersion === addedItemsVersion) return current;
+
+  const s = structuredClone(current);
+  s.areaItems = s.areaItems || [];
+
+  // Helper para desactivar items por área y expresión regular
+  const deactivate = (areaName: string, pattern: RegExp) => {
+    s.areaItems!.forEach((a) => {
+      if (a.area.toLowerCase() === areaName.toLowerCase() && pattern.test(normalize(a.name))) {
+        a.active = false;
+      }
+    });
+  };
+
+  // Helper para agregar o actualizar item en un área
+  const addOrUpdate = (
+    id: string,
+    targetArea: string,
+    group: string,
+    name: string,
+    catId: string,
+    refUnit: string
+  ) => {
+    let existing = s.areaItems!.find((a) => a.id === id);
+    if (!existing) {
+      existing = s.areaItems!.find((a) => normalize(a.name) === normalize(name) && a.area === targetArea);
+    }
+
+    let stock = s.ingredients.find((i) => i.catalogId === catId || i.id === catId);
+    if (!stock) {
+      stock = {
+        id: catId,
+        catalogId: catId,
+        name,
+        category: group,
+        unit: refUnit || 'und',
+        sourceUnit: refUnit,
+        stock: 0,
+        minimum: 0,
+        configured: true,
+        noOrder: false,
+      };
+      s.ingredients.push(stock);
+    }
+    if (!stock.unit) stock.unit = refUnit || 'und';
+    if (!stock.unitIssue) stock.configured = true;
+
+    const unit = refUnit || stock.sourceUnit || stock.unit || 'und';
+
+    if (existing) {
+      existing.id = id;
+      existing.area = targetArea;
+      existing.group = group || existing.group || 'Abarrotes';
+      existing.name = name;
+      existing.sourceName = name;
+      existing.active = true;
+      existing.ingredientId = stock.id;
+      existing.referenceUnit = unit;
+      existing.linkReviewed = true;
+      existing.ingredientOptions = undefined;
+    } else {
+      s.areaItems!.push({
+        id,
+        area: targetArea,
+        group: group || 'Abarrotes',
+        name,
+        sourceName: name,
+        referenceUnit: unit,
+        source: 'AGREGADO POR ADMINISTRACIÓN',
+        ingredientId: stock.id,
+        active: true,
+        linkReviewed: true,
+      });
+    }
+  };
+
+  // =========================================================================
+  // 1. MAKIS
+  // =========================================================================
+  // - Quitar mantequilla
+  deactivate('Makis', /mantequilla/);
+  // - Quitar polvo kare (pasa a salteado)
+  deactivate('Makis', /polvo kare/);
+  // - Quitar balde de aceite (pasa a frituras)
+  deactivate('Makis', /balde.*aceite|aceite cocinero/);
+  // - Quitar col picada (pasa a salteado)
+  deactivate('Makis', /col picada/);
+  // - Quitar col cocida (pasa a ramen)
+  deactivate('Makis', /col cocida/);
+  // - Quitar champiñones (pasa a salteado)
+  deactivate('Makis', /champinon/);
+  // - Quitar mayonesa (solo en salteado)
+  deactivate('Makis', /mayonesa/);
+  // - Quitar pichicata
+  deactivate('Makis', /pichicata/);
+  // - Quitar nori picado (solo para salteado y frituras)
+  deactivate('Makis', /nori picado/);
+
+  // Agregar / asegurar en Makis:
+  addOrUpdate('manual-makis-arroz-personal', 'Makis', 'Abarrotes', 'Arroz de personal', 'manual-stock-arroz-personal', 'kg');
+  addOrUpdate('manual-makis-arroz-maki', 'Makis', 'Abarrotes', 'ARROZ MAKI', 'catalog-017', 'kg');
+  addOrUpdate('manual-makis-aceite-verde', 'Makis', 'Salsas', 'ACEITE VERDE', 'catalog-004', 'und');
+  addOrUpdate('manual-makis-film', 'Makis', 'Empaques', 'FILM PLÁSTICO', 'catalog-103', 'und');
+  addOrUpdate('manual-makis-poligras', 'Makis', 'Empaques', 'POLIGRÁS', 'catalog-198', 'rollo');
+  addOrUpdate('manual-makis-nori', 'Makis', 'Abarrotes', 'NORI', 'catalog-142', 'paquete');
+  addOrUpdate('manual-makis-furikake', 'Makis', 'Abarrotes', 'FURIKAKE', 'catalog-104', 'pote');
+  addOrUpdate('manual-makis-crackers-arroz', 'Makis', 'Abarrotes', 'CRACKERS DE ARROZ', 'catalog-084', 'pack');
+
+  // =========================================================================
+  // 2. SALTEADO
+  // =========================================================================
+  // - Quitar nori y furikake de salteado (solo en makis)
+  deactivate('Salteado', /^(nori|furikake|nori pack|furikake 100 gr)$/);
+  // - Quitar aceite yakitori de salteado (solo en ramen)
+  deactivate('Salteado', /aceite yakitori/);
+  // - Quitar arroz maki de salteado (pasó a makis)
+  deactivate('Salteado', /arroz m.*k/);
+
+  // Agregar / asegurar en Salteado:
+  addOrUpdate('manual-salteado-polvo-kare', 'Salteado', 'Abarrotes', 'POLVO KARE', 'catalog-207', 'und');
+  addOrUpdate('manual-salteado-col-picada', 'Salteado', 'Verduras', 'COL PICADA', 'catalog-074', 'paquete');
+  addOrUpdate('manual-salteado-champinones', 'Salteado', 'Verduras', 'CHAMPIÑONES', 'catalog-035', 'bolsa');
+  addOrUpdate('manual-salteado-polvo-pichicata', 'Salteado', 'Abarrotes', 'POLVO PICHICATA', 'catalog-208', 'und');
+  addOrUpdate('manual-salteado-licor-arroz', 'Salteado', 'Abarrotes', 'LICOR DE ARROZ', 'catalog-127', 'galon');
+  addOrUpdate('manual-salteado-aceite-ajonjoli', 'Salteado', 'Abarrotes', 'ACEITE DE AJONJOLI', 'catalog-003', 'galon');
+  addOrUpdate('manual-salteado-vinagre-blanco', 'Salteado', 'Abarrotes', 'VINAGRE BLANCO', 'catalog-300', 'galon');
+  addOrUpdate('manual-salteado-salsa-katsu-ahumada', 'Salteado', 'Salsas', 'SALSA KATSU AHUMADA', 'catalog-248', 'bolsa');
+  addOrUpdate('manual-salteado-salsa-yakimeshi', 'Salteado', 'Salsas', 'SALSA YAKIMESHI', 'catalog-153', 'pack');
+  addOrUpdate('manual-salteado-mantequilla-porcionada', 'Salteado', 'Abarrotes', 'MANTEQUILLA PORCIONADA', 'catalog-021', 'barra');
+  addOrUpdate('manual-salteado-salsa-okonomiyaki', 'Salteado', 'Salsas', 'SALSA OKONOMIYAKI', 'catalog-158', 'pack');
+  addOrUpdate('manual-salteado-mayonesa', 'Salteado', 'Salsas', 'MAYONESA', 'catalog-037', 'bolsa');
+  addOrUpdate('manual-salteado-pasta-wantan', 'Salteado', 'Abarrotes', 'PASTA WANTAN', 'catalog-188', 'kg');
+  addOrUpdate('manual-salteado-salsa-ponzu', 'Salteado', 'Salsas', 'SALSA PONZU', 'catalog-257', 'bolsa');
+  addOrUpdate('manual-salteado-nori-picado', 'Salteado', 'Abarrotes', 'NORI PICADO', 'catalog-143', 'paquete');
+
+  // =========================================================================
+  // 3. FRITURA (FRITURAS)
+  // =========================================================================
+  // - Quitar pasta wantan (pasó a salteado)
+  deactivate('Fritura', /pasta wantan/);
+  // - Quitar mayonesa (solo en salteado)
+  deactivate('Fritura', /mayonesa/);
+  // - Quitar poligras (pasó a makis)
+  deactivate('Fritura', /poligras/);
+  // - Borrar pasta gyoza siu kao (mismo item con pasta gyoza)
+  deactivate('Fritura', /pasta gyoza siu kao|pasta gyosa siu kao/);
+  // - Quitar nori o furikake si hubiera
+  deactivate('Fritura', /^(nori|furikake)$/);
+  // - Quitar polvo kare
+  deactivate('Fritura', /polvo kare/);
+
+  // Agregar / asegurar en Fritura:
+  addOrUpdate('manual-fritura-balde-aceite', 'Fritura', 'Abarrotes', 'BALDE DE ACEITE', 'catalog-019', 'balde');
+  addOrUpdate('manual-fritura-polvo-pichicata', 'Fritura', 'Abarrotes', 'POLVO PICHICATA', 'catalog-208', 'und');
+  addOrUpdate('manual-fritura-salsa-ponzu', 'Fritura', 'Salsas', 'SALSA PONZU', 'catalog-257', 'bolsa');
+  addOrUpdate('manual-fritura-panko', 'Fritura', 'Abarrotes', 'PANKO', 'catalog-228', 'und');
+  addOrUpdate('area-salsas-18', 'Fritura', 'Salsas', 'PASTA GYOZA', 'catalog-187', 'paquete');
+  addOrUpdate('manual-fritura-nori-picado', 'Fritura', 'Abarrotes', 'NORI PICADO', 'catalog-143', 'paquete');
+
+  // =========================================================================
+  // 4. RAMEN
+  // =========================================================================
+  // - Quitar aceite ajonjoli (solo en salteado)
+  deactivate('Ramen', /aceite.*ajonjoli/);
+  // - Quitar nori común (solo en makis)
+  deactivate('Ramen', /^(nori|nori paqt)$/);
+  // - Quitar nori picado (solo en salteado y frituras)
+  deactivate('Ramen', /nori picado/);
+  // - Borrar PORO duplicado
+  deactivate('Ramen', /^poro$/);
+
+  // Renombrar VEGETARIANA a VEGETARIANA SIN SAZONAR
+  s.areaItems!.forEach((a) => {
+    if (a.area.toLowerCase() === 'ramen' && normalize(a.name) === 'vegetariana') {
+      a.name = 'VEGETARIANA SIN SAZONAR';
+      a.sourceName = 'VEGETARIANA SIN SAZONAR';
+      a.ingredientId = 'catalog-265';
+      a.active = true;
+    }
+  });
+
+  // Agregar / asegurar en Ramen:
+  addOrUpdate('manual-ramen-col-cocida', 'Ramen', 'Verduras', 'COL COCIDA', 'catalog-071', 'paquete');
+  addOrUpdate('manual-ramen-aceite-yakitori', 'Ramen', 'Salsas', 'ACEITE YAKITORI', 'catalog-005', 'und');
+  addOrUpdate('manual-area-ramen-paquete-poro', 'Ramen', 'Verduras', 'PAQUETE DE PORO', 'catalog-180', 'paquete');
+  addOrUpdate('manual-ramen-fideo-ramen-kg', 'Ramen', 'Proteinas', 'FIDEO RAMEN X KG', 'catalog-184', 'kg');
+
+  // Asegurar nombres y alias en ingredients
+  const vegIng = s.ingredients.find((i) => i.id === 'catalog-265');
+  if (vegIng) {
+    vegIng.name = 'VEGETARIANA SIN SAZONAR';
+    vegIng.aliases = [...new Set([...(vegIng.aliases || '').split(','), 'SALSA VEGETARIANA', 'VEGETARIANA'])].filter(Boolean).join(',');
+  }
+
+  // Asegurar otros items previos
+  addOrUpdate('manual-area-barra-pulpa-tamarindo', 'Barra', 'Pulpas', 'PULPA DE TAMARINDO', 'catalog-217', 'und');
+
+  s.addedItemsVersion = addedItemsVersion;
+  return s;
 }
