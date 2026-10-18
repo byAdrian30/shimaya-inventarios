@@ -1,6 +1,6 @@
 import { normalize, type State } from './inventory.ts';
 
-export const addedItemsVersion = 'manual-items-2026-10-17-v4-pedidos-reorganizados';
+export const addedItemsVersion = 'manual-items-2026-10-17-v5-pedidos-reorganizados';
 
 export function withAddedItems(current: State): State {
   if (current.addedItemsVersion === addedItemsVersion) return current;
@@ -100,6 +100,9 @@ export function withAddedItems(current: State): State {
   deactivate('Makis', /pichicata/);
   // - Quitar nori picado (solo para salteado y frituras)
   deactivate('Makis', /nori picado/);
+  // - Exclusividades de otras estaciones
+  deactivate('Makis', /katsu ahumada|yakimeshi|okonomiyaki|pasta wantan/);
+  deactivate('Makis', /licor.*arroz|aceite.*ajonjoli|vinagre.*blanco|aceite yakitori/);
 
   // Agregar / asegurar en Makis:
   addOrUpdate('manual-makis-arroz-personal', 'Makis', 'Abarrotes', 'Arroz de personal', 'manual-stock-arroz-personal', 'kg');
@@ -151,8 +154,13 @@ export function withAddedItems(current: State): State {
   deactivate('Fritura', /pasta gyoza siu kao|pasta gyosa siu kao/);
   // - Quitar nori o furikake si hubiera
   deactivate('Fritura', /^(nori|furikake)$/);
-  // - Quitar polvo kare
+  // - Quitar polvo kare (solo en salteado)
   deactivate('Fritura', /polvo kare/);
+  // - Quitar katsu ahumada (solo en salteado)
+  deactivate('Fritura', /katsu ahumada/);
+  // - Exclusividades de salteado y ramen
+  deactivate('Fritura', /yakimeshi|mantequilla|okonomiyaki/);
+  deactivate('Fritura', /licor.*arroz|aceite.*ajonjoli|vinagre.*blanco|aceite yakitori/);
 
   // Agregar / asegurar en Fritura:
   addOrUpdate('manual-fritura-balde-aceite', 'Fritura', 'Abarrotes', 'BALDE DE ACEITE', 'catalog-019', 'balde');
@@ -173,6 +181,9 @@ export function withAddedItems(current: State): State {
   deactivate('Ramen', /nori picado/);
   // - Borrar PORO duplicado
   deactivate('Ramen', /^poro$/);
+  // - Exclusividades de salteado
+  deactivate('Ramen', /katsu ahumada|yakimeshi|okonomiyaki|mantequilla|mayonesa|polvo kare/);
+  deactivate('Ramen', /licor.*arroz|vinagre.*blanco|pasta wantan|panko/);
 
   // Renombrar VEGETARIANA a VEGETARIANA SIN SAZONAR
   s.areaItems!.forEach((a) => {
