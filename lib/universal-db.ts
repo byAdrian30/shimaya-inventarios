@@ -14,11 +14,23 @@ import bundledData from '../data/base_de_datos_completa.json';
 let postgresClient: any = null;
 let supabaseClient: any = null;
 
+function adaptSupabaseUrl(url: string): string {
+  const m = url.match(/^(postgres(?:ql)?:\/\/)([^:]+):(.+)@db\.([a-z0-9]+)\.supabase\.co(?::\d+)?\/(.+)$/);
+  if (m) {
+    const [, proto, user, pass, ref, rest] = m;
+    const poolerUser = user.includes('.') ? user : `${user}.${ref}`;
+    return `${proto}${poolerUser}:${pass}@aws-0-us-east-1.pooler.supabase.com:6543/${rest}`;
+  }
+  return url;
+}
+
 function getPostgresUrl(): string | undefined {
-  return process.env.POSTGRES_URL || 
-         process.env.DATABASE_URL || 
-         process.env.SUPABASE_DB_URL || 
-         process.env.POSTGRES_PRISMA_URL;
+  const raw = process.env.POSTGRES_URL || 
+              process.env.DATABASE_URL || 
+              process.env.SUPABASE_DB_URL || 
+              process.env.POSTGRES_PRISMA_URL;
+  if (!raw) return undefined;
+  return adaptSupabaseUrl(raw);
 }
 
 function getPostgres() {
