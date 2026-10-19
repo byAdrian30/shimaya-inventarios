@@ -16,6 +16,12 @@ export async function workspaceFor(user:ChatGPTUser){
  ]);
  const member=await env.DB!.prepare('SELECT email,user_id AS userId,name,area,role,status,created_at AS createdAt,updated_at AS updatedAt FROM team_members WHERE email=?').bind(email).first<TeamMember>();
  const role=email===ownerEmail?memberRole(user.userId,ownerId,member):memberRole(user.userId,'',member);
- if((role==='staff'||role==='dispatch'||role==='operator')&&!member?.userId){const result=await env.DB!.prepare('UPDATE team_members SET user_id=?,name=?,updated_at=? WHERE email=? AND user_id IS NULL AND status=? RETURNING user_id').bind(user.userId,user.fullName||user.displayName,new Date().toISOString(),email,'active').first();if(!result)return workspaceFor(user);}
+ if((role==='staff'||role==='dispatch'||role==='operator')&&!member?.userId){
+  try{
+   await env.DB!.prepare('UPDATE team_members SET user_id=?,name=?,updated_at=? WHERE email=? AND (user_id IS NULL OR user_id=\'\') AND status=?').bind(user.userId,user.fullName||user.displayName,new Date().toISOString(),email,'active').run();
+  }catch(err){
+   console.error('[workspaceFor] Error al vincular user_id:', err);
+  }
+ }
  return {ownerId,role,email,area:member?.area||'',status:role==='admin'?'active':member?.status||'unregistered',displayName:user.fullName||user.displayName};
 }

@@ -4,11 +4,21 @@ import { getChatGPTUser } from '../../chatgpt-auth';
 import { applyAction } from '../../../lib/inventory';
 import {workspaceFor} from '../../../lib/workspace';
 import {canPerform} from '../../../lib/requests';
-import {inventoryFor,visibleInventory} from '../../../lib/inventory-store';
+import {inventoryFor,visibleInventory,invalidateInventoryCache} from '../../../lib/inventory-store';
 export const dynamic='force-dynamic';
-export async function GET(){
+export async function GET(req:Request){
  const u=await getChatGPTUser();if(!u)return Response.json({error:'Inicia sesión para acceder.'},{status:401});
- try{const scope=await workspaceFor(u);if(scope.role==='guest')return Response.json({access:scope.status,role:scope.role,displayName:scope.displayName,email:scope.email},{status:403,headers:{'Cache-Control':'no-store'}});const data=await inventoryFor(scope.ownerId);return Response.json({revision:data.revision,state:visibleInventory(data.state,scope.role,u.userId,scope.area),role:scope.role,userId:u.userId,displayName:scope.displayName,area:scope.area},{headers:{'Cache-Control':'no-store'}})}catch{return Response.json({error:'No se pudo cargar el inventario. Vuelve a intentar.'},{status:500})}
+ try{
+  const scope=await workspaceFor(u);
+  if(scope.role==='guest')return Response.json({access:scope.status,role:scope.role,displayName:scope.displayName,email:scope.email},{status:403,headers:{'Cache-Control':'no-store'}});
+  const data=await inventoryFor(scope.ownerId);
+  const clientEtag=req.headers.get('if-none-match');
+  const etag=`"rev-${data.revision}-${scope.role}-${scope.area||'all'}"`;
+  if(clientEtag&&clientEtag===etag){
+   return new Response(null,{status:304,headers:{'ETag':etag,'Cache-Control':'private, no-cache'}});
+  }
+  return Response.json({revision:data.revision,state:visibleInventory(data.state,scope.role,u.userId,scope.area),role:scope.role,userId:u.userId,displayName:scope.displayName,area:scope.area},{headers:{'ETag':etag,'Cache-Control':'private, no-cache'}});
+ }catch{return Response.json({error:'No se pudo cargar el inventario. Vuelve a intentar.'},{status:500})}
 }
 export async function POST(req:Request){
  const sharedDenied=denySharedWrite(req);if(sharedDenied)return sharedDenied;
@@ -33,6 +43,7 @@ export async function POST(req:Request){
   }
  }
  if(!result)return Response.json({error:'Otro dispositivo guardó cambios. Recarga y revisa nuevamente.'},{status:409});
+ invalidateInventoryCache();
  return Response.json({state:visibleInventory(state,scope.role,u.userId,scope.area),revision:result.revision});
  }catch(e){return Response.json({error:e instanceof Error?e.message:'No se pudo guardar.'},{status:400})}
 }

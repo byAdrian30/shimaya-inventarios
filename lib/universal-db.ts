@@ -327,6 +327,18 @@ function translateSqlToPostgres(sql: string, params: any[]): { sql: string; para
   return { sql: pgSql, params };
 }
 
+function normalizePgRow(row: any) {
+  if (!row || typeof row !== 'object') return;
+  for (const key of Object.keys(row)) {
+    const lk = key.toLowerCase();
+    if (lk === 'userid') row.userId = row[key];
+    if (lk === 'createdat') row.createdAt = row[key];
+    if (lk === 'updatedat') row.updatedAt = row[key];
+    if (lk === 'ownerid') row.ownerId = row[key];
+    if (lk === 'resetversion') row.resetVersion = row[key];
+  }
+}
+
 export function createUniversalD1() {
   return {
     prepare(rawSql: string) {
@@ -347,7 +359,11 @@ export function createUniversalD1() {
               if (row && typeof row.data === 'object' && row.data !== null) {
                 row.data = JSON.stringify(row.data);
               }
-              return (columnName ? row[columnName] : row) as T;
+              normalizePgRow(row);
+              if (columnName) {
+                return (row[columnName] !== undefined ? row[columnName] : row[columnName.toLowerCase()]) as T;
+              }
+              return row as T;
             } catch (err) {
               console.error('[universal-db] Postgres query failed, falling back to embedded store:', err);
             }
@@ -368,6 +384,7 @@ export function createUniversalD1() {
                 if (r && typeof r.data === 'object' && r.data !== null) {
                   r.data = JSON.stringify(r.data);
                 }
+                normalizePgRow(r);
                 return r as T;
               });
               return { results };

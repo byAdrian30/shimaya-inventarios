@@ -25,14 +25,95 @@ export default function Page(){
 const [s,setS]=useState<State>(emptyState()),[revision,setRevision]=useState(0),[selectedTab,setTab]=useState('inicio'),[date,setDate]=useState(today()),[busy,setBusy]=useState(false),[loading,setLoading]=useState(true),[error,setError]=useState(''),[toast,setToast]=useState(''),[query,setQuery]=useState(''),[filter,setFilter]=useState('todos'),[page,setPage]=useState(1),[modal,setModal]=useState<any>(null),[counts,setCounts]=useState<Record<string,string>>({}),[detail,setDetail]=useState<Movement|null>(null),[historyDate,setHistoryDate]=useState('');
 const [importSheets,setImportSheets]=useState<{name:string;rows:string[][]}[]>([]),[sheetIdx,setSheetIdx]=useState(0),[nameCols,setNameCols]=useState<number[]>([0]),[unitCol,setUnitCol]=useState(-1),[stockCol,setStockCol]=useState(-1),[minCol,setMinCol]=useState(-1),[startRow,setStartRow]=useState(1),[importItems,setImportItems]=useState<ImportItem[]>([]),[importName,setImportName]=useState('');
 const [role,setRole]=useState('guest'),[userId,setUserId]=useState(''),[displayName,setDisplayName]=useState(''),[access,setAccess]=useState('loading'),[accountEmail,setAccountEmail]=useState(''),[assignedArea,setAssignedArea]=useState('');
+const etagRef=useRef('');
 const tabs=allowedTabs(role),tab=tabs.includes(selectedTab)?selectedTab:tabs[0]||'pedido';
 const excelInput=useRef<HTMLInputElement>(null);
 const [valuation,setValuation]=useState<Valuation|null>(null),[valuationError,setValuationError]=useState('');
 async function loadValuation(){setValuationError('');try{const r=await fetch('/api/admin/valuation',{cache:'no-store'}),d=await r.json() as Valuation&{error?:string};if(!r.ok)throw Error(d.error||'No se pudieron cargar los costos.');setValuation(d)}catch(e){setValuation(null);setValuationError((e as Error).message)}}
 useEffect(()=>{if(role==='admin'&&access==='ready')loadValuation();else{setValuation(null);setValuationError('')}},[role,access,revision]);
-async function load(quiet: boolean | unknown = false){const isQuiet = quiet === true; if(!isQuiet)setLoading(true);setError('');try{const r=await fetch('/api/inventory',{cache:'no-store'}),d:any=await r.json();if(r.status===401||r.status===403){setAccess(d.access||'anonymous');setDisplayName(d.displayName||'');setAccountEmail(d.email||'');return}if(!r.ok)throw Error(d.error);setS(d.state);setRevision(d.revision);setRole(d.role||'guest');setUserId(d.userId||'');setDisplayName(d.displayName||'');setAssignedArea(d.area||'');setAccess('ready');if(!isQuiet)setTab(current=>allowedTabs(d.role).includes(current)?current:allowedTabs(d.role)[0]||'pedido');if(d.role!=='admin'){setModal(null);setDetail(null)}}catch(e){if(!isQuiet){setError((e as Error).message);setAccess('error')}}finally{if(!isQuiet)setLoading(false)}}
-async function logout(){setLoading(true);try{await fetch('/api/auth/logout',{method:'POST'});}catch(_){}document.cookie='auth_user=; path=/; max-age=0; expires=Thu, 01 Jan 1970 00:00:00 GMT;';document.cookie='__sites_local_auth=; path=/; max-age=0; expires=Thu, 01 Jan 1970 00:00:00 GMT;';setAccess('anonymous');setRole('guest');setUserId('');setDisplayName('');setS(emptyState());setLoading(false)}
-useEffect(()=>{load()},[]);
+async function load(quiet: boolean | unknown = false){
+  const isQuiet = quiet === true;
+  if(!isQuiet && access !== 'ready')setLoading(true);
+  setError('');
+  try{
+    const headers: Record<string, string> = {};
+    if(etagRef.current) headers['If-None-Match'] = etagRef.current;
+    const r=await fetch('/api/inventory',{headers,cache:'no-store'});
+    if(r.status===304){if(!isQuiet)setLoading(false);return;}
+    if(r.status===401||r.status===403){
+      const d:any=await r.json();
+      setAccess(d.access||'anonymous');
+      setDisplayName(d.displayName||'');
+      setAccountEmail(d.email||'');
+      return;
+    }
+    if(!r.ok){
+      let msg='No se pudo conectar al servidor';
+      try{const d:any=await r.json();msg=d.error||msg;}catch(_){}
+      throw Error(msg);
+    }
+    const d:any=await r.json();
+    const newEtag=r.headers.get('ETag');
+    if(newEtag)etagRef.current=newEtag;
+    setS(d.state);
+    setRevision(d.revision);
+    setRole(d.role||'guest');
+    setUserId(d.userId||'');
+    setDisplayName(d.displayName||'');
+    setAssignedArea(d.area||'');
+    setAccess('ready');
+    try{
+      localStorage.setItem('shimaya_cache_v1',JSON.stringify({
+        state:d.state,revision:d.revision,role:d.role,userId:d.userId,displayName:d.displayName,area:d.area,etag:newEtag,savedAt:Date.now()
+      }));
+    }catch(_){}
+    if(!isQuiet)setTab(current=>allowedTabs(d.role).includes(current)?current:allowedTabs(d.role)[0]||'pedido');
+    if(d.role!=='admin'){setModal(null);setDetail(null);}
+  }catch(e){
+    if(!isQuiet){
+      setError((e as Error).message);
+      if(access!=='ready')setAccess('error');
+    }
+  }finally{
+    if(!isQuiet)setLoading(false);
+  }
+}
+async function logout(){
+  setLoading(true);
+  try{await fetch('/api/auth/logout',{method:'POST'});}catch(_){}
+  document.cookie='auth_user=; path=/; max-age=0; expires=Thu, 01 Jan 1970 00:00:00 GMT;';
+  document.cookie='__sites_local_auth=; path=/; max-age=0; expires=Thu, 01 Jan 1970 00:00:00 GMT;';
+  try{localStorage.removeItem('shimaya_cache_v1');}catch(_){}
+  etagRef.current='';
+  setAccess('anonymous');
+  setRole('guest');
+  setUserId('');
+  setDisplayName('');
+  setS(emptyState());
+  setLoading(false);
+}
+useEffect(()=>{
+  try{
+    const raw=localStorage.getItem('shimaya_cache_v1');
+    if(raw){
+      const cached=JSON.parse(raw);
+      if(cached&&cached.state&&(Date.now()-(cached.savedAt||0)<86400000)){
+        setS(cached.state);
+        setRevision(cached.revision||0);
+        setRole(cached.role||'guest');
+        setUserId(cached.userId||'');
+        setDisplayName(cached.displayName||'');
+        setAssignedArea(cached.area||'');
+        if(cached.etag)etagRef.current=cached.etag;
+        setAccess('ready');
+        setLoading(false);
+        const t=allowedTabs(cached.role);
+        setTab(current=>t.includes(current)?current:(t[0]||'pedido'));
+      }
+    }
+  }catch(_){}
+  load();
+},[]);
 useEffect(()=>{
  if(access==='pending'){const id=setInterval(()=>load(true),15000);return()=>clearInterval(id);}
  if(access==='ready'){
@@ -54,7 +135,7 @@ async function readExcel(file:File|undefined){if(!file)return;setBusy(true);setE
 function buildImport(){try{const rows=importSheets[sheetIdx]?.rows||[],items:ImportItem[]=[];if(!nameCols.length)throw Error('Selecciona al menos una columna de nombres.');if([unitCol,stockCol,minCol].some(c=>c>=0&&nameCols.includes(c)))throw Error('Las columnas de nombres deben ser distintas a las de unidades y cantidades.');if(new Set([unitCol,stockCol,minCol].filter(c=>c>=0)).size!==[unitCol,stockCol,minCol].filter(c=>c>=0).length)throw Error('Usa columnas diferentes para unidad, stock y mínimo.');for(const row of rows.slice(startRow-1)){for(const col of nameCols){const name=row[col]?.trim();if(!name)continue;const rawStock=stockCol>=0?row[stockCol]||'':'',rawMin=minCol>=0?row[minCol]||'':'';const parse=(v:string)=>{if(!v.trim())return undefined;if(!/^\d+(?:[.,]\d+)?$/.test(v.trim()))return NaN;return Number(v.replace(',','.'))};const stock=parse(rawStock),minimum=parse(rawMin),existing=s.ingredients.find(i=>normalize(i.name)===normalize(name)),unit=unitCol>=0?canonicalUnit(row[unitCol]||''):existing?.unit||'';const duplicate=items.some(i=>normalize(i.name)===normalize(name));const warning=duplicate?'Nombre repetido':stock!==undefined&&(!Number.isFinite(stock)||stock<0)?'Stock inválido':minimum!==undefined&&(!Number.isFinite(minimum)||minimum<0)?'Mínimo inválido':stock!==undefined&&!unit?'Falta unidad de control':'';items.push({name,unit,stock,minimum,selected:!warning,warning})}}if(!items.length)throw Error('No se encontraron nombres. Revisa las columnas y la primera fila.');setImportItems(items)}catch(e){setError((e as Error).message)}}
 const pagination=<div className="pagination"><span>{visible.length} insumos · Página {Math.min(page,numPages)} de {numPages}</span><div><button className="icon-btn" aria-label="Página anterior" disabled={page<=1} onClick={()=>setPage(p=>p-1)}><ChevronLeft size={17}/></button><button className="icon-btn" aria-label="Página siguiente" disabled={page>=numPages} onClick={()=>setPage(p=>p+1)}><ChevronRight size={17}/></button></div></div>;
 if(access!=='ready'){
-  if(loading)return <main className="access-screen"><section className="access-card" style={{maxWidth:'400px',textAlign:'center'}}><div style={{display:'flex',justifyContent:'center',color:'var(--red,#b6372a)',marginBottom:'14px'}}><Bowl size={48}/></div><div className="access-brand">SHIMAYA<small>RAMEN · INVENTARIOS</small></div><div style={{marginTop:'24px',display:'flex',alignItems:'center',justifyContent:'center',gap:'10px',color:'var(--muted)'}}><LoaderCircle className="spin" size={20}/><span>Cargando sistema…</span></div></section></main>;
+  if(loading)return <main className="access-screen"><section className="access-card" style={{maxWidth:'400px',textAlign:'center'}}><div style={{display:'flex',justifyContent:'center',color:'var(--red,#b6372a)',marginBottom:'14px'}}><Bowl size={48}/></div><div className="access-brand">SHIMAYA<small>RAMEN · INVENTARIOS</small></div><div style={{marginTop:'24px',display:'flex',alignItems:'center',justifyContent:'center',gap:'10px',color:'var(--muted)'}}><LoaderCircle className="spin" size={20}/><span>Cargando sistema…</span></div><div style={{marginTop:'18px'}}><button type="button" className="text-btn" style={{fontSize:'12px',color:'#718096'}} onClick={()=>{setLoading(false);setAccess('anonymous');}}>¿Tarda en cargar? Haz clic aquí para entrar</button></div></section></main>;
   return <LoginScreen onSuccess={load} initialError={error}/>;
 }
 return <div className="shell"><aside className="sidebar"><div className="brand"><Bowl/><div>SHIMAYA<small>RAMEN · INVENTARIOS</small></div></div><div className="workspace"><span className="workspace-icon"><Leaf size={17}/></span><div>{displayName||'Shimaya'}<small>{role==='admin'?'Administrador Maestro':'Pedido, Despacho y Stock'}</small></div><span className="online"/></div><div className="nav-label">OPERACIÓN DIARIA</div><nav>{nav.filter(n=>tabs.includes(n.id)).map(n=><button key={n.id} className={tab===n.id?'active':''} aria-current={tab===n.id?'page':undefined} onClick={()=>{setTab(n.id);setQuery('');setFilter('todos')}}><n.icon size={19}/>{n.name}{tab===n.id&&<ChevronRight size={15}/>}</button>)}</nav><div className="side-note"><ShieldCheck size={20}/><p>Tu inventario, en orden.<small>Pedidos por área y stock del espacio Shimaya.</small></p></div><div className="side-footer"><div className="avatar">SR</div><div>Shimaya Ramen<small>Gestión de inventarios</small></div></div></aside><main><header className="topbar"><div className="breadcrumb">Shimaya Ramen <span>/</span><strong>{nav.find(n=>n.id===tab)?.name}</strong></div><div className="top-actions"><button className="text-btn" onClick={logout} title="Cambiar usuario o cerrar sesión" style={{display:'inline-flex',alignItems:'center',gap:'6px',padding:'6px 12px',background:'#f2f5ed',border:'1px solid #d4dfce',borderRadius:'7px',fontSize:'12px',fontWeight:600,color:'#2c4030'}}><LogOut size={14}/><span>Cambiar usuario</span></button><span className="private"><span/> {role==='admin'?'👑 Administración':`👤 ${displayName||'Colaborador'}`}</span><button className="icon-btn" title="Actualizar datos" onClick={load} disabled={isDisabled}><RefreshCw size={17}/></button></div></header><div className="content">
