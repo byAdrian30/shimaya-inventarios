@@ -96,5 +96,12 @@ export function applyWorkflow(s:State,a:any,move:Movement,adjust:(i:Ingredient,n
   r.closed=true;r.deleted={at:move.at,date:move.date,by:a.deletedBy.trim(),actorId:String(a.actorId||''),note:move.note,movementId:move.id};
   move.reference=r.number;move.requestId=r.id;return true;
  }
+ if(a.type==='restaurar-orden'){
+  const r=requests.find(r=>r.id===a.requestId);if(!r)fail('La orden no existe.');
+  delete r.deleted;
+  r.closed=r.lines.every(l=>l.delivered>=l.quantity);
+  move.kind='solicitud';move.reference=r.number;move.note='Orden restaurada: '+r.number;
+  return true;
+ }
  return false;
 }
