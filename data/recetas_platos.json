@@ -1,0 +1,1134 @@
+{
+  "CHASU RAMEN (S / M / L / XL)": {
+    "categoria": "Ramen",
+    "platos": [
+      "Chasu Ramen S",
+      "Chasu Ramen M",
+      "Chasu Ramen L",
+      "Chasu Ramen XL"
+    ],
+    "insumos": [
+      {
+        "insumo": "Caldo Tonkotsu",
+        "cantidad": "S: 300ml | M: 400ml | L: 500ml | XL: 600ml"
+      },
+      {
+        "insumo": "Fideos Ramen",
+        "cantidad": "S: 82.5g (110g*0.75) | M: 142.5g | L: 225g | XL: 322.5g"
+      },
+      {
+        "insumo": "Chashu (láminas)",
+        "cantidad": "S: 5 láminas | M: 7 láminas | L: 9 láminas | XL: 12 láminas"
+      },
+      {
+        "insumo": "Huevo",
+        "cantidad": "S: 0.5 und | M: 0.5 und | L: 1 und | XL: 2 und"
+      },
+      {
+        "insumo": "Nori (lámina)",
+        "cantidad": "S: 0.125 lámina | M: 0.25 | L: 0.375 | XL: 0.5"
+      },
+      {
+        "insumo": "Salsa Shoyu",
+        "cantidad": "S: 30ml | M: 40ml | L: 60ml | XL: 80ml"
+      }
+    ]
+  },
+  "TONKOTSU RAMEN (S / M / L / XL)": {
+    "categoria": "Ramen",
+    "platos": [
+      "Tonkotsu Ramen S",
+      "Tonkotsu Ramen M",
+      "Tonkotsu Ramen L",
+      "Tonkotsu Ramen XL"
+    ],
+    "insumos": [
+      {
+        "insumo": "Caldo Tonkotsu",
+        "cantidad": "S: 300ml | M: 400ml | L: 500ml | XL: 600ml"
+      },
+      {
+        "insumo": "Fideos Ramen",
+        "cantidad": "S: 82.5g | M: 142.5g | L: 225g | XL: 322.5g"
+      },
+      {
+        "insumo": "Chashu (láminas)",
+        "cantidad": "S: 3 láminas | M: 5 láminas | L: 7 láminas | XL: 10 láminas"
+      },
+      {
+        "insumo": "Huevo",
+        "cantidad": "S: 0.5 und | M: 0.5 und | L: 1 und | XL: 2 und"
+      },
+      {
+        "insumo": "Nori (lámina)",
+        "cantidad": "S: 0.125 | M: 0.25 | L: 0.375 | XL: 0.5"
+      }
+    ]
+  },
+  "EBI RAMEN (S / M / L / XL)": {
+    "categoria": "Ramen",
+    "platos": [
+      "Ebi Ramen S",
+      "Ebi Ramen M",
+      "Ebi Ramen L",
+      "Ebi Ramen XL"
+    ],
+    "insumos": [
+      {
+        "insumo": "Porción Ebi Ramen (Langostino)",
+        "cantidad": "S: 4 porc/5 | M: 7 porc/5 | L: 9 porc/5 | XL: 12 porc/5"
+      },
+      {
+        "insumo": "Salsa Ebi Ramen Madre",
+        "cantidad": "S: 50ml | M: 60ml | L: 90ml | XL: 135ml"
+      },
+      {
+        "insumo": "Leche Especiada",
+        "cantidad": "S: 16.7ml | M: 20ml | L: 30ml | XL: 45ml"
+      },
+      {
+        "insumo": "Fideos Ramen",
+        "cantidad": "S: 82.5g | M: 142.5g | L: 225g | XL: 322.5g"
+      },
+      {
+        "insumo": "Huevo",
+        "cantidad": "S: 0.5 und | M: 0.5 und | L: 1 und | XL: 2 und"
+      },
+      {
+        "insumo": "Champiñones",
+        "cantidad": "S: 8g | M: 15g | L: 20g | XL: 25g"
+      },
+      {
+        "insumo": "Nori",
+        "cantidad": "S: 0.125 | M: 0.25 | L: 0.375 | XL: 0.5"
+      }
+    ]
+  },
+  "TAN TAN RAMEN (S / M / L / XL)": {
+    "categoria": "Ramen",
+    "platos": [
+      "Tan Tan S",
+      "Tan Tan M",
+      "Tan Tan L",
+      "Tan Tan XL"
+    ],
+    "insumos": [
+      {
+        "insumo": "Chancho Molido 40g",
+        "cantidad": "S: 1 porc (0.2 pack) | M: 2 porc | L: 3 porc | XL: 4 porc"
+      },
+      {
+        "insumo": "Salsa Tan Tan",
+        "cantidad": "S: 35ml | M: 45ml | L: 65ml | XL: 85ml"
+      },
+      {
+        "insumo": "Fideos Ramen",
+        "cantidad": "S: 82.5g | M: 142.5g | L: 225g | XL: 322.5g"
+      },
+      {
+        "insumo": "Huevo",
+        "cantidad": "S: 0.5 und | M: 0.5 und | L: 1 und | XL: 2 und"
+      },
+      {
+        "insumo": "Nori",
+        "cantidad": "S: 0.125 | M: 0.25 | L: 0.375 | XL: 0.5"
+      }
+    ]
+  },
+  "MISO RAMEN (S / M / L / XL)": {
+    "categoria": "Ramen",
+    "platos": [
+      "Miso Ramen S",
+      "Miso Ramen M",
+      "Miso Ramen L",
+      "Miso Ramen XL"
+    ],
+    "insumos": [
+      {
+        "insumo": "Salsa Miso",
+        "cantidad": "S: 40ml | M: 50ml | L: 80ml | XL: 120ml"
+      },
+      {
+        "insumo": "Chashu (láminas)",
+        "cantidad": "S: 3 láminas | M: 5 láminas | L: 7 láminas | XL: 10 láminas"
+      },
+      {
+        "insumo": "Fideos Ramen",
+        "cantidad": "S: 82.5g | M: 142.5g | L: 225g | XL: 322.5g"
+      },
+      {
+        "insumo": "Huevo",
+        "cantidad": "S: 0.5 und | M: 0.5 und | L: 1 und | XL: 2 und"
+      },
+      {
+        "insumo": "Nori",
+        "cantidad": "S: 0.125 | M: 0.25 | L: 0.375 | XL: 0.5"
+      }
+    ]
+  },
+  "SHIO RAMEN (S / M / L / XL)": {
+    "categoria": "Ramen",
+    "platos": [
+      "Shio Ramen S",
+      "Shio Ramen M",
+      "Shio Ramen L",
+      "Shio Ramen XL"
+    ],
+    "insumos": [
+      {
+        "insumo": "Salsa Shio",
+        "cantidad": "S: 30ml | M: 40ml | L: 60ml | XL: 80ml"
+      },
+      {
+        "insumo": "Chashu (láminas)",
+        "cantidad": "S: 3 láminas | M: 5 láminas | L: 7 láminas | XL: 10 láminas"
+      },
+      {
+        "insumo": "Fideos Ramen",
+        "cantidad": "S: 82.5g | M: 142.5g | L: 225g | XL: 322.5g"
+      },
+      {
+        "insumo": "Huevo",
+        "cantidad": "S: 0.5 und | M: 0.5 und | L: 1 und | XL: 2 und"
+      },
+      {
+        "insumo": "Nori",
+        "cantidad": "S: 0.125 | M: 0.25 | L: 0.375 | XL: 0.5"
+      }
+    ]
+  },
+  "RAMEN BAJIRU (S / M / L / XL)": {
+    "categoria": "Ramen",
+    "platos": [
+      "Ramen Bajiru S",
+      "Ramen Bajiru M",
+      "Ramen Bajiru L",
+      "Ramen Bajiru XL"
+    ],
+    "insumos": [
+      {
+        "insumo": "Salsa Ramen Bajiru (Madre)",
+        "cantidad": "S: 50ml | M: 60ml | L: 90ml | XL: 135ml"
+      },
+      {
+        "insumo": "Base Bajiru",
+        "cantidad": "S: 50g | M: 86.7g | L: 100g | XL: 130g"
+      },
+      {
+        "insumo": "Brisket (carne)",
+        "cantidad": "S: 3 porc | M: 5 porc | L: 7 porc | XL: 10 porc"
+      },
+      {
+        "insumo": "Leche Especiada",
+        "cantidad": "S: 25ml | M: 43.3ml | L: 50ml | XL: 65ml"
+      },
+      {
+        "insumo": "Fideos Ramen",
+        "cantidad": "S: 82.5g | M: 142.5g | L: 225g | XL: 322.5g"
+      },
+      {
+        "insumo": "Huevo",
+        "cantidad": "S: 0.5 und | M: 0.5 und | L: 1 und | XL: 2 und"
+      }
+    ]
+  },
+  "RAMEN VEGETARIANO (S / M / L / XL)": {
+    "categoria": "Ramen",
+    "platos": [
+      "Veggie Ramen S",
+      "Veggie Ramen M",
+      "Veggie Ramen L",
+      "Veggie Ramen XL"
+    ],
+    "insumos": [
+      {
+        "insumo": "Salsa Vegetariana",
+        "cantidad": "S: 25ml | M: 40ml | L: 65ml | XL: 85ml"
+      },
+      {
+        "insumo": "Champiñones",
+        "cantidad": "S: 9g | M: 13g | L: 18g | XL: 25g"
+      },
+      {
+        "insumo": "Fideos Ramen",
+        "cantidad": "S: 82.5g | M: 142.5g | L: 225g | XL: 322.5g"
+      },
+      {
+        "insumo": "Huevo",
+        "cantidad": "S: 0.5 und | M: 0.5 und | L: 1 und | XL: 2 und"
+      }
+    ]
+  },
+  "MAKI ACEVICHADO": {
+    "categoria": "Makis",
+    "platos": [
+      "Maki Acevichado 1 Tabla / 1/2 Tabla / Barra Libre"
+    ],
+    "insumos": [
+      {
+        "insumo": "Arroz Shari",
+        "cantidad": "140g por tabla (70g media tabla)"
+      },
+      {
+        "insumo": "Nori",
+        "cantidad": "0.5 lámina por tabla"
+      },
+      {
+        "insumo": "Ebi Furai (Langostinos empanizados)",
+        "cantidad": "2 und por tabla (1/15 paquete)"
+      },
+      {
+        "insumo": "Barras de Atún (Láminas)",
+        "cantidad": "25g por tabla"
+      },
+      {
+        "insumo": "Salsa Acevichada / Mayonesa",
+        "cantidad": "Porción estándar"
+      }
+    ]
+  },
+  "MAKI FURAI": {
+    "categoria": "Makis",
+    "platos": [
+      "Maki Furai 1 Tabla / 1/2 Tabla"
+    ],
+    "insumos": [
+      {
+        "insumo": "Arroz Shari",
+        "cantidad": "140g por tabla"
+      },
+      {
+        "insumo": "Nori",
+        "cantidad": "0.5 lámina"
+      },
+      {
+        "insumo": "Ebi Furai",
+        "cantidad": "2 und"
+      },
+      {
+        "insumo": "Queso Crema",
+        "cantidad": "40g"
+      },
+      {
+        "insumo": "Palta",
+        "cantidad": "Porción estándar"
+      }
+    ]
+  },
+  "MAKI HOTATE": {
+    "categoria": "Makis",
+    "platos": [
+      "Maki Hotate 1 Tabla / 1/2 Tabla"
+    ],
+    "insumos": [
+      {
+        "insumo": "Arroz Shari",
+        "cantidad": "140g por tabla"
+      },
+      {
+        "insumo": "Nori",
+        "cantidad": "0.5 lámina"
+      },
+      {
+        "insumo": "Ebi Furai",
+        "cantidad": "2 und"
+      },
+      {
+        "insumo": "Conchas de Abanico",
+        "cantidad": "25g (0.1 paq 250g)"
+      },
+      {
+        "insumo": "Salsa Hotate",
+        "cantidad": "25ml"
+      }
+    ]
+  },
+  "MAKI KIRO": {
+    "categoria": "Makis",
+    "platos": [
+      "Maki Kiro 1 Tabla / 1/2 Tabla"
+    ],
+    "insumos": [
+      {
+        "insumo": "Arroz Shari",
+        "cantidad": "140g por tabla"
+      },
+      {
+        "insumo": "Nori",
+        "cantidad": "0.5 lámina"
+      },
+      {
+        "insumo": "Ebi Furai",
+        "cantidad": "2 und"
+      },
+      {
+        "insumo": "Salsa Kiro",
+        "cantidad": "25ml"
+      }
+    ]
+  },
+  "MAKI KUROI": {
+    "categoria": "Makis",
+    "platos": [
+      "Maki Kuroi 1 Tabla / 1/2 Tabla"
+    ],
+    "insumos": [
+      {
+        "insumo": "Arroz Shari",
+        "cantidad": "140g por tabla"
+      },
+      {
+        "insumo": "Nori",
+        "cantidad": "0.5 lámina"
+      },
+      {
+        "insumo": "Barras de Atún",
+        "cantidad": "25g"
+      },
+      {
+        "insumo": "Ebi Furai",
+        "cantidad": "2 und"
+      },
+      {
+        "insumo": "Salsa Kuroy",
+        "cantidad": "25ml"
+      }
+    ]
+  },
+  "MAKI AMAI RYU": {
+    "categoria": "Makis",
+    "platos": [
+      "Maki Amai Ryu 1 Tabla / 1/2 Tabla"
+    ],
+    "insumos": [
+      {
+        "insumo": "Arroz Shari",
+        "cantidad": "140g por tabla"
+      },
+      {
+        "insumo": "Nori",
+        "cantidad": "0.5 lámina"
+      },
+      {
+        "insumo": "Ebi Furai",
+        "cantidad": "2 und"
+      },
+      {
+        "insumo": "Barras de Atún",
+        "cantidad": "25g"
+      },
+      {
+        "insumo": "Salsa Amai Ryu",
+        "cantidad": "25ml"
+      }
+    ]
+  },
+  "MAKI NIN NIKU": {
+    "categoria": "Makis",
+    "platos": [
+      "Maki Nin Niku 1 Tabla / 1/2 Tabla"
+    ],
+    "insumos": [
+      {
+        "insumo": "Arroz Shari",
+        "cantidad": "140g por tabla"
+      },
+      {
+        "insumo": "Nori",
+        "cantidad": "0.5 lámina"
+      },
+      {
+        "insumo": "Barras de Atún",
+        "cantidad": "25g"
+      },
+      {
+        "insumo": "Ebi Furai",
+        "cantidad": "2 und"
+      },
+      {
+        "insumo": "Salsa Nin Niku",
+        "cantidad": "25ml"
+      }
+    ]
+  },
+  "MAKI DIGION": {
+    "categoria": "Makis",
+    "platos": [
+      "Maki Digion 1 Tabla / 1/2 Tabla"
+    ],
+    "insumos": [
+      {
+        "insumo": "Arroz Shari",
+        "cantidad": "140g por tabla"
+      },
+      {
+        "insumo": "Nori",
+        "cantidad": "0.5 lámina"
+      },
+      {
+        "insumo": "Barras de Atún",
+        "cantidad": "25g"
+      },
+      {
+        "insumo": "Ebi Furai",
+        "cantidad": "2 und"
+      },
+      {
+        "insumo": "Salsa Dijon",
+        "cantidad": "25ml"
+      }
+    ]
+  },
+  "MAKI SPICY": {
+    "categoria": "Makis",
+    "platos": [
+      "Maki Spicy 1 Tabla / 1/2 Tabla"
+    ],
+    "insumos": [
+      {
+        "insumo": "Arroz Shari",
+        "cantidad": "140g por tabla"
+      },
+      {
+        "insumo": "Nori",
+        "cantidad": "0.5 lámina"
+      },
+      {
+        "insumo": "Ebi Furai",
+        "cantidad": "2 und"
+      },
+      {
+        "insumo": "Salsa Spicy",
+        "cantidad": "25ml"
+      }
+    ]
+  },
+  "MAKI SUMOKU": {
+    "categoria": "Makis",
+    "platos": [
+      "Maki Sumoku 1 Tabla / 1/2 Tabla"
+    ],
+    "insumos": [
+      {
+        "insumo": "Arroz Shari",
+        "cantidad": "140g por tabla"
+      },
+      {
+        "insumo": "Nori",
+        "cantidad": "0.5 lámina"
+      },
+      {
+        "insumo": "Trucha Ahumada",
+        "cantidad": "25g (0.1 paq 250g)"
+      },
+      {
+        "insumo": "Queso Crema",
+        "cantidad": "40g"
+      }
+    ]
+  },
+  "MAKI INCA": {
+    "categoria": "Makis",
+    "platos": [
+      "Maki Inca 1 Tabla / 1/2 Tabla"
+    ],
+    "insumos": [
+      {
+        "insumo": "Arroz Shari",
+        "cantidad": "140g por tabla"
+      },
+      {
+        "insumo": "Nori",
+        "cantidad": "0.5 lámina"
+      },
+      {
+        "insumo": "Trucha Ahumada",
+        "cantidad": "25g"
+      },
+      {
+        "insumo": "Queso Crema",
+        "cantidad": "40g"
+      },
+      {
+        "insumo": "Salmón Limpio",
+        "cantidad": "30g"
+      }
+    ]
+  },
+  "CHAUFA SHIMAYA": {
+    "categoria": "Salteado y Fondos",
+    "platos": [
+      "Chaufa Shimaya"
+    ],
+    "insumos": [
+      {
+        "insumo": "Arroz Gohan",
+        "cantidad": "400g"
+      },
+      {
+        "insumo": "Pack Base Chaufa",
+        "cantidad": "0.1 pack (1 und x 10 unds)"
+      },
+      {
+        "insumo": "Chancho Chaufa 60g",
+        "cantidad": "1 porción (0.2 pack x 5)"
+      },
+      {
+        "insumo": "Huevo",
+        "cantidad": "2 und"
+      },
+      {
+        "insumo": "Champiñones",
+        "cantidad": "40g"
+      },
+      {
+        "insumo": "Salsa Teriyaki",
+        "cantidad": "50ml"
+      }
+    ]
+  },
+  "YAKIMESHI": {
+    "categoria": "Salteado y Fondos",
+    "platos": [
+      "Yakimeshi"
+    ],
+    "insumos": [
+      {
+        "insumo": "Arroz Gohan",
+        "cantidad": "400g"
+      },
+      {
+        "insumo": "Pack Base Yakimeshi",
+        "cantidad": "0.1 pack (1 und x 10 unds)"
+      },
+      {
+        "insumo": "Pollo Cocido Cuadro",
+        "cantidad": "1 porción (0.2 pack x 5)"
+      },
+      {
+        "insumo": "Huevo",
+        "cantidad": "1 und"
+      }
+    ]
+  },
+  "CHICKEN KATSU": {
+    "categoria": "Fondos",
+    "platos": [
+      "Chicken Katsu"
+    ],
+    "insumos": [
+      {
+        "insumo": "Filete Chicken Katsu 150g",
+        "cantidad": "1 filete (0.2 pack x 5)"
+      },
+      {
+        "insumo": "Arroz Gohan",
+        "cantidad": "200g"
+      },
+      {
+        "insumo": "Salsa Katsu",
+        "cantidad": "25ml"
+      }
+    ]
+  },
+  "CHICKEN KATSU KARE": {
+    "categoria": "Fondos",
+    "platos": [
+      "Chicken Katsu Kare"
+    ],
+    "insumos": [
+      {
+        "insumo": "Filete Chicken Katsu 150g",
+        "cantidad": "1 filete"
+      },
+      {
+        "insumo": "Arroz Gohan",
+        "cantidad": "250g"
+      },
+      {
+        "insumo": "Salsa Kare",
+        "cantidad": "0.25 L (250ml)"
+      }
+    ]
+  },
+  "TONKATSU": {
+    "categoria": "Fondos",
+    "platos": [
+      "Tonkatsu"
+    ],
+    "insumos": [
+      {
+        "insumo": "Chancho Tonkatsu 150g",
+        "cantidad": "1 filete (0.2 pack x 5)"
+      },
+      {
+        "insumo": "Arroz Gohan",
+        "cantidad": "200g"
+      },
+      {
+        "insumo": "Salsa Katsu",
+        "cantidad": "25ml"
+      }
+    ]
+  },
+  "KATSU KARE": {
+    "categoria": "Fondos",
+    "platos": [
+      "Katsu Kare"
+    ],
+    "insumos": [
+      {
+        "insumo": "Chancho Tonkatsu 150g",
+        "cantidad": "1 filete"
+      },
+      {
+        "insumo": "Arroz Gohan",
+        "cantidad": "200g"
+      },
+      {
+        "insumo": "Salsa Kare",
+        "cantidad": "250ml"
+      }
+    ]
+  },
+  "KATSUDON": {
+    "categoria": "Fondos",
+    "platos": [
+      "Katsudon"
+    ],
+    "insumos": [
+      {
+        "insumo": "Chancho Tonkatsu 150g",
+        "cantidad": "0.5 filete (0.1 pack x 5)"
+      },
+      {
+        "insumo": "Arroz Gohan",
+        "cantidad": "200g"
+      },
+      {
+        "insumo": "Salsa Katsudon",
+        "cantidad": "170ml"
+      }
+    ]
+  },
+  "EBIDON": {
+    "categoria": "Fondos",
+    "platos": [
+      "Ebidon"
+    ],
+    "insumos": [
+      {
+        "insumo": "Ebi Furai",
+        "cantidad": "5 und (0.167 pack x 30)"
+      },
+      {
+        "insumo": "Arroz Gohan",
+        "cantidad": "250g"
+      },
+      {
+        "insumo": "Salsa Katsudon",
+        "cantidad": "170ml"
+      }
+    ]
+  },
+  "GYUDON": {
+    "categoria": "Fondos",
+    "platos": [
+      "Gyudon"
+    ],
+    "insumos": [
+      {
+        "insumo": "Lomo Gyudon Porción",
+        "cantidad": "1 porción (150g)"
+      },
+      {
+        "insumo": "Salsa Gyudon",
+        "cantidad": "170ml"
+      },
+      {
+        "insumo": "Arroz Gohan",
+        "cantidad": "250g"
+      },
+      {
+        "insumo": "Huevo",
+        "cantidad": "1 und"
+      }
+    ]
+  },
+  "OYACODON": {
+    "categoria": "Fondos",
+    "platos": [
+      "Oyacodon"
+    ],
+    "insumos": [
+      {
+        "insumo": "Pollo Cocido Cuadro",
+        "cantidad": "1 porción (0.2 pack x 5)"
+      },
+      {
+        "insumo": "Salsa Katsudon",
+        "cantidad": "170ml"
+      },
+      {
+        "insumo": "Arroz Gohan",
+        "cantidad": "250g"
+      },
+      {
+        "insumo": "Huevo",
+        "cantidad": "1 und"
+      }
+    ]
+  },
+  "OMURAISU": {
+    "categoria": "Fondos",
+    "platos": [
+      "Omuraisu"
+    ],
+    "insumos": [
+      {
+        "insumo": "Arroz Gohan",
+        "cantidad": "250g"
+      },
+      {
+        "insumo": "Pollo Cocido Cuadro",
+        "cantidad": "1 porción"
+      },
+      {
+        "insumo": "Huevo",
+        "cantidad": "2 und"
+      },
+      {
+        "insumo": "Ketchup",
+        "cantidad": "20g"
+      }
+    ]
+  },
+  "BATAYAKI RAMEN": {
+    "categoria": "Salteado",
+    "platos": [
+      "Batayaki Ramen"
+    ],
+    "insumos": [
+      {
+        "insumo": "Fideos Batayaki",
+        "cantidad": "1 porción (1/50 caja)"
+      },
+      {
+        "insumo": "Bola de Lomo 150g",
+        "cantidad": "1 bola"
+      },
+      {
+        "insumo": "Mantequilla Batayaki",
+        "cantidad": "1 porción"
+      },
+      {
+        "insumo": "Pack Salsa Batayaki 100g",
+        "cantidad": "0.2 pack"
+      },
+      {
+        "insumo": "Champiñones",
+        "cantidad": "40g"
+      }
+    ]
+  },
+  "YAKIRAMEN": {
+    "categoria": "Salteado",
+    "platos": [
+      "Yakiramen"
+    ],
+    "insumos": [
+      {
+        "insumo": "Pollo Cocido Tiras",
+        "cantidad": "1 porción (0.2 pack x 5)"
+      },
+      {
+        "insumo": "Fideos Ramen",
+        "cantidad": "1 porción M (190g)"
+      },
+      {
+        "insumo": "Salsa Yasaitame",
+        "cantidad": "95ml"
+      }
+    ]
+  },
+  "YAKIUDON": {
+    "categoria": "Salteado",
+    "platos": [
+      "Yakiudon"
+    ],
+    "insumos": [
+      {
+        "insumo": "Pasta Udon",
+        "cantidad": "200g (300g * 0.667)"
+      },
+      {
+        "insumo": "Pollo Cocido Tiras",
+        "cantidad": "1 porción"
+      },
+      {
+        "insumo": "Salsa Yasaitame",
+        "cantidad": "95ml"
+      }
+    ]
+  },
+  "YASAITAME DE POLLO": {
+    "categoria": "Salteado",
+    "platos": [
+      "Yasaitame De Pollo"
+    ],
+    "insumos": [
+      {
+        "insumo": "Pollo Cocido Tiras",
+        "cantidad": "2 porciones (0.4 pack x 5)"
+      },
+      {
+        "insumo": "Salsa Yasaitame",
+        "cantidad": "95ml"
+      }
+    ]
+  },
+  "YASAITAME DE LOMO": {
+    "categoria": "Salteado",
+    "platos": [
+      "Yasaitame De Lomo"
+    ],
+    "insumos": [
+      {
+        "insumo": "Bola de Lomo 150g",
+        "cantidad": "1 bola"
+      },
+      {
+        "insumo": "Salsa Yasaitame",
+        "cantidad": "95ml"
+      }
+    ]
+  },
+  "KARAMESHI": {
+    "categoria": "Salteado",
+    "platos": [
+      "Karameshi"
+    ],
+    "insumos": [
+      {
+        "insumo": "Arroz Gohan",
+        "cantidad": "400g"
+      },
+      {
+        "insumo": "Pollo Cocido Cuadro",
+        "cantidad": "1 porción"
+      },
+      {
+        "insumo": "Huevo",
+        "cantidad": "2 und"
+      },
+      {
+        "insumo": "Salsa Tan Tan",
+        "cantidad": "65ml"
+      }
+    ]
+  },
+  "HARUSAME IRICHA": {
+    "categoria": "Salteado",
+    "platos": [
+      "Harusame Iricha"
+    ],
+    "insumos": [
+      {
+        "insumo": "Fideos Harusame",
+        "cantidad": "78.9g (300g * 0.2631)"
+      },
+      {
+        "insumo": "Pollo Cocido Tiras",
+        "cantidad": "1 porción"
+      },
+      {
+        "insumo": "Salsa Harusamen",
+        "cantidad": "70ml"
+      }
+    ]
+  },
+  "CHICKEN TERIYAKI": {
+    "categoria": "Salteado",
+    "platos": [
+      "Chicken Teriyaki"
+    ],
+    "insumos": [
+      {
+        "insumo": "Pollo Cocido Teriyaki",
+        "cantidad": "1 porción (0.2 pack x 5)"
+      },
+      {
+        "insumo": "Salsa Teriyaki",
+        "cantidad": "90ml"
+      }
+    ]
+  },
+  "YAKITORI": {
+    "categoria": "Entradas",
+    "platos": [
+      "Yakitori"
+    ],
+    "insumos": [
+      {
+        "insumo": "Pollo Yakitori Brocheta",
+        "cantidad": "3 brochetas (0.5 und pack x 6)"
+      }
+    ]
+  },
+  "OKONOMIYAKI": {
+    "categoria": "Entradas",
+    "platos": [
+      "Okonomiyaki"
+    ],
+    "insumos": [
+      {
+        "insumo": "Pack Okonomiyaki",
+        "cantidad": "1 und (0.1 pack x 10)"
+      },
+      {
+        "insumo": "Fideos Batayaki/Okonomiyaki",
+        "cantidad": "1 und (1/50 caja)"
+      }
+    ]
+  },
+  "ALITAS (ACEVICHADAS / BBQ / SPICY / TERIYAKI / DIJON / AMAKARAI / ANTICUCHERAS / JONETSU)": {
+    "categoria": "Frituras / Entradas",
+    "platos": [
+      "Alitas (Acevichadas, BBQ, Spicy, Teriyaki, Dijon, Amakarai, Anticuchera, Jonetsu)"
+    ],
+    "insumos": [
+      {
+        "insumo": "Paquete de Alitas",
+        "cantidad": "1 porción = 6 unidades de alita (0.2 de pack x 5 bolsas de 6u)"
+      },
+      {
+        "insumo": "Salsa de Cobertura según tipo",
+        "cantidad": "60g por porción (BBQ, Dijon, Teriyaki, Spicy, Amakarai, Anticuchera o Jonetsu)"
+      }
+    ]
+  },
+  "GYOZAS / AGE GYOZAS": {
+    "categoria": "Frituras / Entradas",
+    "platos": [
+      "Gyozas / Age Gyozas"
+    ],
+    "insumos": [
+      {
+        "insumo": "Pack Gyoza",
+        "cantidad": "6 und por porción (0.078 pack de 13g c/u)"
+      },
+      {
+        "insumo": "Salsa Teriyaki / Salsa Gyoza",
+        "cantidad": "25ml"
+      }
+    ]
+  },
+  "EBI FURAI": {
+    "categoria": "Frituras / Entradas",
+    "platos": [
+      "Ebi Furai porción"
+    ],
+    "insumos": [
+      {
+        "insumo": "Ebi Furai Paquete 30 und",
+        "cantidad": "6 langostinos empanizados (0.2 pack x 30)"
+      },
+      {
+        "insumo": "Salsa Teriyaki",
+        "cantidad": "25ml"
+      }
+    ]
+  },
+  "EBI PHILADELFIA": {
+    "categoria": "Frituras / Entradas",
+    "platos": [
+      "Ebi Philadelfia porción"
+    ],
+    "insumos": [
+      {
+        "insumo": "Ebi Filadelfia Paquete 6 und",
+        "cantidad": "6 und (1 paquete)"
+      },
+      {
+        "insumo": "Queso Crema",
+        "cantidad": "72g"
+      },
+      {
+        "insumo": "Salsa Teriyaki",
+        "cantidad": "25ml"
+      }
+    ]
+  },
+  "KARAGE": {
+    "categoria": "Frituras / Entradas",
+    "platos": [
+      "Karage porción"
+    ],
+    "insumos": [
+      {
+        "insumo": "Pollo Karague Aderezado Crudo",
+        "cantidad": "1 porción (0.2 pack x 5)"
+      }
+    ]
+  },
+  "SODA FRUTOS DEL BOSQUE": {
+    "categoria": "Bebidas",
+    "platos": [
+      "Soda Frutos del Bosque"
+    ],
+    "insumos": [
+      {
+        "insumo": "Esencia Frutos del Bosque",
+        "cantidad": "30ml - 60ml"
+      },
+      {
+        "insumo": "Jarabe de Goma",
+        "cantidad": "60ml"
+      }
+    ]
+  },
+  "SODA PIÑA Y KYURI (PEPINO)": {
+    "categoria": "Bebidas",
+    "platos": [
+      "Soda Piña y Kyuri"
+    ],
+    "insumos": [
+      {
+        "insumo": "Cordial Piña 1L",
+        "cantidad": "30ml"
+      },
+      {
+        "insumo": "Cordial Pepino 1L",
+        "cantidad": "30ml"
+      }
+    ]
+  },
+  "SODA MELON CON GENGIBRE": {
+    "categoria": "Bebidas",
+    "platos": [
+      "Soda Melón con Gengibre"
+    ],
+    "insumos": [
+      {
+        "insumo": "Cordial Melón 1L",
+        "cantidad": "60ml"
+      }
+    ]
+  },
+  "SODA MARACUMANGO": {
+    "categoria": "Bebidas",
+    "platos": [
+      "Soda Maracumango"
+    ],
+    "insumos": [
+      {
+        "insumo": "Cordial de Mango 1L",
+        "cantidad": "60ml"
+      },
+      {
+        "insumo": "Jarabe de Goma",
+        "cantidad": "30ml"
+      }
+    ]
+  }
+}

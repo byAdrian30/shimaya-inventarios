@@ -1,0 +1,3882 @@
+[
+  {
+    "producto": "Taper Unidad",
+    "sku": "PROD228",
+    "subcat": "OTROS",
+    "categoria": "EXTRAS",
+    "cantidadSemana1": 96,
+    "cantidadQuincena": 212
+  },
+  {
+    "producto": "2 SODAS X 18 – SODA DE MARACUYA",
+    "sku": "SODA-MARACUYA",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 94,
+    "cantidadQuincena": 208
+  },
+  {
+    "producto": "2 SODAS X 18 – SODA FRUTOS DEL BOSQUE",
+    "sku": "BAR001",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 69,
+    "cantidadQuincena": 152
+  },
+  {
+    "producto": "Chaufa Shimaya",
+    "sku": "PROD062",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 63,
+    "cantidadQuincena": 139
+  },
+  {
+    "producto": "Limonada Normal Con hierba luisa",
+    "sku": "PROD177-1",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 45,
+    "cantidadQuincena": 99
+  },
+  {
+    "producto": "MENU ESTUDIANTIL PARA DOS – SODA DE MARACUYA",
+    "sku": "SODA-MARACUYA",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 42,
+    "cantidadQuincena": 93
+  },
+  {
+    "producto": "Combo 3 Makis – Maki Acevichado 1 Tabla",
+    "sku": "PROD118",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 42,
+    "cantidadQuincena": 93
+  },
+  {
+    "producto": "Combo 2 Ramen + maki – Chasu Ramen S",
+    "sku": "PROD028",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 40,
+    "cantidadQuincena": 88
+  },
+  {
+    "producto": "Inca Kola Regular",
+    "sku": "PROD014",
+    "subcat": "EMBOTELLADAS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 35,
+    "cantidadQuincena": 77
+  },
+  {
+    "producto": "Maki Acevichado 1/2 Tabla",
+    "sku": "PROD117",
+    "subcat": "MAKIS 1/2 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 32,
+    "cantidadQuincena": 71
+  },
+  {
+    "producto": "Combo 2 Makis + Ramen – Maki Acevichado 1 Tabla",
+    "sku": "PROD118",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 31,
+    "cantidadQuincena": 69
+  },
+  {
+    "producto": "Maki Acevichado 1 Tabla",
+    "sku": "PROD118",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 31,
+    "cantidadQuincena": 69
+  },
+  {
+    "producto": "Chasu Ramen S",
+    "sku": "PROD028",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 30,
+    "cantidadQuincena": 66
+  },
+  {
+    "producto": "Agua Mineral Sin Gas",
+    "sku": "PROD002",
+    "subcat": "EMBOTELLADAS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 29,
+    "cantidadQuincena": 64
+  },
+  {
+    "producto": "Combo 2 Makis – Maki Acevichado 1 Tabla",
+    "sku": "PROD118",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 27,
+    "cantidadQuincena": 60
+  },
+  {
+    "producto": "MENU ESTUDIANTIL PARA DOS – SODA MELON CON GENGIBRE",
+    "sku": "soda-melon-con-gengibre",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 26,
+    "cantidadQuincena": 57
+  },
+  {
+    "producto": "Chasu Ramen M",
+    "sku": "PROD029",
+    "subcat": "RAMEN M",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 26,
+    "cantidadQuincena": 57
+  },
+  {
+    "producto": "Maracuya Normal",
+    "sku": "PROD182",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 25,
+    "cantidadQuincena": 55
+  },
+  {
+    "producto": "Age Gyozas x 6 und.",
+    "sku": "PROD020",
+    "subcat": "ENTRADAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 25,
+    "cantidadQuincena": 55
+  },
+  {
+    "producto": "2 SODAS X 18 – SODA PIÑA Y KYURI",
+    "sku": "soda-pina-y-kyuri",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 23,
+    "cantidadQuincena": 51
+  },
+  {
+    "producto": "Limonada Normal Clasica",
+    "sku": "PROD177-3",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 22,
+    "cantidadQuincena": 49
+  },
+  {
+    "producto": "Ebi Furai x 6 und.",
+    "sku": "PROD021",
+    "subcat": "ENTRADAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 22,
+    "cantidadQuincena": 49
+  },
+  {
+    "producto": "Combo 3 Makis – Maki Furai 1 Tabla",
+    "sku": "PROD136",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 22,
+    "cantidadQuincena": 49
+  },
+  {
+    "producto": "MENU ESTUDIANTIL PARA DOS – Maki Acevichado 1/2 Tabla",
+    "sku": "PROD117",
+    "subcat": "MAKIS 1/2 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 22,
+    "cantidadQuincena": 49
+  },
+  {
+    "producto": "Batayaki ramen",
+    "sku": "PROD299",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 22,
+    "cantidadQuincena": 49
+  },
+  {
+    "producto": "Limonada Frozen Clasica",
+    "sku": "PROD179-3",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 21,
+    "cantidadQuincena": 46
+  },
+  {
+    "producto": "Maki Furai 1 Tabla",
+    "sku": "PROD136",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 21,
+    "cantidadQuincena": 46
+  },
+  {
+    "producto": "Limonada Frozen Con hierba luisa",
+    "sku": "PROD179-1",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 20,
+    "cantidadQuincena": 44
+  },
+  {
+    "producto": "MENU ESTUDIANTIL PARA DOS – SODA PIÑA Y KYURI",
+    "sku": "soda-pina-y-kyuri",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 20,
+    "cantidadQuincena": 44
+  },
+  {
+    "producto": "Obento de cerdo – OBENTO - Age Gyozas x 2 und.",
+    "sku": "PROD234",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 20,
+    "cantidadQuincena": 44
+  },
+  {
+    "producto": "Obento de cerdo – OBENTO - Harusame Iricha",
+    "sku": "PROD235",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 20,
+    "cantidadQuincena": 44
+  },
+  {
+    "producto": "Obento de cerdo – OBENTO - Porción de Arroz",
+    "sku": "PROD236",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 20,
+    "cantidadQuincena": 44
+  },
+  {
+    "producto": "Coca Cola Regular",
+    "sku": "PROD008",
+    "subcat": "EMBOTELLADAS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 19,
+    "cantidadQuincena": 42
+  },
+  {
+    "producto": "Agrandar Ramen M",
+    "sku": "PROD202",
+    "subcat": "RAMEN M",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 19,
+    "cantidadQuincena": 42
+  },
+  {
+    "producto": "MENU ESTUDIANTIL PARA DOS – Chasu Ramen S",
+    "sku": "PROD028",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 19,
+    "cantidadQuincena": 42
+  },
+  {
+    "producto": "Combo 2 Makis + Ramen – Chasu Ramen S",
+    "sku": "PROD028",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 18,
+    "cantidadQuincena": 40
+  },
+  {
+    "producto": "3x2 EN MAKIS – Maki Acevichado 1 Tabla",
+    "sku": "PROD118",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 17,
+    "cantidadQuincena": 38
+  },
+  {
+    "producto": "Combo 2 Makis + Ramen – Maki Furai 1 Tabla",
+    "sku": "PROD136",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 17,
+    "cantidadQuincena": 38
+  },
+  {
+    "producto": "MENU ESTUDIANTIL PARA DOS – Maki Furai 1/2 Tabla",
+    "sku": "PROD135",
+    "subcat": "MAKIS 1/2 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 17,
+    "cantidadQuincena": 38
+  },
+  {
+    "producto": "SODA DE MARACUYA",
+    "sku": "SODA-MARACUYA",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 16,
+    "cantidadQuincena": 35
+  },
+  {
+    "producto": "Combo 1 Maki + 1 Ramen – Chasu Ramen S",
+    "sku": "PROD028",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 16,
+    "cantidadQuincena": 35
+  },
+  {
+    "producto": "Ebi Ramen S",
+    "sku": "PROD032",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 16,
+    "cantidadQuincena": 35
+  },
+  {
+    "producto": "Shoyu Ramen S",
+    "sku": "PROD049",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 16,
+    "cantidadQuincena": 35
+  },
+  {
+    "producto": "MENU ESTUDIANTIL – SODA DE LYTCHEE",
+    "sku": "soda-de-lytchee",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 15,
+    "cantidadQuincena": 33
+  },
+  {
+    "producto": "6 Alitas + 2 Makis – Maki Acevichado 1 Tabla",
+    "sku": "PROD118",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 15,
+    "cantidadQuincena": 33
+  },
+  {
+    "producto": "Ebi Ramen M",
+    "sku": "PROD033",
+    "subcat": "RAMEN M",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 15,
+    "cantidadQuincena": 33
+  },
+  {
+    "producto": "Coca Cola Zero",
+    "sku": "PROD009",
+    "subcat": "EMBOTELLADAS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 14,
+    "cantidadQuincena": 31
+  },
+  {
+    "producto": "Té Rojo Taza",
+    "sku": "PROD200",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 14,
+    "cantidadQuincena": 31
+  },
+  {
+    "producto": "MENU ESTUDIANTIL – Chaufa Shimaya",
+    "sku": "PROD062",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 14,
+    "cantidadQuincena": 31
+  },
+  {
+    "producto": "Combo 2 Ramen + maki – Tonkotsu Ramen S",
+    "sku": "PROD058",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 14,
+    "cantidadQuincena": 31
+  },
+  {
+    "producto": "Combo 2 Ramen + maki – Maki Acevichado 1 Tabla",
+    "sku": "PROD118",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 13,
+    "cantidadQuincena": 29
+  },
+  {
+    "producto": "Chicken Katsu",
+    "sku": "PROD063",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 13,
+    "cantidadQuincena": 29
+  },
+  {
+    "producto": "MENU ESTUDIANTIL PARA DOS – Chaufa Shimaya",
+    "sku": "PROD062",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 13,
+    "cantidadQuincena": 29
+  },
+  {
+    "producto": "6 Alitas + 2 Ramen – Chasu Ramen S",
+    "sku": "PROD028",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 13,
+    "cantidadQuincena": 29
+  },
+  {
+    "producto": "Mango Normal",
+    "sku": "PROD180",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 12,
+    "cantidadQuincena": 27
+  },
+  {
+    "producto": "MENU ESTUDIANTIL PARA DOS – SODA FRUTOS DEL BOSQUE",
+    "sku": "BAR001",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 12,
+    "cantidadQuincena": 27
+  },
+  {
+    "producto": "Combo 2 Ramen + maki – Maki Furai 1 Tabla",
+    "sku": "PROD136",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 12,
+    "cantidadQuincena": 27
+  },
+  {
+    "producto": "Tan Tan Men M",
+    "sku": "PROD055",
+    "subcat": "RAMEN M",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 12,
+    "cantidadQuincena": 27
+  },
+  {
+    "producto": "Tan Tan Men S",
+    "sku": "PROD054",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 12,
+    "cantidadQuincena": 27
+  },
+  {
+    "producto": "Aloe Original",
+    "sku": "PROD003",
+    "subcat": "EMBOTELLADAS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 11,
+    "cantidadQuincena": 24
+  },
+  {
+    "producto": "Maracuya Frozen",
+    "sku": "PROD184",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 11,
+    "cantidadQuincena": 24
+  },
+  {
+    "producto": "Te De Jazmin Taza",
+    "sku": "PROD198",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 11,
+    "cantidadQuincena": 24
+  },
+  {
+    "producto": "1 Ramen + 1 Gyoza – Gyozas x 6und.",
+    "sku": "PROD023",
+    "subcat": "ENTRADAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 11,
+    "cantidadQuincena": 24
+  },
+  {
+    "producto": "Ebi Philadelfia x 6 und.",
+    "sku": "PROD022",
+    "subcat": "ENTRADAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 11,
+    "cantidadQuincena": 24
+  },
+  {
+    "producto": "6 Alitas + 2 Makis – Maki Furai 1 Tabla",
+    "sku": "PROD136",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 11,
+    "cantidadQuincena": 24
+  },
+  {
+    "producto": "Combo 2 Makis – Maki Furai 1 Tabla",
+    "sku": "PROD136",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 11,
+    "cantidadQuincena": 24
+  },
+  {
+    "producto": "Combo 2 Ramen + maki – Tan Tan Men S",
+    "sku": "PROD054",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 11,
+    "cantidadQuincena": 24
+  },
+  {
+    "producto": "Obento de cerdo – OBENTO - Chancho Teriyaki",
+    "sku": "PROD238",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 11,
+    "cantidadQuincena": 24
+  },
+  {
+    "producto": "Obento de cerdo – OBENTO - Maki Acevichado 1/2 Tabla",
+    "sku": "MKOPROD117",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 11,
+    "cantidadQuincena": 24
+  },
+  {
+    "producto": "Obento de ebi – OBENTO - Age Gyozas x 2 und.",
+    "sku": "PROD234",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 11,
+    "cantidadQuincena": 24
+  },
+  {
+    "producto": "Obento de ebi – OBENTO - Harusame Iricha",
+    "sku": "PROD235",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 11,
+    "cantidadQuincena": 24
+  },
+  {
+    "producto": "Obento de ebi – OBENTO - Porción de Arroz",
+    "sku": "PROD236",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 11,
+    "cantidadQuincena": 24
+  },
+  {
+    "producto": "TOKYO MULE",
+    "sku": "TM",
+    "subcat": "COCTELES",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 10,
+    "cantidadQuincena": 22
+  },
+  {
+    "producto": "Agua Mineral Con Gas",
+    "sku": "PROD001",
+    "subcat": "EMBOTELLADAS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 10,
+    "cantidadQuincena": 22
+  },
+  {
+    "producto": "Tamarindo Jarra",
+    "sku": "tamarindo-jarra",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 10,
+    "cantidadQuincena": 22
+  },
+  {
+    "producto": "6 Alitas + 2 Makis – ⁠⁠Alitas BBQ x 6 unid",
+    "sku": "PROD276",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 10,
+    "cantidadQuincena": 22
+  },
+  {
+    "producto": "Combo 1 Maki + 1 Ramen – Maki Acevichado 1 Tabla",
+    "sku": "PROD118",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 10,
+    "cantidadQuincena": 22
+  },
+  {
+    "producto": "Maki Furai 1/2 Tabla",
+    "sku": "PROD135",
+    "subcat": "MAKIS 1/2 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 10,
+    "cantidadQuincena": 22
+  },
+  {
+    "producto": "Katsudon",
+    "sku": "PROD075",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 10,
+    "cantidadQuincena": 22
+  },
+  {
+    "producto": "Combo 2 Makis + Ramen – Shoyu Ramen S",
+    "sku": "PROD049",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 10,
+    "cantidadQuincena": 22
+  },
+  {
+    "producto": "Combo 2 Ramen + maki – Miso Ramen S",
+    "sku": "PROD036",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 10,
+    "cantidadQuincena": 22
+  },
+  {
+    "producto": "Adicional Salsa",
+    "sku": "PROD224",
+    "subcat": "OTROS",
+    "categoria": "EXTRAS",
+    "cantidadSemana1": 10,
+    "cantidadQuincena": 22
+  },
+  {
+    "producto": "Ayuditas",
+    "sku": "PROD217",
+    "subcat": "OTROS",
+    "categoria": "EXTRAS",
+    "cantidadSemana1": 10,
+    "cantidadQuincena": 22
+  },
+  {
+    "producto": "Cheesecake japones",
+    "sku": "cheecake-jap",
+    "subcat": "OTROS",
+    "categoria": "EXTRAS",
+    "cantidadSemana1": 10,
+    "cantidadQuincena": 22
+  },
+  {
+    "producto": "Fanta Naranja",
+    "sku": "PROD012",
+    "subcat": "EMBOTELLADAS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 9,
+    "cantidadQuincena": 20
+  },
+  {
+    "producto": "Mango Frozen",
+    "sku": "PROD181",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 9,
+    "cantidadQuincena": 20
+  },
+  {
+    "producto": "MENU ESTUDIANTIL – SODA MELON CON GENGIBRE",
+    "sku": "soda-melon-con-gengibre",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 9,
+    "cantidadQuincena": 20
+  },
+  {
+    "producto": "SODA PIÑA Y KYURI",
+    "sku": "soda-pina-y-kyuri",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 9,
+    "cantidadQuincena": 20
+  },
+  {
+    "producto": "12 Alitas + 1 Maki – Alitas acevichadas x 6 unid",
+    "sku": "PROD277",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 9,
+    "cantidadQuincena": 20
+  },
+  {
+    "producto": "⁠⁠Alitas BBQ x 6 unid",
+    "sku": "PROD276",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 9,
+    "cantidadQuincena": 20
+  },
+  {
+    "producto": "Gyozas x 6und.",
+    "sku": "PROD023",
+    "subcat": "ENTRADAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 9,
+    "cantidadQuincena": 20
+  },
+  {
+    "producto": "PEDIDOS YA: Gyoza + 6 alitas + tabla de maki – Age Gyozas x 6 und.",
+    "sku": "PROD020",
+    "subcat": "ENTRADAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 9,
+    "cantidadQuincena": 20
+  },
+  {
+    "producto": "Combo 3 Makis – Yama maki 1 Tabla",
+    "sku": "PROD305",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 9,
+    "cantidadQuincena": 20
+  },
+  {
+    "producto": "MENU ESTUDIANTIL – Maki Acevichado 1/2 Tabla",
+    "sku": "PROD117",
+    "subcat": "MAKIS 1/2 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 9,
+    "cantidadQuincena": 20
+  },
+  {
+    "producto": "MENU ESTUDIANTIL PARA DOS – Chicken Katsu",
+    "sku": "PROD063",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 9,
+    "cantidadQuincena": 20
+  },
+  {
+    "producto": "Combo 2 Ramen + maki – Shoyu Ramen S",
+    "sku": "PROD049",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 9,
+    "cantidadQuincena": 20
+  },
+  {
+    "producto": "Tonkotsu Ramen S",
+    "sku": "PROD058",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 9,
+    "cantidadQuincena": 20
+  },
+  {
+    "producto": "Obento de cerdo – OBENTO - Tonkatsu",
+    "sku": "OPROD083",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 9,
+    "cantidadQuincena": 20
+  },
+  {
+    "producto": "2 SODAS X 18 – SODA MELON CON GENGIBRE",
+    "sku": "soda-melon-con-gengibre",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 8,
+    "cantidadQuincena": 18
+  },
+  {
+    "producto": "12 Alitas + 1 Maki – ⁠⁠Alitas BBQ x 6 unid",
+    "sku": "PROD276",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 8,
+    "cantidadQuincena": 18
+  },
+  {
+    "producto": "Combo 1 Maki + 1 Ramen – Maki Furai 1 Tabla",
+    "sku": "PROD136",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 8,
+    "cantidadQuincena": 18
+  },
+  {
+    "producto": "Combo 2 Makis – Yama maki 1 Tabla",
+    "sku": "PROD305",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 8,
+    "cantidadQuincena": 18
+  },
+  {
+    "producto": "Omuraisu",
+    "sku": "PROD077",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 8,
+    "cantidadQuincena": 18
+  },
+  {
+    "producto": "Poke Salmon",
+    "sku": "PROD081",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 8,
+    "cantidadQuincena": 18
+  },
+  {
+    "producto": "Miso Ramen S",
+    "sku": "PROD036",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 8,
+    "cantidadQuincena": 18
+  },
+  {
+    "producto": "Promo: 3 Ramen tamaño S – Shoyu Ramen S",
+    "sku": "PROD049",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 8,
+    "cantidadQuincena": 18
+  },
+  {
+    "producto": "Shio Ramen S",
+    "sku": "PROD044",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 8,
+    "cantidadQuincena": 18
+  },
+  {
+    "producto": "Obento de ebi – OBENTO - Maki Acevichado 1/2 Tabla",
+    "sku": "MKOPROD117",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 8,
+    "cantidadQuincena": 18
+  },
+  {
+    "producto": "Combo 8 Lukitas",
+    "sku": "COMBO007",
+    "subcat": "PROMOCIONES",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 8,
+    "cantidadQuincena": 18
+  },
+  {
+    "producto": "TOKYO MULE 50% L-V",
+    "sku": "TM2",
+    "subcat": "COCTELES",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 7,
+    "cantidadQuincena": 15
+  },
+  {
+    "producto": "Piña Normal",
+    "sku": "PROD191",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 7,
+    "cantidadQuincena": 15
+  },
+  {
+    "producto": "SODA FRUTOS DEL BOSQUE",
+    "sku": "BAR001",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 7,
+    "cantidadQuincena": 15
+  },
+  {
+    "producto": "6 Alitas + 2 Ramen – ⁠⁠Alitas BBQ x 6 unid",
+    "sku": "PROD276",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 7,
+    "cantidadQuincena": 15
+  },
+  {
+    "producto": "PEDIDOS YA: Gyoza + 6 alitas + tabla de maki – Alitas acevichadas x 6 unid",
+    "sku": "PROD277",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 7,
+    "cantidadQuincena": 15
+  },
+  {
+    "producto": "3x2 EN MAKIS – Maki Guacamole 1 Tabla",
+    "sku": "PROD102",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 7,
+    "cantidadQuincena": 15
+  },
+  {
+    "producto": "Combo 2 Makis – Maki Guacamole 1 Tabla",
+    "sku": "PROD102",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 7,
+    "cantidadQuincena": 15
+  },
+  {
+    "producto": "Maki Spicy 1 Tabla",
+    "sku": "PROD160",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 7,
+    "cantidadQuincena": 15
+  },
+  {
+    "producto": "Chicken Teriyaki",
+    "sku": "PROD065",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 7,
+    "cantidadQuincena": 15
+  },
+  {
+    "producto": "Yakiramen",
+    "sku": "PROD087",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 7,
+    "cantidadQuincena": 15
+  },
+  {
+    "producto": "Obento de ebi – OBENTO - Ebi Furai x 5 und.",
+    "sku": "PROD237",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 7,
+    "cantidadQuincena": 15
+  },
+  {
+    "producto": "Obento de lomo – OBENTO - Age Gyozas x 2 und.",
+    "sku": "PROD234",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 7,
+    "cantidadQuincena": 15
+  },
+  {
+    "producto": "Obento de lomo – OBENTO - Harusame Iricha",
+    "sku": "PROD235",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 7,
+    "cantidadQuincena": 15
+  },
+  {
+    "producto": "Obento de lomo – OBENTO - Porción de Arroz",
+    "sku": "PROD236",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 7,
+    "cantidadQuincena": 15
+  },
+  {
+    "producto": "DRAGON TONIC",
+    "sku": "dragon-tonic",
+    "subcat": "COCTELES",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 6,
+    "cantidadQuincena": 13
+  },
+  {
+    "producto": "Inca Kola Zero",
+    "sku": "PROD015",
+    "subcat": "EMBOTELLADAS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 6,
+    "cantidadQuincena": 13
+  },
+  {
+    "producto": "2 SODAS X 18 – SODA DE LYTCHEE",
+    "sku": "soda-de-lytchee",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 6,
+    "cantidadQuincena": 13
+  },
+  {
+    "producto": "Arandano Normal",
+    "sku": "PROD175",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 6,
+    "cantidadQuincena": 13
+  },
+  {
+    "producto": "Te Afrutado Taza",
+    "sku": "PROD-041-1",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 6,
+    "cantidadQuincena": 13
+  },
+  {
+    "producto": "Te De Jazmin Jarra",
+    "sku": "PROD199",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 6,
+    "cantidadQuincena": 13
+  },
+  {
+    "producto": "12 Alitas + 1 Ramen – Alitas acevichadas x 6 unid",
+    "sku": "PROD277",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 6,
+    "cantidadQuincena": 13
+  },
+  {
+    "producto": "6 Alitas + 2 Makis – Alitas acevichadas x 6 unid",
+    "sku": "PROD277",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 6,
+    "cantidadQuincena": 13
+  },
+  {
+    "producto": "⁠⁠Alitas BBQ x 12 unid",
+    "sku": "PROD282",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 6,
+    "cantidadQuincena": 13
+  },
+  {
+    "producto": "Yakitori",
+    "sku": "PROD027",
+    "subcat": "ENTRADAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 6,
+    "cantidadQuincena": 13
+  },
+  {
+    "producto": "3x2 EN MAKIS – Maki Furai 1 Tabla",
+    "sku": "PROD136",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 6,
+    "cantidadQuincena": 13
+  },
+  {
+    "producto": "Combo 2 Makis + Ramen – Yama maki 1 Tabla",
+    "sku": "PROD305",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 6,
+    "cantidadQuincena": 13
+  },
+  {
+    "producto": "Yakimeshi",
+    "sku": "PROD085",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 6,
+    "cantidadQuincena": 13
+  },
+  {
+    "producto": "Miso Ramen M",
+    "sku": "PROD037",
+    "subcat": "RAMEN M",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 6,
+    "cantidadQuincena": 13
+  },
+  {
+    "producto": "Shoyu Ramen M",
+    "sku": "PROD050",
+    "subcat": "RAMEN M",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 6,
+    "cantidadQuincena": 13
+  },
+  {
+    "producto": "Combo 2 Makis + Ramen – Tan Tan Men S",
+    "sku": "PROD054",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 6,
+    "cantidadQuincena": 13
+  },
+  {
+    "producto": "Obento de cerdo – OBENTO - Maki California 1/2 Tabla",
+    "sku": "MKOPROD129",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 6,
+    "cantidadQuincena": 13
+  },
+  {
+    "producto": "Obento de lomo – OBENTO - Yasaitame De Lomo",
+    "sku": "OPROD089",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 6,
+    "cantidadQuincena": 13
+  },
+  {
+    "producto": "Obento de pollo – OBENTO - Age Gyozas x 2 und.",
+    "sku": "PROD234",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 6,
+    "cantidadQuincena": 13
+  },
+  {
+    "producto": "Obento de pollo – OBENTO - Harusame Iricha",
+    "sku": "PROD235",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 6,
+    "cantidadQuincena": 13
+  },
+  {
+    "producto": "Obento de pollo – OBENTO - Porción de Arroz",
+    "sku": "PROD236",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 6,
+    "cantidadQuincena": 13
+  },
+  {
+    "producto": "MOJITO CLASICO 50% L-V",
+    "sku": "MC2",
+    "subcat": "COCTELES",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 5,
+    "cantidadQuincena": 11
+  },
+  {
+    "producto": "Menu Ejecutivo – Inca Kola Regular",
+    "sku": "PROD014",
+    "subcat": "EMBOTELLADAS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 5,
+    "cantidadQuincena": 11
+  },
+  {
+    "producto": "Ramune Botella",
+    "sku": "PROD016",
+    "subcat": "EMBOTELLADAS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 5,
+    "cantidadQuincena": 11
+  },
+  {
+    "producto": "Sprite Regular",
+    "sku": "PROD019",
+    "subcat": "EMBOTELLADAS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 5,
+    "cantidadQuincena": 11
+  },
+  {
+    "producto": "Piña Frozen",
+    "sku": "PROD192",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 5,
+    "cantidadQuincena": 11
+  },
+  {
+    "producto": "SODA MELON CON GENGIBRE",
+    "sku": "soda-melon-con-gengibre",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 5,
+    "cantidadQuincena": 11
+  },
+  {
+    "producto": "12 Alitas + 1 Ramen – ⁠⁠Alitas BBQ x 6 unid",
+    "sku": "PROD276",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 5,
+    "cantidadQuincena": 11
+  },
+  {
+    "producto": "Alitas acevichadas x 6 unid",
+    "sku": "PROD277",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 5,
+    "cantidadQuincena": 11
+  },
+  {
+    "producto": "1 Ramen + 1 Gyoza – Age Gyozas x 6 und.",
+    "sku": "PROD020",
+    "subcat": "ENTRADAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 5,
+    "cantidadQuincena": 11
+  },
+  {
+    "producto": "3x2 EN MAKIS – Yama maki 1 Tabla",
+    "sku": "PROD305",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 5,
+    "cantidadQuincena": 11
+  },
+  {
+    "producto": "Combo 2 Makis – Maki Kiro 1 Tabla",
+    "sku": "PROD111",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 5,
+    "cantidadQuincena": 11
+  },
+  {
+    "producto": "Combo 2 Ramen + maki – Yama maki 1 Tabla",
+    "sku": "PROD305",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 5,
+    "cantidadQuincena": 11
+  },
+  {
+    "producto": "Combo 3 Makis – Maki Guacamole 1 Tabla",
+    "sku": "PROD102",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 5,
+    "cantidadQuincena": 11
+  },
+  {
+    "producto": "Maki Guacamole 1 Tabla",
+    "sku": "PROD102",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 5,
+    "cantidadQuincena": 11
+  },
+  {
+    "producto": "PEDIDOS YA: Gyoza + 6 alitas + tabla de maki – Maki Acevichado 1 Tabla",
+    "sku": "PROD118",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 5,
+    "cantidadQuincena": 11
+  },
+  {
+    "producto": "Maki Anticuchero 1/2 Tabla",
+    "sku": "PROD269",
+    "subcat": "MAKIS 1/2 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 5,
+    "cantidadQuincena": 11
+  },
+  {
+    "producto": "Maki Guacamole 1/2 Tabla",
+    "sku": "PROD104",
+    "subcat": "MAKIS 1/2 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 5,
+    "cantidadQuincena": 11
+  },
+  {
+    "producto": "Karameshi",
+    "sku": "PROD070",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 5,
+    "cantidadQuincena": 11
+  },
+  {
+    "producto": "Katsu Kare",
+    "sku": "PROD074",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 5,
+    "cantidadQuincena": 11
+  },
+  {
+    "producto": "Yasaitame De Pollo",
+    "sku": "PROD090",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 5,
+    "cantidadQuincena": 11
+  },
+  {
+    "producto": "Tonkotsu Ramen M",
+    "sku": "PROD059",
+    "subcat": "RAMEN M",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 5,
+    "cantidadQuincena": 11
+  },
+  {
+    "producto": "1 Ramen + 1 Gyoza – Chasu Ramen S",
+    "sku": "PROD028",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 5,
+    "cantidadQuincena": 11
+  },
+  {
+    "producto": "1 Ramen + 1 Gyoza – Miso Ramen S",
+    "sku": "PROD036",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 5,
+    "cantidadQuincena": 11
+  },
+  {
+    "producto": "6 Alitas + 2 Ramen – Miso Ramen S",
+    "sku": "PROD036",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 5,
+    "cantidadQuincena": 11
+  },
+  {
+    "producto": "Combo 1 Maki + 1 Ramen – Shoyu Ramen S",
+    "sku": "PROD049",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 5,
+    "cantidadQuincena": 11
+  },
+  {
+    "producto": "Obento de pollo – OBENTO - Maki Acevichado 1/2 Tabla",
+    "sku": "MKOPROD117",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 5,
+    "cantidadQuincena": 11
+  },
+  {
+    "producto": "SAKHERINHA  50% L-V",
+    "sku": "SK2",
+    "subcat": "COCTELES",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 4,
+    "cantidadQuincena": 9
+  },
+  {
+    "producto": "Te Afrutado Jarra",
+    "sku": "PROD-041",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 4,
+    "cantidadQuincena": 9
+  },
+  {
+    "producto": "⁠⁠Alitas anticucheras x 6 unid",
+    "sku": "PROD279",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 4,
+    "cantidadQuincena": 9
+  },
+  {
+    "producto": "Karage",
+    "sku": "PROD025",
+    "subcat": "ENTRADAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 4,
+    "cantidadQuincena": 9
+  },
+  {
+    "producto": "PEDIDOS YA: Gyoza + 6 alitas + tabla de maki – Gyozas x 6und.",
+    "sku": "PROD023",
+    "subcat": "ENTRADAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 4,
+    "cantidadQuincena": 9
+  },
+  {
+    "producto": "3x2 EN MAKIS – Maki Anticuchero 1 Tabla",
+    "sku": "PROD268",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 4,
+    "cantidadQuincena": 9
+  },
+  {
+    "producto": "6 Alitas + 2 Makis – Yama maki 1 Tabla",
+    "sku": "PROD305",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 4,
+    "cantidadQuincena": 9
+  },
+  {
+    "producto": "Combo 2 Makis – Maki Spicy 1 Tabla",
+    "sku": "PROD160",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 4,
+    "cantidadQuincena": 9
+  },
+  {
+    "producto": "Combo 2 Makis + Ramen – Maki Guacamole 1 Tabla",
+    "sku": "PROD102",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 4,
+    "cantidadQuincena": 9
+  },
+  {
+    "producto": "Combo 3 Makis – Maki Murazaki 1 Tabla",
+    "sku": "PROD145",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 4,
+    "cantidadQuincena": 9
+  },
+  {
+    "producto": "Combo 3 Makis – Maki Spicy 1 Tabla",
+    "sku": "PROD160",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 4,
+    "cantidadQuincena": 9
+  },
+  {
+    "producto": "MENU ESTUDIANTIL – Maki Furai 1/2 Tabla",
+    "sku": "PROD135",
+    "subcat": "MAKIS 1/2 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 4,
+    "cantidadQuincena": 9
+  },
+  {
+    "producto": "MENU ESTUDIANTIL PARA DOS – Maki California 1/2 Tabla",
+    "sku": "PROD129",
+    "subcat": "MAKIS 1/2 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 4,
+    "cantidadQuincena": 9
+  },
+  {
+    "producto": "Yasaitame De Lomo",
+    "sku": "PROD089",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 4,
+    "cantidadQuincena": 9
+  },
+  {
+    "producto": "Tonkotsu Ramen L",
+    "sku": "PROD060",
+    "subcat": "RAMEN L",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 4,
+    "cantidadQuincena": 9
+  },
+  {
+    "producto": "6 Alitas + 2 Ramen – Tan Tan Men S",
+    "sku": "PROD054",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 4,
+    "cantidadQuincena": 9
+  },
+  {
+    "producto": "6 Alitas + 2 Ramen – Tonkotsu Ramen S",
+    "sku": "PROD058",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 4,
+    "cantidadQuincena": 9
+  },
+  {
+    "producto": "Combo 2 Ramen + maki – Ramen Vegetariano S",
+    "sku": "PROD040",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 4,
+    "cantidadQuincena": 9
+  },
+  {
+    "producto": "Menu Ejecutivo – Ebi Furai x 3 und.",
+    "sku": "TPP-ME-05",
+    "subcat": "MENÚ MEDIAS ENTRADAS",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 4,
+    "cantidadQuincena": 9
+  },
+  {
+    "producto": "Obento de ebi – OBENTO - Ebi Philadelfia x 5 und.",
+    "sku": "PROD239",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 4,
+    "cantidadQuincena": 9
+  },
+  {
+    "producto": "Obento de lomo – OBENTO - Maki Acevichado 1/2 Tabla",
+    "sku": "MKOPROD117",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 4,
+    "cantidadQuincena": 9
+  },
+  {
+    "producto": "SAKERINHA",
+    "sku": "SK",
+    "subcat": "COCTELES",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "MENU ESTUDIANTIL – SODA DE MARACUYA",
+    "sku": "SODA-MARACUYA",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "MENU ESTUDIANTIL – SODA PIÑA Y KYURI",
+    "sku": "soda-pina-y-kyuri",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "6 Alitas + 2 Ramen – Alitas acevichadas x 6 unid",
+    "sku": "PROD277",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "6 Alitas + 2 Ramen – ⁠⁠Alitas anticucheras x 6 unid",
+    "sku": "PROD279",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Misoshiru",
+    "sku": "PROD026",
+    "subcat": "ENTRADAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "12 Alitas + 1 Maki – Maki Acevichado 1 Tabla",
+    "sku": "PROD118",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "12 Alitas + 1 Maki – Maki Furai 1 Tabla",
+    "sku": "PROD136",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "3x2 EN MAKIS – Maki Avocado 1 Tabla",
+    "sku": "PROD127",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "3x2 EN MAKIS – Maki California 1 Tabla",
+    "sku": "PROD130",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Combo 2 Makis – Maki Amakarai 1 Tabla",
+    "sku": "PROD271",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Combo 2 Makis – Maki Hotate 1 Tabla",
+    "sku": "PROD139",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Combo 2 Makis – Maki Inka 1 Tabla",
+    "sku": "PROD105",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Combo 2 Makis – Maki Murazaki 1 Tabla",
+    "sku": "PROD145",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Combo 2 Makis + Ramen – Maki Amakarai 1 Tabla",
+    "sku": "PROD271",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Combo 2 Makis + Ramen – Maki Kiro 1 Tabla",
+    "sku": "PROD111",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Combo 2 Makis + Ramen – Maki Murazaki 1 Tabla",
+    "sku": "PROD145",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Combo 2 Ramen + maki – Maki Kiro 1 Tabla",
+    "sku": "PROD111",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Combo 2 Ramen + maki – Maki Sumoku 1 Tabla",
+    "sku": "PROD163",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Combo 3 Makis – Maki Amai Ryu 1 Tabla",
+    "sku": "PROD121",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Combo 3 Makis – Maki California 1 Tabla",
+    "sku": "PROD130",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Combo 3 Makis – Maki Sumoku 1 Tabla",
+    "sku": "PROD163",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Maki Hotate 1 Tabla",
+    "sku": "PROD139",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Maki Murazaki 1 Tabla",
+    "sku": "PROD145",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Maki Yuwaku 1 Tabla",
+    "sku": "PROD172",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "PEDIDOS YA: Gyoza + 6 alitas + tabla de maki – Yama maki 1 Tabla",
+    "sku": "PROD305",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Maki California 1/2 Tabla",
+    "sku": "PROD129",
+    "subcat": "MAKIS 1/2 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Maki Inka 1/2 Tabla",
+    "sku": "PROD106",
+    "subcat": "MAKIS 1/2 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Maki Murazaki 1/2 Tabla",
+    "sku": "PROD144",
+    "subcat": "MAKIS 1/2 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Maki Spicy 1/2 Tabla",
+    "sku": "PROD161",
+    "subcat": "MAKIS 1/2 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Yama maki 1/2 Tabla",
+    "sku": "PROD313",
+    "subcat": "MAKIS 1/2 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Ebidon",
+    "sku": "PROD066",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "MENU ESTUDIANTIL PARA DOS – Kare Raisu",
+    "sku": "PROD071",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Chasu Ramen L",
+    "sku": "PROD030",
+    "subcat": "RAMEN L",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "1 Ramen + 1 Gyoza – Tan Tan Men S",
+    "sku": "PROD054",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "12 Alitas + 1 Ramen – Chasu Ramen S",
+    "sku": "PROD028",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "6 Alitas + 2 Ramen – Shio Ramen S",
+    "sku": "PROD044",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Combo 1 Maki + 1 Ramen – Miso Ramen S",
+    "sku": "PROD036",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Combo 1 Maki + 1 Ramen – Shio Ramen S",
+    "sku": "PROD044",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Combo 2 Makis + Ramen – Tonkotsu Ramen S",
+    "sku": "PROD058",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Combo 2 Ramen + maki – Ramen Bajiru S",
+    "sku": "PROD263",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Combo 2 Ramen + maki – Shio Ramen S",
+    "sku": "PROD044",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Promo: 3 Ramen tamaño S – Shio Ramen S",
+    "sku": "PROD044",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Ramen Vegetariano S",
+    "sku": "PROD040",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Obento de pollo – OBENTO - Chicken Katsu",
+    "sku": "OPROD063",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Obento de pollo – OBENTO - Karage",
+    "sku": "OPROD025",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Taper Obento Unidad",
+    "sku": "PROD229",
+    "subcat": "OTROS",
+    "categoria": "EXTRAS",
+    "cantidadSemana1": 3,
+    "cantidadQuincena": 7
+  },
+  {
+    "producto": "Maki Acevichado - BL",
+    "sku": "PROD119",
+    "subcat": "BARRA LIBRE SUBCAT",
+    "categoria": "BARRA LIBRE CAT",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "CHILCANO MARACUYA  50% L-V",
+    "sku": "CM2",
+    "subcat": "COCTELES",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Cusqueña",
+    "sku": "PROD010",
+    "subcat": "EMBOTELLADAS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Menu Ejecutivo – Coca Cola Regular",
+    "sku": "PROD008",
+    "subcat": "EMBOTELLADAS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "SOJU Fresa",
+    "sku": "soju-1",
+    "subcat": "EMBOTELLADAS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Ocha Taza",
+    "sku": "PROD189",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Té Rojo Jarra",
+    "sku": "PROD201",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "12 Alitas + 1 Maki – ⁠Alitas amakarai x 6 unid",
+    "sku": "PROD274",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "12 Alitas + 1 Maki – Alitas jōnetsu x 6 unid",
+    "sku": "PROD319",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "3X2 en Alitas de 6 und – Alitas acevichadas x 6 unid",
+    "sku": "PROD277",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "3X2 en Alitas de 6 und – ⁠⁠Alitas BBQ x 6 unid",
+    "sku": "PROD276",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "6 Alitas + 2 Makis – ⁠⁠Alitas anticucheras x 6 unid",
+    "sku": "PROD279",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "6 Alitas + 2 Makis – ⁠Alitas Spicy x 6 unid",
+    "sku": "PROD293",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Alitas acevichadas x 12 unid",
+    "sku": "PROD283",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Alitas anticucheras -BL",
+    "sku": "alitas -003",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "⁠⁠Alitas BBQ x 18 unid",
+    "sku": "ALITAS-023",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "PEDIDOS YA: Gyoza + 6 alitas + tabla de maki – ⁠⁠Alitas BBQ x 6 unid",
+    "sku": "PROD276",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "PEDIDOS YA: Gyoza + 6 alitas + tabla de maki – Alitas jōnetsu x 6 unid",
+    "sku": "PROD319",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Porción Arroz",
+    "sku": "PROD204",
+    "subcat": "GUARNICIONES",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Porción Picante",
+    "sku": "PROD209",
+    "subcat": "GUARNICIONES",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "3x2 EN MAKIS – AMAI maki 1 Tabla",
+    "sku": "PROD304",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "3x2 EN MAKIS – Maki Hotate 1 Tabla",
+    "sku": "PROD139",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "3x2 EN MAKIS – Maki Paseri (Chimi) 1 Tabla",
+    "sku": "PROD156",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "6 Alitas + 2 Makis – AMAI maki 1 Tabla",
+    "sku": "PROD304",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "6 Alitas + 2 Makis – Maki Guacamole 1 Tabla",
+    "sku": "PROD102",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Combo 1 Maki + 1 Ramen – Maki Guacamole 1 Tabla",
+    "sku": "PROD102",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Combo 1 Maki + 1 Ramen – Maki Kiro 1 Tabla",
+    "sku": "PROD111",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Combo 2 Makis – Jōnetsu maki 1 Tabla",
+    "sku": "PROD310",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Combo 2 Makis – Maki Anticuchero 1 Tabla",
+    "sku": "PROD268",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Combo 2 Makis – Maki California 1 Tabla",
+    "sku": "PROD130",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Combo 2 Makis – Maki Yuwaku 1 Tabla",
+    "sku": "PROD172",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Combo 2 Makis + Ramen – AMAI maki 1 Tabla",
+    "sku": "PROD304",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Combo 2 Makis + Ramen – Maki Amai Ryu 1 Tabla",
+    "sku": "PROD121",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Combo 2 Makis + Ramen – Maki Anticuchero 1 Tabla",
+    "sku": "PROD268",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Combo 2 Makis + Ramen – Maki Sumoku 1 Tabla",
+    "sku": "PROD163",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Combo 2 Ramen + maki – Maki Anticuchero 1 Tabla",
+    "sku": "PROD268",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Combo 2 Ramen + maki – Maki Inka 1 Tabla",
+    "sku": "PROD105",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Combo 3 Makis – Maki Anticuchero 1 Tabla",
+    "sku": "PROD268",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Combo 3 Makis – Maki Avocado 1 Tabla",
+    "sku": "PROD127",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Combo 3 Makis – Maki Hotate 1 Tabla",
+    "sku": "PROD139",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Maki Kiro 1 Tabla",
+    "sku": "PROD111",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "PEDIDOS YA: Gyoza + 6 alitas + tabla de maki – Maki Kiro 1 Tabla",
+    "sku": "PROD111",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Yama maki 1 Tabla",
+    "sku": "PROD305",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Maki Digion 1/2 Tabla",
+    "sku": "PROD132",
+    "subcat": "MAKIS 1/2 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Maki Hotate 1/2 Tabla",
+    "sku": "PROD138",
+    "subcat": "MAKIS 1/2 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Maki Keihaku 1/2 Tabla",
+    "sku": "PROD109",
+    "subcat": "MAKIS 1/2 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Maki Kiro 1/2 Tabla",
+    "sku": "PROD112",
+    "subcat": "MAKIS 1/2 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Maki Veggie 1/2 Tabla",
+    "sku": "PROD170",
+    "subcat": "MAKIS 1/2 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Ceviche nikkei",
+    "sku": "PROD298",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Gyudon",
+    "sku": "PROD067",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Kare Raisu",
+    "sku": "PROD071",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Menu Ejecutivo – Katsudon",
+    "sku": "PROD075",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Menu Ejecutivo – Yakiramen",
+    "sku": "PROD087",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "MENU ESTUDIANTIL PARA DOS – Batayaki ramen",
+    "sku": "PROD299",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "MENU ESTUDIANTIL PARA DOS – Karameshi",
+    "sku": "PROD070",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Poke Karage",
+    "sku": "PROD080",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Tonkatsu",
+    "sku": "PROD083",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Yakiudon",
+    "sku": "PROD088",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Miso Ramen L",
+    "sku": "PROD038",
+    "subcat": "RAMEN L",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Shoyu Ramen L",
+    "sku": "PROD051",
+    "subcat": "RAMEN L",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Tan Tan Men L",
+    "sku": "PROD056",
+    "subcat": "RAMEN L",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Ramen Vegetariano M",
+    "sku": "PROD041",
+    "subcat": "RAMEN M",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Shio Ramen M",
+    "sku": "PROD045",
+    "subcat": "RAMEN M",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "1 Ramen + 1 Gyoza – Tonkotsu Ramen S",
+    "sku": "PROD058",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "12 Alitas + 1 Ramen – Miso Ramen S",
+    "sku": "PROD036",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Combo 1 Maki + 1 Ramen – Tan Tan Men S",
+    "sku": "PROD054",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Combo 1 Maki + 1 Ramen – Tonkotsu Ramen S",
+    "sku": "PROD058",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Combo 2 Makis + Ramen – Shio Ramen S",
+    "sku": "PROD044",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "MENU ESTUDIANTIL PARA DOS – Shoyu Ramen S",
+    "sku": "PROD049",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "MENU ESTUDIANTIL PARA DOS – Tonkotsu Ramen S",
+    "sku": "PROD058",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Promo: 3 Ramen tamaño S – Ramen Vegetariano S",
+    "sku": "PROD040",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Chasu Ramen XL",
+    "sku": "PROD031",
+    "subcat": "RAMEN XL",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Tiradito jōnetsu",
+    "sku": "PROD308",
+    "subcat": "TIRADITOS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Obento de cerdo – OBENTO - Maki Amai Ryu 1/2 Tabla",
+    "sku": "MKOPROD120",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Puchi Kurimu",
+    "sku": "crema-volteada",
+    "subcat": "OTROS",
+    "categoria": "EXTRAS",
+    "cantidadSemana1": 2,
+    "cantidadQuincena": 4
+  },
+  {
+    "producto": "Barra Libre Salón",
+    "sku": "PROD100",
+    "subcat": "BARRA LIBRE SUBCAT",
+    "categoria": "BARRA LIBRE CAT",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Maki Inka - BL",
+    "sku": "PROD107",
+    "subcat": "BARRA LIBRE SUBCAT",
+    "categoria": "BARRA LIBRE CAT",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Maki Kuroi - BL",
+    "sku": "PROD116",
+    "subcat": "BARRA LIBRE SUBCAT",
+    "categoria": "BARRA LIBRE CAT",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Maki Pachikai (Kion) - BL",
+    "sku": "PROD154",
+    "subcat": "BARRA LIBRE SUBCAT",
+    "categoria": "BARRA LIBRE CAT",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "CHILCANO LYCHEE",
+    "sku": "CL",
+    "subcat": "COCTELES",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "CHILCANO MARACUYÁ",
+    "sku": "CM",
+    "subcat": "COCTELES",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "MOJITO CLASICO",
+    "sku": "MC",
+    "subcat": "COCTELES",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Menu Ejecutivo – Coca Cola Zero",
+    "sku": "PROD009",
+    "subcat": "EMBOTELLADAS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "MENU ESTUDIANTIL – Fanta Piña",
+    "sku": "PROD013",
+    "subcat": "EMBOTELLADAS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "MENU ESTUDIANTIL PARA DOS – Coca Cola Regular",
+    "sku": "PROD008",
+    "subcat": "EMBOTELLADAS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "MENU ESTUDIANTIL PARA DOS – Inca Kola Regular",
+    "sku": "PROD014",
+    "subcat": "EMBOTELLADAS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "MENU LOCATARIO – Coca Cola Regular",
+    "sku": "PROD008",
+    "subcat": "EMBOTELLADAS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Sake Original",
+    "sku": "PROD017",
+    "subcat": "EMBOTELLADAS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Limonada - BL",
+    "sku": "PROD178",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "MENU ESTUDIANTIL – SODA FRUTOS DEL BOSQUE",
+    "sku": "BAR001",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Mugi Cha Taza",
+    "sku": "PROD187",
+    "subcat": "JUGOS",
+    "categoria": "CARTA BEBIDAS",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "12 Alitas + 1 Maki – ⁠⁠Alitas anticucheras x 6 unid",
+    "sku": "PROD279",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "12 Alitas + 1 Ramen – ⁠Alitas amakarai x 6 unid",
+    "sku": "PROD274",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "12 Alitas + 1 Ramen – ⁠⁠Alitas anticucheras x 6 unid",
+    "sku": "PROD279",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "12 Alitas + 1 Ramen – ⁠Alitas Spicy x 6 unid",
+    "sku": "PROD293",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "3X2 en Alitas de 6 und – ⁠Alitas amakarai x 6 unid",
+    "sku": "PROD274",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "3X2 en Alitas de 6 und – Alitas jōnetsu x 6 unid",
+    "sku": "PROD319",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "6 Alitas + 2 Makis – Alitas jōnetsu x 6 unid",
+    "sku": "PROD319",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "6 Alitas + 2 Ramen – Alitas dijion x 6 unid",
+    "sku": "PROD278",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "6 Alitas + 2 Ramen – Alitas jōnetsu x 6 unid",
+    "sku": "PROD319",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Alitas Acevichadas x 18 unid",
+    "sku": "ALITAS-020",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "⁠Alitas amakarai x 6 unid",
+    "sku": "PROD274",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Alitas Amakari 6 und-DELIVERY",
+    "sku": "ALITASS-001",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Alitas BBQ - BL ",
+    "sku": "alitas -004",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "⁠Alitas Spicy x 6 unid",
+    "sku": "PROD293",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "PEDIDOS YA: Gyoza + 6 alitas + tabla de maki – ⁠Alitas amakarai x 6 unid",
+    "sku": "PROD274",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "PEDIDOS YA: Gyoza + 6 alitas + tabla de maki – ⁠⁠Alitas anticucheras x 6 unid",
+    "sku": "PROD279",
+    "subcat": "ALITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Okonomiyaki",
+    "sku": "okonomiyaki",
+    "subcat": "ENTRADAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Porción Chashu",
+    "sku": "PROD210",
+    "subcat": "GUARNICIONES",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Porción Fideo Ramen",
+    "sku": "PROD206",
+    "subcat": "GUARNICIONES",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Porción Fideo Udon",
+    "sku": "PROD207",
+    "subcat": "GUARNICIONES",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Tofu Frito",
+    "sku": "PROD212",
+    "subcat": "GUARNICIONES",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "12 Alitas + 1 Maki – Maki Anticuchero 1 Tabla",
+    "sku": "PROD268",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "12 Alitas + 1 Maki – Maki Kiro 1 Tabla",
+    "sku": "PROD111",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "12 Alitas + 1 Maki – Maki Sumoku 1 Tabla",
+    "sku": "PROD163",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "12 Alitas + 1 Maki – Maki Sumokuchizu (Queso) 1 Tabla",
+    "sku": "PROD166",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "12 Alitas + 1 Maki – Yama maki 1 Tabla",
+    "sku": "PROD305",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "3x2 EN MAKIS – Maki Amai Ryu 1 Tabla",
+    "sku": "PROD121",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "3x2 EN MAKIS – Maki Amakarai 1 Tabla",
+    "sku": "PROD271",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "3x2 EN MAKIS – Maki Murazaki 1 Tabla",
+    "sku": "PROD145",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "3x2 EN MAKIS – Maki Nin Niku 1 Tabla",
+    "sku": "PROD148",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "3x2 EN MAKIS – Maki Sumokuchizu (Queso) 1 Tabla",
+    "sku": "PROD166",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "3x2 EN MAKIS – Maki Yuwaku 1 Tabla",
+    "sku": "PROD172",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "6 Alitas + 2 Makis – Maki Amakarai 1 Tabla",
+    "sku": "PROD271",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "6 Alitas + 2 Makis – Maki Avocado 1 Tabla",
+    "sku": "PROD127",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "6 Alitas + 2 Makis – Maki California 1 Tabla",
+    "sku": "PROD130",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "6 Alitas + 2 Makis – Maki Digion 1 Tabla",
+    "sku": "PROD133",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "6 Alitas + 2 Makis – Maki Nin Niku 1 Tabla",
+    "sku": "PROD148",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "6 Alitas + 2 Makis – Maki Paseri (Chimi) 1 Tabla",
+    "sku": "PROD156",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "6 Alitas + 2 Makis – Maki Sumoku 1 Tabla",
+    "sku": "PROD163",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "6 Alitas + 2 Makis – Maki Veggie 1 Tabla",
+    "sku": "PROD169",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 1 Maki + 1 Ramen – Maki Amai Ryu 1 Tabla",
+    "sku": "PROD121",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 1 Maki + 1 Ramen – Maki Avocado 1 Tabla",
+    "sku": "PROD127",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 1 Maki + 1 Ramen – Maki California 1 Tabla",
+    "sku": "PROD130",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 1 Maki + 1 Ramen – Maki Inka 1 Tabla",
+    "sku": "PROD105",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 1 Maki + 1 Ramen – Maki Keihaku 1 Tabla",
+    "sku": "PROD108",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 1 Maki + 1 Ramen – Maki Kuroi 1 Tabla",
+    "sku": "PROD114",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 1 Maki + 1 Ramen – Maki Murazaki 1 Tabla",
+    "sku": "PROD145",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 1 Maki + 1 Ramen – Maki Spicy 1 Tabla",
+    "sku": "PROD160",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 1 Maki + 1 Ramen – Maki Sumoku 1 Tabla",
+    "sku": "PROD163",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 1 Maki + 1 Ramen – Maki Yuwaku 1 Tabla",
+    "sku": "PROD172",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 2 Makis – AMAI maki 1 Tabla",
+    "sku": "PROD304",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 2 Makis – Maki Avocado 1 Tabla",
+    "sku": "PROD127",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 2 Makis – Maki Kuroi 1 Tabla",
+    "sku": "PROD114",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 2 Makis – Maki Nin Niku 1 Tabla",
+    "sku": "PROD148",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 2 Makis – Maki Paseri (Chimi) 1 Tabla",
+    "sku": "PROD156",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 2 Makis – Maki Sumoku 1 Tabla",
+    "sku": "PROD163",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 2 Makis – Maki Sumokuchizu (Queso) 1 Tabla",
+    "sku": "PROD166",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 2 Makis – Maki Veggie 1 Tabla",
+    "sku": "PROD169",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 2 Makis + Ramen – Maki California 1 Tabla",
+    "sku": "PROD130",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 2 Makis + Ramen – Maki Hotate 1 Tabla",
+    "sku": "PROD139",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 2 Makis + Ramen – Maki Inka 1 Tabla",
+    "sku": "PROD105",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 2 Makis + Ramen – Maki Keihaku 1 Tabla",
+    "sku": "PROD108",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 2 Makis + Ramen – Maki Kuroi 1 Tabla",
+    "sku": "PROD114",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 2 Makis + Ramen – Maki Nin Niku 1 Tabla",
+    "sku": "PROD148",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 2 Makis + Ramen – Maki Sumokuchizu (Queso) 1 Tabla",
+    "sku": "PROD166",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 2 Ramen + maki – AMAI maki 1 Tabla",
+    "sku": "PROD304",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 2 Ramen + maki – Jōnetsu maki 1 Tabla",
+    "sku": "PROD310",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 2 Ramen + maki – Maki California 1 Tabla",
+    "sku": "PROD130",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 2 Ramen + maki – Maki Kuroi 1 Tabla",
+    "sku": "PROD114",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 2 Ramen + maki – Maki Murazaki 1 Tabla",
+    "sku": "PROD145",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 2 Ramen + maki – Maki Spicy 1 Tabla",
+    "sku": "PROD160",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 2 Ramen + maki – Maki Veggie 1 Tabla",
+    "sku": "PROD169",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 3 Makis – AMAI maki 1 Tabla",
+    "sku": "PROD304",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 3 Makis – Maki Keihaku 1 Tabla",
+    "sku": "PROD108",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 3 Makis – Maki Kiro 1 Tabla",
+    "sku": "PROD111",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 3 Makis – Maki Paseri (Chimi) 1 Tabla",
+    "sku": "PROD156",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Maki Amai Ryu 1 Tabla",
+    "sku": "PROD121",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Maki anticuchero",
+    "sku": "PROD306",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Maki Avocado 1 Tabla",
+    "sku": "PROD127",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Maki California 1 Tabla",
+    "sku": "PROD130",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Maki Inka 1 Tabla",
+    "sku": "PROD105",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Maki Kuroi 1 Tabla",
+    "sku": "PROD114",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Maki Nin Niku 1 Tabla",
+    "sku": "PROD148",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Maki Sumoku 1 Tabla",
+    "sku": "PROD163",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Maki Sumokuchizu (Queso) 1 Tabla",
+    "sku": "PROD166",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "PEDIDOS YA: Gyoza + 6 alitas + tabla de maki – AMAI maki 1 Tabla",
+    "sku": "PROD304",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "PEDIDOS YA: Gyoza + 6 alitas + tabla de maki – Maki Digion 1 Tabla",
+    "sku": "PROD133",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "PEDIDOS YA: Gyoza + 6 alitas + tabla de maki – Maki Hotate 1 Tabla",
+    "sku": "PROD139",
+    "subcat": "MAKIS 1 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "AMAI maki 1/2 Tabla",
+    "sku": "PROD311",
+    "subcat": "MAKIS 1/2 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Jōnetsu maki 1/2 Tabla",
+    "sku": "PROD317",
+    "subcat": "MAKIS 1/2 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Maki Amakarai 1/2 Tabla",
+    "sku": "PROD272",
+    "subcat": "MAKIS 1/2 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Maki Avocado 1/2 Tabla",
+    "sku": "PROD126",
+    "subcat": "MAKIS 1/2 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Maki Sumoku 1/2 Tabla",
+    "sku": "PROD164",
+    "subcat": "MAKIS 1/2 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Maki Yuwaku 1/2 Tabla",
+    "sku": "PROD173",
+    "subcat": "MAKIS 1/2 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "MENU ESTUDIANTIL – Maki Murazaki 1/2 Tabla",
+    "sku": "PROD144",
+    "subcat": "MAKIS 1/2 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "MENU ESTUDIANTIL PARA DOS – Maki Digion 1/2 Tabla",
+    "sku": "PROD132",
+    "subcat": "MAKIS 1/2 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "MENU ESTUDIANTIL PARA DOS – Maki Kiro 1/2 Tabla",
+    "sku": "PROD112",
+    "subcat": "MAKIS 1/2 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "MENU ESTUDIANTIL PARA DOS – Maki Murazaki 1/2 Tabla",
+    "sku": "PROD144",
+    "subcat": "MAKIS 1/2 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "MENU ESTUDIANTIL PARA DOS – Maki Nin Niku 1/2 Taba",
+    "sku": "PROD147",
+    "subcat": "MAKIS 1/2 TABLA",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Chicken Katsu Kare",
+    "sku": "PROD064",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Harusame Iricha",
+    "sku": "PROD068",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Hiyashi Chuka",
+    "sku": "PROD069",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Kare Udon",
+    "sku": "PROD073",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Menu Ejecutivo – Chicken Katsu",
+    "sku": "PROD063",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Menu Ejecutivo – Chicken Teriyaki",
+    "sku": "PROD065",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Menu Ejecutivo – Yakimeshi",
+    "sku": "PROD085",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Menu Ejecutivo – Yasaitame De Pollo",
+    "sku": "PROD090",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "MENU ESTUDIANTIL – Chicken Katsu",
+    "sku": "PROD063",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "MENU ESTUDIANTIL – Kare Raisu",
+    "sku": "PROD071",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "MENU ESTUDIANTIL PARA DOS – Tonkatsu",
+    "sku": "PROD083",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "MENU ESTUDIANTIL PARA DOS – Yakimeshi",
+    "sku": "PROD085",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "MENU LOCATARIO – Chicken Teriyaki",
+    "sku": "PROD065",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Oyakodon",
+    "sku": "PROD078",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Udebi",
+    "sku": "PROD084",
+    "subcat": "PLATOS DE FONDO",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Ebi Ramen L",
+    "sku": "PROD034",
+    "subcat": "RAMEN L",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "1 Ramen + 1 Gyoza – Shoyu Ramen S",
+    "sku": "PROD049",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "12 Alitas + 1 Ramen – Shoyu Ramen S",
+    "sku": "PROD049",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "12 Alitas + 1 Ramen – Tonkotsu Ramen S",
+    "sku": "PROD058",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "6 Alitas + 2 Ramen – Shoyu Ramen S",
+    "sku": "PROD049",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 1 Maki + 1 Ramen – Ramen Bajiru S",
+    "sku": "PROD263",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 2 Makis + Ramen – Miso Ramen S",
+    "sku": "PROD036",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Combo 2 Makis + Ramen – Ramen Vegetariano S",
+    "sku": "PROD040",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "MENU ESTUDIANTIL – Chasu Ramen S",
+    "sku": "PROD028",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "MENU ESTUDIANTIL – Shio Ramen S",
+    "sku": "PROD044",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "MENU ESTUDIANTIL PARA DOS – Shio Ramen S",
+    "sku": "PROD044",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Promo: 3 Ramen tamaño S – Chasu Ramen S",
+    "sku": "PROD028",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Promo: 3 Ramen tamaño S – Miso Ramen S",
+    "sku": "PROD036",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Shio Ramen - BL",
+    "sku": "PROD047",
+    "subcat": "RAMEN S",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Ebi Ramen XL",
+    "sku": "PROD035",
+    "subcat": "RAMEN XL",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Nigiri de Pulpo de 3 und.",
+    "sku": "NIGIRI-010",
+    "subcat": "SUSHI 3 PIEZAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Nigiri de Salmon de 3 und.",
+    "sku": "NIGIRI-013",
+    "subcat": "SUSHI 3 PIEZAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Sashimi de Salmon de 3 und.",
+    "sku": "SASHIMI-013",
+    "subcat": "SUSHI 3 PIEZAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Nigiri de Salmon de 7 und.",
+    "sku": "NIGIRI-015",
+    "subcat": "SUSHI 7 PIEZAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Sashimi de Salmon de 7 und.",
+    "sku": "SASHIMI-015",
+    "subcat": "SUSHI 7 PIEZAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Tiradito Cocona",
+    "sku": "PROD232",
+    "subcat": "TIRADITOS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Age Gyozas",
+    "sku": "TPADD7LUK-001",
+    "subcat": "TOPPING ADICIONALES 7 LUKITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Ebi Furai",
+    "sku": "TPADD7LUK-002",
+    "subcat": "TOPPING ADICIONALES 7 LUKITAS",
+    "categoria": "CARTA COMIDA",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Menu Ejecutivo – Age Gyozas x 3 und.",
+    "sku": "TPP-ME-02",
+    "subcat": "MENÚ MEDIAS ENTRADAS",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Menu Ejecutivo – Gyozas x 3 und.",
+    "sku": "TPP-ME-01",
+    "subcat": "MENÚ MEDIAS ENTRADAS",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Menu Ejecutivo – Medio Karage ",
+    "sku": "TPP-ME-03",
+    "subcat": "MENÚ MEDIAS ENTRADAS",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Menu Ejecutivo – Medio Misoshiru",
+    "sku": "TPP-ME-04",
+    "subcat": "MENÚ MEDIAS ENTRADAS",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "MENU LOCATARIO – Age Gyozas x 3 und.",
+    "sku": "TPP-ME-02",
+    "subcat": "MENÚ MEDIAS ENTRADAS",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Obento de cerdo – OBENTO - Maki Digion 1/2 Tabla",
+    "sku": "MKOPROD132",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Obento de ebi – OBENTO - Maki Digion 1/2 Tabla",
+    "sku": "MKOPROD132",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Obento de ebi – OBENTO - Maki Kiro 1/2 Tabla",
+    "sku": "MKOPROD112",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Obento de ebi – OBENTO - Maki Kuroi 1/2 Tabla",
+    "sku": "MKOPROD115",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Obento de lomo – OBENTO - Gyudon",
+    "sku": "OPROD067",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Obento de lomo – OBENTO - Maki Amai Ryu 1/2 Tabla",
+    "sku": "MKOPROD120",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Obento de lomo – OBENTO - Maki Digion 1/2 Tabla",
+    "sku": "MKOPROD132",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Obento de lomo – OBENTO - Maki Kuroi 1/2 Tabla",
+    "sku": "MKOPROD115",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Obento de pescado – OBENTO - Age Gyozas x 2 und.",
+    "sku": "PROD234",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Obento de pescado – OBENTO - Atún al panko",
+    "sku": "PROD240",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Obento de pescado – OBENTO - Harusame Iricha",
+    "sku": "PROD235",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Obento de pescado – OBENTO - Maki Acevichado 1/2 Tabla",
+    "sku": "MKOPROD117",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Obento de pescado – OBENTO - Porción de Arroz",
+    "sku": "PROD236",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  },
+  {
+    "producto": "Obento de pollo – OBENTO - Maki Amai Ryu 1/2 Tabla",
+    "sku": "MKOPROD120",
+    "subcat": "PRODUCTO COMBO OBENTO",
+    "categoria": "COMBOS",
+    "cantidadSemana1": 1,
+    "cantidadQuincena": 2
+  }
+]
