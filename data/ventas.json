@@ -1,96 +1,175 @@
 {
-  "generatedAt": "2026-10-17T23:27:28.030Z",
+  "generatedAt": "2026-10-24T19:25:23.604Z",
+  "source": "ID POS (pos.idbi.pe) - SHIMAYA-CHICLAYO",
   "days": [
+    {
+      "date": "2026-10-01",
+      "ordersCount": 93,
+      "ventaSinIgv": 5514.07,
+      "igv": 992.53,
+      "ventaConIgv": 6506.6
+    },
+    {
+      "date": "2026-10-02",
+      "ordersCount": 95,
+      "ventaSinIgv": 6238.73,
+      "igv": 1122.97,
+      "ventaConIgv": 7361.7
+    },
+    {
+      "date": "2026-10-03",
+      "ordersCount": 131,
+      "ventaSinIgv": 10106.78,
+      "igv": 1819.22,
+      "ventaConIgv": 11926
+    },
+    {
+      "date": "2026-10-04",
+      "ordersCount": 109,
+      "ventaSinIgv": 9378.47,
+      "igv": 1688.13,
+      "ventaConIgv": 11066.6
+    },
     {
       "date": "2026-10-05",
       "ordersCount": 75,
-      "ventaSinIgv": 5177.5,
-      "igv": 931.95,
-      "ventaConIgv": 6109.45
+      "ventaSinIgv": 4387.71,
+      "igv": 789.79,
+      "ventaConIgv": 5177.5
     },
     {
       "date": "2026-10-06",
       "ordersCount": 72,
-      "ventaSinIgv": 4897.9,
-      "igv": 881.62,
-      "ventaConIgv": 5779.52
+      "ventaSinIgv": 4150.76,
+      "igv": 747.14,
+      "ventaConIgv": 4897.9
     },
     {
       "date": "2026-10-07",
       "ordersCount": 90,
-      "ventaSinIgv": 6547,
-      "igv": 1178.46,
-      "ventaConIgv": 7725.46
+      "ventaSinIgv": 5548.31,
+      "igv": 998.69,
+      "ventaConIgv": 6547
     },
     {
       "date": "2026-10-08",
       "ordersCount": 90,
-      "ventaSinIgv": 7828.9,
-      "igv": 1409.2,
-      "ventaConIgv": 9238.1
+      "ventaSinIgv": 6634.66,
+      "igv": 1194.24,
+      "ventaConIgv": 7828.9
     },
     {
       "date": "2026-10-09",
       "ordersCount": 72,
-      "ventaSinIgv": 5451.3,
-      "igv": 981.23,
-      "ventaConIgv": 6432.53
+      "ventaSinIgv": 4619.75,
+      "igv": 831.55,
+      "ventaConIgv": 5451.3
     },
     {
       "date": "2026-10-10",
       "ordersCount": 111,
-      "ventaSinIgv": 9546.4,
-      "igv": 1718.35,
-      "ventaConIgv": 11264.75
+      "ventaSinIgv": 8090.17,
+      "igv": 1456.23,
+      "ventaConIgv": 9546.4
     },
     {
       "date": "2026-10-11",
-      "ordersCount": 105,
-      "ventaSinIgv": 10612.7,
-      "igv": 1910.29,
-      "ventaConIgv": 12522.99
+      "ordersCount": 106,
+      "ventaSinIgv": 8993.81,
+      "igv": 1618.89,
+      "ventaConIgv": 10612.7
     },
     {
       "date": "2026-10-12",
-      "ordersCount": 68,
-      "ventaSinIgv": 5067.5,
-      "igv": 912.15,
-      "ventaConIgv": 5979.65
+      "ordersCount": 69,
+      "ventaSinIgv": 4294.49,
+      "igv": 773.01,
+      "ventaConIgv": 5067.5
     },
     {
       "date": "2026-10-13",
-      "ordersCount": 84,
-      "ventaSinIgv": 5977.6,
-      "igv": 1075.97,
-      "ventaConIgv": 7053.57
+      "ordersCount": 85,
+      "ventaSinIgv": 5065.76,
+      "igv": 911.84,
+      "ventaConIgv": 5977.6
     },
     {
       "date": "2026-10-14",
       "ordersCount": 72,
-      "ventaSinIgv": 4918.3,
-      "igv": 885.29,
-      "ventaConIgv": 5803.59
+      "ventaSinIgv": 4168.05,
+      "igv": 750.25,
+      "ventaConIgv": 4918.3
     },
     {
       "date": "2026-10-15",
       "ordersCount": 72,
-      "ventaSinIgv": 4683.8,
-      "igv": 843.08,
-      "ventaConIgv": 5526.88
+      "ventaSinIgv": 3969.32,
+      "igv": 714.48,
+      "ventaConIgv": 4683.8
     },
     {
       "date": "2026-10-16",
-      "ordersCount": 91,
-      "ventaSinIgv": 7229.2,
-      "igv": 1301.26,
-      "ventaConIgv": 8530.46
+      "ordersCount": 92,
+      "ventaSinIgv": 6126.44,
+      "igv": 1102.76,
+      "ventaConIgv": 7229.2
     },
     {
       "date": "2026-10-17",
-      "ordersCount": 34,
-      "ventaSinIgv": 3180,
-      "igv": 572.4,
-      "ventaConIgv": 3752.4
+      "ordersCount": 105,
+      "ventaSinIgv": 8228.14,
+      "igv": 1481.06,
+      "ventaConIgv": 9709.2
+    },
+    {
+      "date": "2026-10-18",
+      "ordersCount": 86,
+      "ventaSinIgv": 6755.93,
+      "igv": 1216.07,
+      "ventaConIgv": 7972
+    },
+    {
+      "date": "2026-10-19",
+      "ordersCount": 69,
+      "ventaSinIgv": 4492.97,
+      "igv": 808.73,
+      "ventaConIgv": 5301.7
+    },
+    {
+      "date": "2026-10-20",
+      "ordersCount": 63,
+      "ventaSinIgv": 3717.2,
+      "igv": 669.1,
+      "ventaConIgv": 4386.3
+    },
+    {
+      "date": "2026-10-21",
+      "ordersCount": 80,
+      "ventaSinIgv": 4878.56,
+      "igv": 878.14,
+      "ventaConIgv": 5756.7
+    },
+    {
+      "date": "2026-10-22",
+      "ordersCount": 80,
+      "ventaSinIgv": 4642.2,
+      "igv": 835.6,
+      "ventaConIgv": 5477.8
+    },
+    {
+      "date": "2026-10-23",
+      "ordersCount": 76,
+      "ventaSinIgv": 5337.29,
+      "igv": 960.71,
+      "ventaConIgv": 6298
+    },
+    {
+      "date": "2026-10-24",
+      "ordersCount": 5,
+      "ventaSinIgv": 342.37,
+      "igv": 61.63,
+      "ventaConIgv": 404
     }
-  ]
+  ],
+  "lastSyncDate": "2026-10-24"
 }

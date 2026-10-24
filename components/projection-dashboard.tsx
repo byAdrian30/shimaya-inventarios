@@ -16,7 +16,8 @@ import {
   Sparkles,
   Info,
   CalendarDays,
-  Percent
+  Percent,
+  Coins
 } from 'lucide-react';
 import type { State } from '../lib/inventory';
 import rawCatalog from '../data/catalogo_proyeccion.json';
@@ -29,6 +30,7 @@ interface CatalogItem {
   codigo: string;
   nombre: string;
   unidad: string;
+  precioUnitario?: number;
   consumoQuincenalBase: number;
   consumo14dProyectado: number;
   stockActual: number | null;
@@ -166,10 +168,15 @@ export default function ProjectionDashboard({ state }: { state?: State }) {
   const summary = useMemo(() => {
     const toOrder = catalog.filter(i => i.sugerenciaPedido > 0);
     const critical = catalog.filter(i => i.stockActual !== null && i.stockActual <= 0);
+    const totalEstimatedBudget = toOrder.reduce(
+      (acc, i) => acc + i.sugerenciaPedido * (i.precioUnitario || 0),
+      0
+    );
     return {
       totalToOrder: toOrder.length,
       totalCritical: critical.length,
       totalCatalog: catalog.length,
+      totalEstimatedBudget,
       targetDateRange: period === '01-14' ? '01/11/2026 al 14/11/2026' : '15/11/2026 al 30/11/2026',
       baseDateRange: period === '01-14' ? '01/10/2026 al 14/10/2026' : '15/10/2026 al 31/10/2026'
     };
@@ -180,10 +187,15 @@ export default function ProjectionDashboard({ state }: { state?: State }) {
     const textLines = [
       `LISTA DE PEDIDO SHIMAYA360 - QUINCENA ${period === '01-14' ? '01/11 AL 14/11' : '15/11 AL 30/11'}`,
       `Usuario: cocchic | Portal: https://admin.shimaya360.com/`,
+      `Presupuesto Total Estimado: S/ ${summary.totalEstimatedBudget.toFixed(2)}`,
       `Generado: ${new Date().toLocaleDateString('es-PE')}`,
-      '-------------------------------------------------------',
-      'CÓDIGO | CANTIDAD | UNIDAD | PRODUCTO',
-      ...toOrder.map(i => `${i.codigo} | ${i.sugerenciaPedido} ${i.unidad} | ${i.nombre}`)
+      '---------------------------------------------------------------------------------',
+      'CÓDIGO | CANTIDAD | UNIDAD | PRECIO UNIT. | SUBTOTAL EST. | PRODUCTO',
+      ...toOrder.map(i => {
+        const pu = i.precioUnitario || 0;
+        const sub = (i.sugerenciaPedido * pu).toFixed(2);
+        return `${i.codigo} | ${i.sugerenciaPedido} ${i.unidad} | S/ ${pu.toFixed(2)} | S/ ${sub} | ${i.nombre}`;
+      })
     ];
     navigator.clipboard.writeText(textLines.join('\n'));
     setCopied(true);
@@ -192,17 +204,23 @@ export default function ProjectionDashboard({ state }: { state?: State }) {
 
   function exportToCsv() {
     const toOrder = catalog.filter(i => i.sugerenciaPedido > 0);
-    const headers = ['Codigo Planta', 'Categoria', 'Producto', 'Unidad', 'Consumo 14d', 'Stock Actual', 'Cantidad a Pedir', 'Estado'];
-    const rows = toOrder.map(i => [
-      i.codigo,
-      i.categoria,
-      `"${i.nombre.replace(/"/g, '""')}"`,
-      i.unidad,
-      i.consumo14dProyectado,
-      i.stockActual ?? '',
-      i.sugerenciaPedido,
-      `"${i.estado}"`
-    ]);
+    const headers = ['Codigo Planta', 'Categoria', 'Producto', 'Unidad', 'Precio Unitario', 'Consumo 14d', 'Stock Actual', 'Cantidad a Pedir', 'Subtotal Estimado', 'Estado'];
+    const rows = toOrder.map(i => {
+      const pu = i.precioUnitario || 0;
+      const sub = (i.sugerenciaPedido * pu).toFixed(2);
+      return [
+        i.codigo,
+        i.categoria,
+        `"${i.nombre.replace(/"/g, '""')}"`,
+        i.unidad,
+        pu,
+        i.consumo14dProyectado,
+        i.stockActual ?? '',
+        i.sugerenciaPedido,
+        sub,
+        `"${i.estado}"`
+      ];
+    });
     const csvContent = 'data:text/csv;charset=utf-8,\uFEFF' + [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement('a');
@@ -336,7 +354,7 @@ export default function ProjectionDashboard({ state }: { state?: State }) {
       </div>
 
       {/* KPI Cards */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
         <div className="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-4 shadow-sm">
           <div className="flex items-center justify-between text-neutral-500 dark:text-neutral-400 text-xs font-bold uppercase">
             <span>Insumos a Pedir</span>
@@ -346,6 +364,17 @@ export default function ProjectionDashboard({ state }: { state?: State }) {
             {summary.totalToOrder}
           </div>
           <div className="text-[11px] text-neutral-500 mt-1">Con necesidad de reposición</div>
+        </div>
+
+        <div className="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-4 shadow-sm">
+          <div className="flex items-center justify-between text-neutral-500 dark:text-neutral-400 text-xs font-bold uppercase">
+            <span>Presupuesto Estimado</span>
+            <Coins className="w-4 h-4 text-emerald-500" />
+          </div>
+          <div className="text-2xl font-black mt-2 text-emerald-600 dark:text-emerald-400">
+            S/ {summary.totalEstimatedBudget.toLocaleString('es-PE', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+          </div>
+          <div className="text-[11px] text-neutral-500 mt-1">Costo total de reposición</div>
         </div>
 
         <div className="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-4 shadow-sm">
@@ -487,11 +516,13 @@ export default function ProjectionDashboard({ state }: { state?: State }) {
                   <th className="py-3 px-4">Insumo Oficial (Shimaya360)</th>
                   <th className="py-3 px-4">Categoría</th>
                   <th className="py-3 px-4">Unidad</th>
+                  <th className="py-3 px-4 text-right">Precio Unit.</th>
                   <th className="py-3 px-4 text-right">Consumo 14d</th>
                   <th className="py-3 px-4 text-right">Stock Actual</th>
                   <th className="py-3 px-4 text-center bg-red-50/50 dark:bg-red-950/20 text-red-700 dark:text-red-300">
                     A Pedir (14d)
                   </th>
+                  <th className="py-3 px-4 text-right">Subtotal Est.</th>
                   <th className="py-3 px-4 text-right">Cobertura</th>
                   <th className="py-3 px-4">Estado</th>
                 </tr>
@@ -499,7 +530,7 @@ export default function ProjectionDashboard({ state }: { state?: State }) {
               <tbody className="divide-y divide-neutral-100 dark:divide-neutral-800 font-medium">
                 {filteredCatalog.length === 0 ? (
                   <tr>
-                    <td colSpan={9} className="text-center py-10 text-neutral-400">
+                    <td colSpan={11} className="text-center py-10 text-neutral-400">
                       No se encontraron insumos con los filtros seleccionados.
                     </td>
                   </tr>
@@ -519,6 +550,13 @@ export default function ProjectionDashboard({ state }: { state?: State }) {
                         </td>
                         <td className="py-2.5 px-4 text-neutral-500">{item.categoria}</td>
                         <td className="py-2.5 px-4 text-neutral-600 dark:text-neutral-300">{item.unidad}</td>
+                        <td className="py-2.5 px-4 text-right font-mono text-neutral-700 dark:text-neutral-300">
+                          {item.precioUnitario && item.precioUnitario > 0 ? (
+                            `S/ ${item.precioUnitario.toFixed(2)}`
+                          ) : (
+                            <span className="text-neutral-400">-</span>
+                          )}
+                        </td>
                         <td className="py-2.5 px-4 text-right font-mono text-neutral-600 dark:text-neutral-400">
                           {item.consumo14dProyectado > 0 ? item.consumo14dProyectado.toFixed(1) : '-'}
                         </td>
@@ -544,6 +582,13 @@ export default function ProjectionDashboard({ state }: { state?: State }) {
                             </span>
                           ) : (
                             <span className="text-neutral-400 font-normal">0</span>
+                          )}
+                        </td>
+                        <td className="py-2.5 px-4 text-right font-mono font-bold text-neutral-900 dark:text-neutral-100">
+                          {item.sugerenciaPedido > 0 && item.precioUnitario && item.precioUnitario > 0 ? (
+                            `S/ ${(item.sugerenciaPedido * item.precioUnitario).toFixed(2)}`
+                          ) : (
+                            <span className="text-neutral-400 font-normal">-</span>
                           )}
                         </td>
                         <td className="py-2.5 px-4 text-right font-mono">

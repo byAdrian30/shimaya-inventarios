@@ -11,7 +11,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 344
   },
   {
     "proid": "775",
@@ -25,7 +26,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 229
   },
   {
     "proid": "272",
@@ -39,7 +41,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 39.7
   },
   {
     "proid": "444",
@@ -53,7 +56,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 1.5
   },
   {
     "proid": "694",
@@ -67,7 +71,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 38
   },
   {
     "proid": "215",
@@ -81,7 +86,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 11.5
   },
   {
     "proid": "216",
@@ -95,7 +101,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 11.5
   },
   {
     "proid": "405",
@@ -109,7 +116,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 30.8
   },
   {
     "proid": "406",
@@ -123,7 +131,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 34.5
   },
   {
     "proid": "22",
@@ -137,7 +146,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 14.7
   },
   {
     "proid": "217",
@@ -151,7 +161,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 12.1
   },
   {
     "proid": "23",
@@ -165,7 +176,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 16.5
   },
   {
     "proid": "24",
@@ -179,7 +191,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 17.5
   },
   {
     "proid": "101",
@@ -193,7 +206,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 32.5
   },
   {
     "proid": "19",
@@ -207,7 +221,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 49
   },
   {
     "proid": "103",
@@ -221,7 +236,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 7.6
   },
   {
     "proid": "4",
@@ -235,7 +251,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 7.5
   },
   {
     "proid": "453",
@@ -249,7 +266,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 35.5
   },
   {
     "proid": "524",
@@ -263,7 +281,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 180
   },
   {
     "proid": "172",
@@ -277,7 +296,8 @@
     "stockMinimo": 0,
     "diasCob": 0.3,
     "sugerenciaPedido": 30,
-    "estado": "URGENTE (< 5 días)"
+    "estado": "URGENTE (< 5 días)",
+    "precioUnitario": 80.1
   },
   {
     "proid": "30",
@@ -291,7 +311,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 33.2
   },
   {
     "proid": "331",
@@ -305,7 +326,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 13.3
   },
   {
     "proid": "220",
@@ -319,7 +341,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 3.3
   },
   {
     "proid": "166",
@@ -333,7 +356,8 @@
     "stockMinimo": 0,
     "diasCob": 9.1,
     "sugerenciaPedido": 35,
-    "estado": "PEDIR (5 a 12 días)"
+    "estado": "PEDIR (5 a 12 días)",
+    "precioUnitario": 10.2
   },
   {
     "proid": "261",
@@ -347,7 +371,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 13.2
   },
   {
     "proid": "257",
@@ -361,7 +386,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 19.8
   },
   {
     "proid": "258",
@@ -375,7 +401,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 7.7
   },
   {
     "proid": "259",
@@ -389,7 +416,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 13.2
   },
   {
     "proid": "260",
@@ -403,7 +431,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 13.2
   },
   {
     "proid": "25",
@@ -417,7 +446,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 4.4
   },
   {
     "proid": "278",
@@ -431,7 +461,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 22
   },
   {
     "proid": "93",
@@ -445,7 +476,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 17.6
   },
   {
     "proid": "89",
@@ -459,7 +491,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 3.3
   },
   {
     "proid": "27",
@@ -473,7 +506,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 7.1
   },
   {
     "proid": "359",
@@ -487,7 +521,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 6.3
   },
   {
     "proid": "32",
@@ -501,7 +536,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 12.5
   },
   {
     "proid": "31",
@@ -515,7 +551,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 28.5
   },
   {
     "proid": "40",
@@ -529,7 +566,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 1.7
   },
   {
     "proid": "92",
@@ -543,7 +581,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 5.5
   },
   {
     "proid": "94",
@@ -557,7 +596,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 55
   },
   {
     "proid": "37",
@@ -571,7 +611,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 27.2
   },
   {
     "proid": "332",
@@ -585,7 +626,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 64.4
   },
   {
     "proid": "221",
@@ -599,7 +641,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 5.2
   },
   {
     "proid": "354",
@@ -613,7 +656,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 90.2
   },
   {
     "proid": "673",
@@ -627,7 +671,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 184.7
   },
   {
     "proid": "576",
@@ -641,7 +686,8 @@
     "stockMinimo": 0,
     "diasCob": 0,
     "sugerenciaPedido": 1,
-    "estado": "CRÍTICO / AGOTADO"
+    "estado": "CRÍTICO / AGOTADO",
+    "precioUnitario": 180
   },
   {
     "proid": "556",
@@ -655,7 +701,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 10
   },
   {
     "proid": "265",
@@ -669,7 +716,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 17
   },
   {
     "proid": "774",
@@ -683,7 +731,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 100
   },
   {
     "proid": "664",
@@ -697,7 +746,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 474.1
   },
   {
     "proid": "478",
@@ -711,7 +761,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 14.5
   },
   {
     "proid": "123",
@@ -725,7 +776,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 15.5
   },
   {
     "proid": "477",
@@ -739,7 +791,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 14.5
   },
   {
     "proid": "69",
@@ -753,7 +806,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 18.2
   },
   {
     "proid": "71",
@@ -767,7 +821,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 18.2
   },
   {
     "proid": "617",
@@ -781,7 +836,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 11.4
   },
   {
     "proid": "222",
@@ -795,7 +851,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 3.7
   },
   {
     "proid": "327",
@@ -809,7 +866,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 253
   },
   {
     "proid": "223",
@@ -823,7 +881,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 4.9
   },
   {
     "proid": "224",
@@ -837,7 +896,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 7.5
   },
   {
     "proid": "225",
@@ -851,7 +911,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 4.6
   },
   {
     "proid": "308",
@@ -865,7 +926,8 @@
     "stockMinimo": 0,
     "diasCob": -1,
     "sugerenciaPedido": 38,
-    "estado": "CRÍTICO / AGOTADO"
+    "estado": "CRÍTICO / AGOTADO",
+    "precioUnitario": 12.5
   },
   {
     "proid": "583",
@@ -879,7 +941,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 15
   },
   {
     "proid": "159",
@@ -893,7 +956,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 12.5
   },
   {
     "proid": "307",
@@ -907,7 +971,8 @@
     "stockMinimo": 0,
     "diasCob": 9,
     "sugerenciaPedido": 19,
-    "estado": "PEDIR (5 a 12 días)"
+    "estado": "PEDIR (5 a 12 días)",
+    "precioUnitario": 10
   },
   {
     "proid": "161",
@@ -921,7 +986,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 4
   },
   {
     "proid": "160",
@@ -935,7 +1001,8 @@
     "stockMinimo": 0,
     "diasCob": -2.4,
     "sugerenciaPedido": 17,
-    "estado": "CRÍTICO / AGOTADO"
+    "estado": "CRÍTICO / AGOTADO",
+    "precioUnitario": 22.5
   },
   {
     "proid": "618",
@@ -949,7 +1016,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 18.1
   },
   {
     "proid": "511",
@@ -963,7 +1031,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 1.9
   },
   {
     "proid": "227",
@@ -977,7 +1046,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 7.2
   },
   {
     "proid": "290",
@@ -991,7 +1061,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 1.1
   },
   {
     "proid": "295",
@@ -1005,7 +1076,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 1.8
   },
   {
     "proid": "294",
@@ -1019,7 +1091,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 2.4
   },
   {
     "proid": "289",
@@ -1033,7 +1106,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 1.1
   },
   {
     "proid": "79",
@@ -1047,7 +1121,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 32.5
   },
   {
     "proid": "581",
@@ -1061,7 +1136,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 2.7
   },
   {
     "proid": "580",
@@ -1075,7 +1151,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 7
   },
   {
     "proid": "601",
@@ -1089,7 +1166,8 @@
     "stockMinimo": 0,
     "diasCob": 999,
     "sugerenciaPedido": 0,
-    "estado": "SOBRESTOCK"
+    "estado": "SOBRESTOCK",
+    "precioUnitario": 17.6
   },
   {
     "proid": "539",
@@ -1103,7 +1181,8 @@
     "stockMinimo": 0,
     "diasCob": -31.8,
     "sugerenciaPedido": 5,
-    "estado": "CRÍTICO / AGOTADO"
+    "estado": "CRÍTICO / AGOTADO",
+    "precioUnitario": 20
   },
   {
     "proid": "538",
@@ -1117,7 +1196,8 @@
     "stockMinimo": 0,
     "diasCob": -47.7,
     "sugerenciaPedido": 5,
-    "estado": "CRÍTICO / AGOTADO"
+    "estado": "CRÍTICO / AGOTADO",
+    "precioUnitario": 12.1
   },
   {
     "proid": "537",
@@ -1131,7 +1211,8 @@
     "stockMinimo": 0,
     "diasCob": 365.9,
     "sugerenciaPedido": 0,
-    "estado": "SOBRESTOCK"
+    "estado": "SOBRESTOCK",
+    "precioUnitario": 18
   },
   {
     "proid": "319",
@@ -1145,7 +1226,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 1.4
   },
   {
     "proid": "609",
@@ -1159,7 +1241,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 12.5
   },
   {
     "proid": "440",
@@ -1173,7 +1256,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 1.5
   },
   {
     "proid": "231",
@@ -1187,7 +1271,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 7.5
   },
   {
     "proid": "105",
@@ -1201,7 +1286,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 26
   },
   {
     "proid": "614",
@@ -1215,7 +1301,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 9
   },
   {
     "proid": "615",
@@ -1229,7 +1316,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 11
   },
   {
     "proid": "649",
@@ -1243,7 +1331,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 15.2
   },
   {
     "proid": "104",
@@ -1257,7 +1346,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 6.1
   },
   {
     "proid": "169",
@@ -1271,7 +1361,8 @@
     "stockMinimo": 0,
     "diasCob": 4.1,
     "sugerenciaPedido": 32,
-    "estado": "URGENTE (< 5 días)"
+    "estado": "URGENTE (< 5 días)",
+    "precioUnitario": 4.5
   },
   {
     "proid": "168",
@@ -1285,7 +1376,8 @@
     "stockMinimo": 0,
     "diasCob": 3.4,
     "sugerenciaPedido": 119,
-    "estado": "URGENTE (< 5 días)"
+    "estado": "URGENTE (< 5 días)",
+    "precioUnitario": 22.5
   },
   {
     "proid": "170",
@@ -1299,7 +1391,8 @@
     "stockMinimo": 0,
     "diasCob": 17.8,
     "sugerenciaPedido": 0,
-    "estado": "ADECUADO"
+    "estado": "ADECUADO",
+    "precioUnitario": 45
   },
   {
     "proid": "389",
@@ -1313,7 +1406,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 88
   },
   {
     "proid": "536",
@@ -1327,7 +1421,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 26
   },
   {
     "proid": "120",
@@ -1341,7 +1436,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 15.5
   },
   {
     "proid": "122",
@@ -1355,7 +1451,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 4.6
   },
   {
     "proid": "119",
@@ -1369,7 +1466,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 12
   },
   {
     "proid": "232",
@@ -1383,7 +1481,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 6.9
   },
   {
     "proid": "107",
@@ -1397,7 +1496,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 3.7
   },
   {
     "proid": "108",
@@ -1411,7 +1511,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 2
   },
   {
     "proid": "164",
@@ -1425,7 +1526,8 @@
     "stockMinimo": 0,
     "diasCob": 0.6,
     "sugerenciaPedido": 26,
-    "estado": "URGENTE (< 5 días)"
+    "estado": "URGENTE (< 5 días)",
+    "precioUnitario": 17.5
   },
   {
     "proid": "325",
@@ -1439,7 +1541,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 43
   },
   {
     "proid": "670",
@@ -1453,7 +1556,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 19
   },
   {
     "proid": "5",
@@ -1467,7 +1571,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 9.8
   },
   {
     "proid": "102",
@@ -1481,7 +1586,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 38.6
   },
   {
     "proid": "28",
@@ -1495,7 +1601,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 3
   },
   {
     "proid": "297",
@@ -1509,7 +1616,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 4.5
   },
   {
     "proid": "6",
@@ -1523,7 +1631,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 135.3
   },
   {
     "proid": "346",
@@ -1537,7 +1646,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 10.5
   },
   {
     "proid": "165",
@@ -1551,7 +1661,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 6
   },
   {
     "proid": "80",
@@ -1565,7 +1676,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 91
   },
   {
     "proid": "110",
@@ -1579,7 +1691,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 44.2
   },
   {
     "proid": "117",
@@ -1593,7 +1706,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 21
   },
   {
     "proid": "645",
@@ -1607,7 +1721,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 5
   },
   {
     "proid": "532",
@@ -1621,7 +1736,8 @@
     "stockMinimo": 0,
     "diasCob": -73.3,
     "sugerenciaPedido": 37,
-    "estado": "CRÍTICO / AGOTADO"
+    "estado": "CRÍTICO / AGOTADO",
+    "precioUnitario": 5
   },
   {
     "proid": "234",
@@ -1635,7 +1751,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 5.8
   },
   {
     "proid": "787",
@@ -1649,7 +1766,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 9.8
   },
   {
     "proid": "534",
@@ -1663,7 +1781,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 41
   },
   {
     "proid": "535",
@@ -1677,7 +1796,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 27
   },
   {
     "proid": "235",
@@ -1691,7 +1811,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 2.7
   },
   {
     "proid": "557",
@@ -1705,7 +1826,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 10
   },
   {
     "proid": "275",
@@ -1719,7 +1841,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 4.4
   },
   {
     "proid": "111",
@@ -1733,7 +1856,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 23
   },
   {
     "proid": "285",
@@ -1747,7 +1871,8 @@
     "stockMinimo": 0,
     "diasCob": 15.2,
     "sugerenciaPedido": 1,
-    "estado": "ADECUADO"
+    "estado": "ADECUADO",
+    "precioUnitario": 10
   },
   {
     "proid": "112",
@@ -1761,7 +1886,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 10.9
   },
   {
     "proid": "256",
@@ -1775,7 +1901,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 43
   },
   {
     "proid": "236",
@@ -1789,7 +1916,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 4.9
   },
   {
     "proid": "115",
@@ -1803,7 +1931,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 11.1
   },
   {
     "proid": "116",
@@ -1817,7 +1946,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 25
   },
   {
     "proid": "167",
@@ -1831,7 +1961,8 @@
     "stockMinimo": 0,
     "diasCob": 17.1,
     "sugerenciaPedido": 0,
-    "estado": "ADECUADO"
+    "estado": "ADECUADO",
+    "precioUnitario": 12.3
   },
   {
     "proid": "634",
@@ -1845,7 +1976,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 26
   },
   {
     "proid": "312",
@@ -1859,7 +1991,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 22
   },
   {
     "proid": "237",
@@ -1873,7 +2006,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 6.7
   },
   {
     "proid": "114",
@@ -1887,7 +2021,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 20.8
   },
   {
     "proid": "182",
@@ -1901,7 +2036,8 @@
     "stockMinimo": 0,
     "diasCob": 0,
     "sugerenciaPedido": 7,
-    "estado": "CRÍTICO / AGOTADO"
+    "estado": "CRÍTICO / AGOTADO",
+    "precioUnitario": 92.3
   },
   {
     "proid": "530",
@@ -1915,7 +2051,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 7.7
   },
   {
     "proid": "506",
@@ -1929,7 +2066,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 3.8
   },
   {
     "proid": "35",
@@ -1943,7 +2081,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 5
   },
   {
     "proid": "33",
@@ -1957,7 +2096,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 12.7
   },
   {
     "proid": "239",
@@ -1971,7 +2111,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 3.8
   },
   {
     "proid": "9",
@@ -1985,7 +2126,8 @@
     "stockMinimo": 0,
     "diasCob": 3.8,
     "sugerenciaPedido": 11,
-    "estado": "URGENTE (< 5 días)"
+    "estado": "URGENTE (< 5 días)",
+    "precioUnitario": 50
   },
   {
     "proid": "669",
@@ -1999,7 +2141,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 4.3
   },
   {
     "proid": "542",
@@ -2013,7 +2156,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 3.8
   },
   {
     "proid": "467",
@@ -2027,7 +2171,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 51.5
   },
   {
     "proid": "468",
@@ -2041,7 +2186,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 14
   },
   {
     "proid": "466",
@@ -2055,7 +2201,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 34
   },
   {
     "proid": "465",
@@ -2069,7 +2216,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 37
   },
   {
     "proid": "422",
@@ -2083,7 +2231,8 @@
     "stockMinimo": 0,
     "diasCob": 49.1,
     "sugerenciaPedido": 0,
-    "estado": "SOBRESTOCK"
+    "estado": "SOBRESTOCK",
+    "precioUnitario": 14.5
   },
   {
     "proid": "464",
@@ -2097,7 +2246,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 5
   },
   {
     "proid": "502",
@@ -2111,7 +2261,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 24
   },
   {
     "proid": "492",
@@ -2125,7 +2276,8 @@
     "stockMinimo": 0,
     "diasCob": -87.6,
     "sugerenciaPedido": 55,
-    "estado": "CRÍTICO / AGOTADO"
+    "estado": "CRÍTICO / AGOTADO",
+    "precioUnitario": 15
   },
   {
     "proid": "493",
@@ -2139,7 +2291,8 @@
     "stockMinimo": 0,
     "diasCob": 11.9,
     "sugerenciaPedido": 2,
-    "estado": "PEDIR (5 a 12 días)"
+    "estado": "PEDIR (5 a 12 días)",
+    "precioUnitario": 15
   },
   {
     "proid": "279",
@@ -2153,7 +2306,8 @@
     "stockMinimo": 0,
     "diasCob": -4.5,
     "sugerenciaPedido": 48,
-    "estado": "CRÍTICO / AGOTADO"
+    "estado": "CRÍTICO / AGOTADO",
+    "precioUnitario": 20
   },
   {
     "proid": "491",
@@ -2167,7 +2321,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 7.5
   },
   {
     "proid": "442",
@@ -2181,7 +2336,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 49.2
   },
   {
     "proid": "446",
@@ -2195,7 +2351,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 6.5
   },
   {
     "proid": "641",
@@ -2209,7 +2366,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 15.5
   },
   {
     "proid": "489",
@@ -2223,7 +2381,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 12
   },
   {
     "proid": "304",
@@ -2237,7 +2396,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 9.7
   },
   {
     "proid": "488",
@@ -2251,7 +2411,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 15
   },
   {
     "proid": "118",
@@ -2265,7 +2426,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 4
   },
   {
     "proid": "240",
@@ -2279,7 +2441,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 11.5
   },
   {
     "proid": "125",
@@ -2293,7 +2456,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 13.1
   },
   {
     "proid": "126",
@@ -2307,7 +2471,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 2.6
   },
   {
     "proid": "241",
@@ -2321,7 +2486,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 3.7
   },
   {
     "proid": "263",
@@ -2335,7 +2501,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 10.6
   },
   {
     "proid": "676",
@@ -2349,7 +2516,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 11.8
   },
   {
     "proid": "665",
@@ -2363,7 +2531,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 24.8
   },
   {
     "proid": "262",
@@ -2377,7 +2546,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 12.1
   },
   {
     "proid": "277",
@@ -2391,7 +2561,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 10.7
   },
   {
     "proid": "341",
@@ -2405,7 +2576,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 144
   },
   {
     "proid": "451",
@@ -2419,7 +2591,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 5.2
   },
   {
     "proid": "450",
@@ -2433,7 +2606,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 5.8
   },
   {
     "proid": "174",
@@ -2447,7 +2621,8 @@
     "stockMinimo": 0,
     "diasCob": 6.3,
     "sugerenciaPedido": 11,
-    "estado": "PEDIR (5 a 12 días)"
+    "estado": "PEDIR (5 a 12 días)",
+    "precioUnitario": 19.3
   },
   {
     "proid": "355",
@@ -2461,7 +2636,8 @@
     "stockMinimo": 0,
     "diasCob": 18,
     "sugerenciaPedido": 0,
-    "estado": "ADECUADO"
+    "estado": "ADECUADO",
+    "precioUnitario": 24
   },
   {
     "proid": "452",
@@ -2475,7 +2651,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 8.1
   },
   {
     "proid": "10",
@@ -2489,7 +2666,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 9
   },
   {
     "proid": "248",
@@ -2503,7 +2681,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 3.2
   },
   {
     "proid": "173",
@@ -2517,7 +2696,8 @@
     "stockMinimo": 0,
     "diasCob": -2.5,
     "sugerenciaPedido": 1,
-    "estado": "CRÍTICO / AGOTADO"
+    "estado": "CRÍTICO / AGOTADO",
+    "precioUnitario": 75
   },
   {
     "proid": "176",
@@ -2531,7 +2711,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 86.4
   },
   {
     "proid": "267",
@@ -2545,7 +2726,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 8
   },
   {
     "proid": "154",
@@ -2559,7 +2741,8 @@
     "stockMinimo": 0,
     "diasCob": 0,
     "sugerenciaPedido": 172,
-    "estado": "CRÍTICO / AGOTADO"
+    "estado": "CRÍTICO / AGOTADO",
+    "precioUnitario": 13.2
   },
   {
     "proid": "400",
@@ -2573,7 +2756,8 @@
     "stockMinimo": 0,
     "diasCob": -3.7,
     "sugerenciaPedido": 96,
-    "estado": "CRÍTICO / AGOTADO"
+    "estado": "CRÍTICO / AGOTADO",
+    "precioUnitario": 30
   },
   {
     "proid": "374",
@@ -2587,7 +2771,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 20
   },
   {
     "proid": "153",
@@ -2601,7 +2786,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 11.4
   },
   {
     "proid": "569",
@@ -2615,7 +2801,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 7.7
   },
   {
     "proid": "127",
@@ -2629,7 +2816,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 6
   },
   {
     "proid": "543",
@@ -2643,7 +2831,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 20
   },
   {
     "proid": "184",
@@ -2657,7 +2846,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 18
   },
   {
     "proid": "175",
@@ -2671,7 +2861,8 @@
     "stockMinimo": 0,
     "diasCob": 0,
     "sugerenciaPedido": 1,
-    "estado": "CRÍTICO / AGOTADO"
+    "estado": "CRÍTICO / AGOTADO",
+    "precioUnitario": 80
   },
   {
     "proid": "36",
@@ -2685,7 +2876,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 21.5
   },
   {
     "proid": "244",
@@ -2699,7 +2891,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 16.1
   },
   {
     "proid": "245",
@@ -2713,7 +2906,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 6.4
   },
   {
     "proid": "794",
@@ -2727,7 +2921,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 12.3
   },
   {
     "proid": "246",
@@ -2741,7 +2936,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 1.8
   },
   {
     "proid": "82",
@@ -2755,7 +2951,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 15.4
   },
   {
     "proid": "81",
@@ -2769,7 +2966,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 17.6
   },
   {
     "proid": "306",
@@ -2783,7 +2981,8 @@
     "stockMinimo": 0,
     "diasCob": -11.6,
     "sugerenciaPedido": 25,
-    "estado": "CRÍTICO / AGOTADO"
+    "estado": "CRÍTICO / AGOTADO",
+    "precioUnitario": 11.5
   },
   {
     "proid": "315",
@@ -2797,7 +2996,8 @@
     "stockMinimo": 0,
     "diasCob": -7.9,
     "sugerenciaPedido": 10,
-    "estado": "CRÍTICO / AGOTADO"
+    "estado": "CRÍTICO / AGOTADO",
+    "precioUnitario": 44.5
   },
   {
     "proid": "305",
@@ -2811,7 +3011,8 @@
     "stockMinimo": 0,
     "diasCob": -3.4,
     "sugerenciaPedido": 36,
-    "estado": "CRÍTICO / AGOTADO"
+    "estado": "CRÍTICO / AGOTADO",
+    "precioUnitario": 12
   },
   {
     "proid": "316",
@@ -2825,7 +3026,8 @@
     "stockMinimo": 0,
     "diasCob": 6.3,
     "sugerenciaPedido": 7,
-    "estado": "PEDIR (5 a 12 días)"
+    "estado": "PEDIR (5 a 12 días)",
+    "precioUnitario": 34
   },
   {
     "proid": "476",
@@ -2839,7 +3041,8 @@
     "stockMinimo": 0,
     "diasCob": 18.5,
     "sugerenciaPedido": 0,
-    "estado": "ADECUADO"
+    "estado": "ADECUADO",
+    "precioUnitario": 6.5
   },
   {
     "proid": "439",
@@ -2853,7 +3056,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 2.3
   },
   {
     "proid": "505",
@@ -2867,7 +3071,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 29.8
   },
   {
     "proid": "605",
@@ -2881,7 +3086,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 2
   },
   {
     "proid": "507",
@@ -2895,7 +3101,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 5.8
   },
   {
     "proid": "60",
@@ -2909,7 +3116,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 26.2
   },
   {
     "proid": "555",
@@ -2923,7 +3131,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 50
   },
   {
     "proid": "328",
@@ -2937,7 +3146,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 12
   },
   {
     "proid": "561",
@@ -2951,7 +3161,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 120
   },
   {
     "proid": "608",
@@ -2965,7 +3176,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 18
   },
   {
     "proid": "607",
@@ -2979,7 +3191,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 14
   },
   {
     "proid": "364",
@@ -2993,7 +3206,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 33
   },
   {
     "proid": "606",
@@ -3007,7 +3221,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 12
   },
   {
     "proid": "671",
@@ -3021,7 +3236,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 13.2
   },
   {
     "proid": "550",
@@ -3035,7 +3251,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 155
   },
   {
     "proid": "549",
@@ -3049,7 +3266,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 155
   },
   {
     "proid": "443",
@@ -3063,7 +3281,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 1
   },
   {
     "proid": "602",
@@ -3077,7 +3296,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 16.5
   },
   {
     "proid": "39",
@@ -3091,7 +3311,8 @@
     "stockMinimo": 0,
     "diasCob": 14.7,
     "sugerenciaPedido": 1,
-    "estado": "ADECUADO"
+    "estado": "ADECUADO",
+    "precioUnitario": 191
   },
   {
     "proid": "454",
@@ -3105,7 +3326,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 5
   },
   {
     "proid": "249",
@@ -3119,7 +3341,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 8
   },
   {
     "proid": "121",
@@ -3133,7 +3356,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 9.8
   },
   {
     "proid": "394",
@@ -3147,7 +3371,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 0
   },
   {
     "proid": "500",
@@ -3161,7 +3386,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 1.5
   },
   {
     "proid": "407",
@@ -3175,7 +3401,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 145
   },
   {
     "proid": "441",
@@ -3189,7 +3416,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 1.7
   },
   {
     "proid": "469",
@@ -3203,7 +3431,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 3
   },
   {
     "proid": "199",
@@ -3217,7 +3446,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 5
   },
   {
     "proid": "200",
@@ -3231,7 +3461,8 @@
     "stockMinimo": 0,
     "diasCob": 116.7,
     "sugerenciaPedido": 0,
-    "estado": "SOBRESTOCK"
+    "estado": "SOBRESTOCK",
+    "precioUnitario": 11.5
   },
   {
     "proid": "402",
@@ -3245,7 +3476,8 @@
     "stockMinimo": 0,
     "diasCob": 38.1,
     "sugerenciaPedido": 0,
-    "estado": "SOBRESTOCK"
+    "estado": "SOBRESTOCK",
+    "precioUnitario": 20.2
   },
   {
     "proid": "404",
@@ -3259,7 +3491,8 @@
     "stockMinimo": 0,
     "diasCob": 9.1,
     "sugerenciaPedido": 4,
-    "estado": "PEDIR (5 a 12 días)"
+    "estado": "PEDIR (5 a 12 días)",
+    "precioUnitario": 13.8
   },
   {
     "proid": "403",
@@ -3273,7 +3506,8 @@
     "stockMinimo": 0,
     "diasCob": -3,
     "sugerenciaPedido": 14,
-    "estado": "CRÍTICO / AGOTADO"
+    "estado": "CRÍTICO / AGOTADO",
+    "precioUnitario": 12.4
   },
   {
     "proid": "12",
@@ -3287,7 +3521,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 44
   },
   {
     "proid": "202",
@@ -3301,7 +3536,8 @@
     "stockMinimo": 0,
     "diasCob": 38.7,
     "sugerenciaPedido": 0,
-    "estado": "SOBRESTOCK"
+    "estado": "SOBRESTOCK",
+    "precioUnitario": 10.5
   },
   {
     "proid": "503",
@@ -3315,7 +3551,8 @@
     "stockMinimo": 0,
     "diasCob": 19.9,
     "sugerenciaPedido": 0,
-    "estado": "ADECUADO"
+    "estado": "ADECUADO",
+    "precioUnitario": 14.5
   },
   {
     "proid": "558",
@@ -3329,7 +3566,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 55
   },
   {
     "proid": "292",
@@ -3343,7 +3581,8 @@
     "stockMinimo": 0,
     "diasCob": 33.1,
     "sugerenciaPedido": 0,
-    "estado": "SOBRESTOCK"
+    "estado": "SOBRESTOCK",
+    "precioUnitario": 12
   },
   {
     "proid": "462",
@@ -3357,7 +3596,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 5.6
   },
   {
     "proid": "195",
@@ -3371,7 +3611,8 @@
     "stockMinimo": 0,
     "diasCob": 2.7,
     "sugerenciaPedido": 11,
-    "estado": "URGENTE (< 5 días)"
+    "estado": "URGENTE (< 5 días)",
+    "precioUnitario": 8.75
   },
   {
     "proid": "201",
@@ -3385,7 +3626,8 @@
     "stockMinimo": 0,
     "diasCob": 9.3,
     "sugerenciaPedido": 4,
-    "estado": "PEDIR (5 a 12 días)"
+    "estado": "PEDIR (5 a 12 días)",
+    "precioUnitario": 12.75
   },
   {
     "proid": "348",
@@ -3399,7 +3641,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 10.5
   },
   {
     "proid": "449",
@@ -3413,7 +3656,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 14.9
   },
   {
     "proid": "459",
@@ -3427,7 +3671,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 16.1
   },
   {
     "proid": "187",
@@ -3441,7 +3686,8 @@
     "stockMinimo": 0,
     "diasCob": 2.1,
     "sugerenciaPedido": 8,
-    "estado": "URGENTE (< 5 días)"
+    "estado": "URGENTE (< 5 días)",
+    "precioUnitario": 16.5
   },
   {
     "proid": "188",
@@ -3455,7 +3701,8 @@
     "stockMinimo": 0,
     "diasCob": -3.4,
     "sugerenciaPedido": 12,
-    "estado": "CRÍTICO / AGOTADO"
+    "estado": "CRÍTICO / AGOTADO",
+    "precioUnitario": 8.25
   },
   {
     "proid": "189",
@@ -3469,7 +3716,8 @@
     "stockMinimo": 0,
     "diasCob": -0.9,
     "sugerenciaPedido": 20,
-    "estado": "CRÍTICO / AGOTADO"
+    "estado": "CRÍTICO / AGOTADO",
+    "precioUnitario": 12
   },
   {
     "proid": "207",
@@ -3483,7 +3731,8 @@
     "stockMinimo": 0,
     "diasCob": 30.4,
     "sugerenciaPedido": 0,
-    "estado": "SOBRESTOCK"
+    "estado": "SOBRESTOCK",
+    "precioUnitario": 12
   },
   {
     "proid": "196",
@@ -3497,7 +3746,8 @@
     "stockMinimo": 0,
     "diasCob": 73.3,
     "sugerenciaPedido": 0,
-    "estado": "SOBRESTOCK"
+    "estado": "SOBRESTOCK",
+    "precioUnitario": 10.5
   },
   {
     "proid": "198",
@@ -3511,7 +3761,8 @@
     "stockMinimo": 0,
     "diasCob": 27.8,
     "sugerenciaPedido": 0,
-    "estado": "SOBRESTOCK"
+    "estado": "SOBRESTOCK",
+    "precioUnitario": 13.2
   },
   {
     "proid": "205",
@@ -3525,7 +3776,8 @@
     "stockMinimo": 0,
     "diasCob": 40.8,
     "sugerenciaPedido": 0,
-    "estado": "SOBRESTOCK"
+    "estado": "SOBRESTOCK",
+    "precioUnitario": 10.5
   },
   {
     "proid": "204",
@@ -3539,7 +3791,8 @@
     "stockMinimo": 0,
     "diasCob": 39.8,
     "sugerenciaPedido": 0,
-    "estado": "SOBRESTOCK"
+    "estado": "SOBRESTOCK",
+    "precioUnitario": 11.5
   },
   {
     "proid": "210",
@@ -3553,7 +3806,8 @@
     "stockMinimo": 0,
     "diasCob": 95.5,
     "sugerenciaPedido": 0,
-    "estado": "SOBRESTOCK"
+    "estado": "SOBRESTOCK",
+    "precioUnitario": 10
   },
   {
     "proid": "209",
@@ -3567,7 +3821,8 @@
     "stockMinimo": 0,
     "diasCob": 94.9,
     "sugerenciaPedido": 0,
-    "estado": "SOBRESTOCK"
+    "estado": "SOBRESTOCK",
+    "precioUnitario": 12
   },
   {
     "proid": "300",
@@ -3581,7 +3836,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 7.7
   },
   {
     "proid": "197",
@@ -3595,7 +3851,8 @@
     "stockMinimo": 0,
     "diasCob": 8.7,
     "sugerenciaPedido": 9,
-    "estado": "PEDIR (5 a 12 días)"
+    "estado": "PEDIR (5 a 12 días)",
+    "precioUnitario": 7
   },
   {
     "proid": "208",
@@ -3609,7 +3866,8 @@
     "stockMinimo": 0,
     "diasCob": 31.1,
     "sugerenciaPedido": 0,
-    "estado": "SOBRESTOCK"
+    "estado": "SOBRESTOCK",
+    "precioUnitario": 20.1
   },
   {
     "proid": "499",
@@ -3623,7 +3881,8 @@
     "stockMinimo": 0,
     "diasCob": 34.6,
     "sugerenciaPedido": 0,
-    "estado": "SOBRESTOCK"
+    "estado": "SOBRESTOCK",
+    "precioUnitario": 7.2
   },
   {
     "proid": "211",
@@ -3637,7 +3896,8 @@
     "stockMinimo": 0,
     "diasCob": 34.6,
     "sugerenciaPedido": 0,
-    "estado": "SOBRESTOCK"
+    "estado": "SOBRESTOCK",
+    "precioUnitario": 23.3
   },
   {
     "proid": "193",
@@ -3651,7 +3911,8 @@
     "stockMinimo": 0,
     "diasCob": 15.4,
     "sugerenciaPedido": 2,
-    "estado": "ADECUADO"
+    "estado": "ADECUADO",
+    "precioUnitario": 25
   },
   {
     "proid": "191",
@@ -3665,7 +3926,8 @@
     "stockMinimo": 0,
     "diasCob": 0,
     "sugerenciaPedido": 41,
-    "estado": "CRÍTICO / AGOTADO"
+    "estado": "CRÍTICO / AGOTADO",
+    "precioUnitario": 11.9
   },
   {
     "proid": "486",
@@ -3679,7 +3941,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 15.1
   },
   {
     "proid": "194",
@@ -3693,7 +3956,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 19.5
   },
   {
     "proid": "455",
@@ -3707,7 +3971,8 @@
     "stockMinimo": 0,
     "diasCob": 27.9,
     "sugerenciaPedido": 0,
-    "estado": "SOBRESTOCK"
+    "estado": "SOBRESTOCK",
+    "precioUnitario": 12.9
   },
   {
     "proid": "192",
@@ -3721,7 +3986,8 @@
     "stockMinimo": 0,
     "diasCob": 6.2,
     "sugerenciaPedido": 13,
-    "estado": "PEDIR (5 a 12 días)"
+    "estado": "PEDIR (5 a 12 días)",
+    "precioUnitario": 11.5
   },
   {
     "proid": "320",
@@ -3735,7 +4001,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 12.5
   },
   {
     "proid": "179",
@@ -3749,7 +4016,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 28
   },
   {
     "proid": "15",
@@ -3763,7 +4031,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 27.6
   },
   {
     "proid": "113",
@@ -3777,7 +4046,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 14
   },
   {
     "proid": "701",
@@ -3791,7 +4061,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 188
   },
   {
     "proid": "702",
@@ -3805,7 +4076,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 188
   },
   {
     "proid": "703",
@@ -3819,7 +4091,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 188
   },
   {
     "proid": "704",
@@ -3833,7 +4106,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 188
   },
   {
     "proid": "705",
@@ -3847,7 +4121,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 188
   },
   {
     "proid": "706",
@@ -3861,7 +4136,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 188
   },
   {
     "proid": "651",
@@ -3875,7 +4151,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 10.5
   },
   {
     "proid": "145",
@@ -3889,7 +4166,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 21
   },
   {
     "proid": "339",
@@ -3903,7 +4181,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 122
   },
   {
     "proid": "353",
@@ -3917,7 +4196,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 19.2
   },
   {
     "proid": "358",
@@ -3931,7 +4211,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 28.8
   },
   {
     "proid": "139",
@@ -3945,7 +4226,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 27.5
   },
   {
     "proid": "140",
@@ -3959,7 +4241,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 33
   },
   {
     "proid": "141",
@@ -3973,7 +4256,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 33
   },
   {
     "proid": "142",
@@ -3987,7 +4271,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 35
   },
   {
     "proid": "143",
@@ -4001,7 +4286,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 35
   },
   {
     "proid": "460",
@@ -4015,7 +4301,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 10.3
   },
   {
     "proid": "418",
@@ -4029,7 +4316,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 7.8
   },
   {
     "proid": "457",
@@ -4043,7 +4331,8 @@
     "stockMinimo": 0,
     "diasCob": 6.3,
     "sugerenciaPedido": 17,
-    "estado": "PEDIR (5 a 12 días)"
+    "estado": "PEDIR (5 a 12 días)",
+    "precioUnitario": 22
   },
   {
     "proid": "472",
@@ -4057,7 +4346,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 13
   },
   {
     "proid": "72",
@@ -4071,7 +4361,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 15
   },
   {
     "proid": "124",
@@ -4085,7 +4376,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 9.1
   },
   {
     "proid": "45",
@@ -4099,7 +4391,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 12
   },
   {
     "proid": "16",
@@ -4113,7 +4406,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 36.5
   },
   {
     "proid": "250",
@@ -4127,7 +4421,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 8.1
   },
   {
     "proid": "128",
@@ -4141,7 +4436,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 6.2
   },
   {
     "proid": "178",
@@ -4155,7 +4451,8 @@
     "stockMinimo": 0,
     "diasCob": 24.5,
     "sugerenciaPedido": 0,
-    "estado": "SOBRESTOCK"
+    "estado": "SOBRESTOCK",
+    "precioUnitario": 24
   },
   {
     "proid": "284",
@@ -4169,7 +4466,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 26
   },
   {
     "proid": "41",
@@ -4183,7 +4481,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 11.5
   },
   {
     "proid": "646",
@@ -4197,7 +4496,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 600
   },
   {
     "proid": "17",
@@ -4211,7 +4511,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 25.1
   },
   {
     "proid": "18",
@@ -4225,7 +4526,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 54.9
   },
   {
     "proid": "445",
@@ -4239,7 +4541,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 2
   },
   {
     "proid": "251",
@@ -4253,7 +4556,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 4.9
   },
   {
     "proid": "252",
@@ -4267,7 +4571,8 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 3.5
   },
   {
     "proid": "214",
@@ -4281,7 +4586,8 @@
     "stockMinimo": 0,
     "diasCob": -1.8,
     "sugerenciaPedido": 53,
-    "estado": "CRÍTICO / AGOTADO"
+    "estado": "CRÍTICO / AGOTADO",
+    "precioUnitario": 8.6
   },
   {
     "proid": "56",
@@ -4295,6 +4601,7 @@
     "stockMinimo": 0,
     "diasCob": null,
     "sugerenciaPedido": 0,
-    "estado": "SIN STOCK REGISTRADO"
+    "estado": "SIN STOCK REGISTRADO",
+    "precioUnitario": 13.2
   }
 ]
