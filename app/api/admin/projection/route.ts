@@ -3,6 +3,7 @@ import { workspaceFor } from '../../../../lib/workspace';
 import { inventoryFor } from '../../../../lib/inventory-store';
 import initialCatalog from '../../../../data/catalogo_proyeccion.json';
 import initialDishes from '../../../../data/ventas_platos_01_14_octubre.json';
+import initialDailyDishes from '../../../../data/ventas_platos_diarios_compact.json';
 import initialRecipes from '../../../../data/recetas_platos.json';
 
 export const dynamic = 'force-dynamic';
@@ -114,10 +115,12 @@ export async function GET(req: Request) {
         totalItemsCatalog: catalog.length,
         totalItemsToOrder: withOrder.length,
         criticalItemsCount: critical.length,
-        totalPlatosVendidosQuincena: 2850
+        totalPlatosVendidosQuincena: 2850,
+        totalPlatosVendidosMes: initialDailyDishes.grandTotalPlatos || 6659
       },
       catalog,
       dishes: (initialDishes as any[]).slice(0, 50),
+      dailyDishes: initialDailyDishes,
       recipes: initialRecipes
     });
   } catch (e: any) {
