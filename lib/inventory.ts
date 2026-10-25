@@ -11,6 +11,12 @@ export type State={ingredients:Ingredient[];movements:Movement[];areaItems?:Area
 export const normalize=(s:string)=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim();
 export const round=(n:number)=>Math.round(n*1e6)/1e6;
 export const configured=(i:Ingredient)=>i.configured!==false&&!!i.unit&&!i.unitIssue;
+export function isTrago(name: string, category?: string): boolean {
+  const n = (name || '').toLowerCase();
+  const c = (category || '').toLowerCase().trim();
+  if (c === 'tragos' || c === 'licores' || c.includes('trago') || c.includes('licor')) return true;
+  return /\b(soju|sake|cusqueña|asahi|kirin|orion|cerveza|licor de arroz|vodka|gin|ron|pisco|whisky|tequila)\b/i.test(n) || /^blend de\s+/i.test(n);
+}
 export function emptyState():State{return {ingredients:[],movements:[]}}
 export function withCatalog(s:State):State{return reconcileCatalog(structuredClone(s))}
 function fail(s:string):never{throw Error(s)}

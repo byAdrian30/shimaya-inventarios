@@ -1130,5 +1130,148 @@
         "cantidad": "30ml"
       }
     ]
+  },
+  "CHEESECAKE JAPONÉS": {
+    "categoria": "Postres",
+    "platos": [
+      "Cheesecake japones",
+      "Cheesecake",
+      "CHEESECAKE"
+    ],
+    "insumos": [
+      {
+        "insumo": "Cheesecake",
+        "cantidad": "1 porción (unidad)"
+      },
+      {
+        "insumo": "Coulis de Fresa / Frambuesa",
+        "cantidad": "25ml (opcional)"
+      }
+    ]
+  },
+  "PUCHIKURIMO (PETIT CHOUX / PUCHI KURIMU)": {
+    "categoria": "Postres",
+    "platos": [
+      "Puchi Kurimu",
+      "Puchikurimo",
+      "PÚCHIKURIMU"
+    ],
+    "insumos": [
+      {
+        "insumo": "Púchikurimu",
+        "cantidad": "1 porción (unidad choux relleno)"
+      }
+    ]
+  },
+  "TOKYO MULE": {
+    "categoria": "Coctelería",
+    "platos": [
+      "TOKYO MULE",
+      "TOKYO MULE 50% L-V"
+    ],
+    "insumos": [
+      {
+        "insumo": "Blend de Tokyo Mule",
+        "cantidad": "50ml (0.05 und)"
+      },
+      {
+        "insumo": "Ginger Ale",
+        "cantidad": "150ml (0.5 lata)"
+      },
+      {
+        "insumo": "Deshidratado de Limón",
+        "cantidad": "1 rodaja"
+      }
+    ]
+  },
+  "SAKERINHA": {
+    "categoria": "Coctelería",
+    "platos": [
+      "SAKERINHA",
+      "SAKHERINHA  50% L-V"
+    ],
+    "insumos": [
+      {
+        "insumo": "Blend de Sakerinha",
+        "cantidad": "60ml (0.06 und)"
+      },
+      {
+        "insumo": "Sake Original",
+        "cantidad": "45ml (0.05 bot)"
+      },
+      {
+        "insumo": "Jarabe de Goma",
+        "cantidad": "20ml"
+      }
+    ]
+  },
+  "MOJITO CLÁSICO": {
+    "categoria": "Coctelería",
+    "platos": [
+      "MOJITO CLASICO",
+      "MOJITO CLASICO 50% L-V"
+    ],
+    "insumos": [
+      {
+        "insumo": "Ron Blanco",
+        "cantidad": "45ml"
+      },
+      {
+        "insumo": "Jarabe de Goma",
+        "cantidad": "30ml"
+      },
+      {
+        "insumo": "Ginger Ale / Soda",
+        "cantidad": "120ml"
+      }
+    ]
+  },
+  "DRAGON TONIC": {
+    "categoria": "Coctelería",
+    "platos": [
+      "DRAGON TONIC",
+      "DRAGON TONIC 50% L-V"
+    ],
+    "insumos": [
+      {
+        "insumo": "Blend de Dragon Tonic",
+        "cantidad": "50ml (0.05 und)"
+      },
+      {
+        "insumo": "Ginger Ale / Tónica",
+        "cantidad": "150ml"
+      },
+      {
+        "insumo": "Deshidratado de Pitahaya",
+        "cantidad": "1 rodaja"
+      }
+    ]
+  },
+  "CHILCANO (MARACUYÁ / LYCHEE)": {
+    "categoria": "Coctelería",
+    "platos": [
+      "CHILCANO MARACUYÁ",
+      "CHILCANO MARACUYA  50% L-V",
+      "CHILCANO LYCHEE",
+      "CHILCANO LYCHEE  50% L-V"
+    ],
+    "insumos": [
+      {
+        "insumo": "Pisco Quebranta",
+        "cantidad": "45ml"
+      },
+      {
+        "insumo": "Blend de Maracuyá o Blend de Lychee",
+        "cantidad": "30ml (0.03 und)"
+      },
+      {
+        "insumo": "Ginger Ale",
+        "cantidad": "150ml"
+      },
+      {
+        "insumo": "Deshidratado de Limón",
+        "cantidad": "1 rodaja"
+      }
+    ]
   }
 }

@@ -19,9 +19,12 @@ import {
   Percent,
   Coins,
   ChevronDown,
-  Filter
+  Filter,
+  Wine,
+  Cake,
+  GlassWater
 } from 'lucide-react';
-import type { State } from '../lib/inventory';
+import { type State, isTrago } from '../lib/inventory';
 import rawCatalog from '../data/catalogo_proyeccion.json';
 import rawDailyDishes from '../data/ventas_platos_diarios_compact.json';
 import rawRecipes from '../data/recetas_platos.json';
@@ -67,6 +70,10 @@ export default function ProjectionDashboard({ state }: { state?: State }) {
   const [dishCategory, setDishCategory] = useState<string>('TODAS');
   const [dishSearch, setDishSearch] = useState<string>('');
 
+  // Recetas state
+  const [recipeCategory, setRecipeCategory] = useState<string>('TODAS');
+  const [recipeSearch, setRecipeSearch] = useState<string>('');
+
   // Stock en vivo desde el estado de la base de datos de inventario
   const stockMap = useMemo(() => {
     const map = new Map<string, { stock: number; unit: string; minimum: number }>();
@@ -83,9 +90,11 @@ export default function ProjectionDashboard({ state }: { state?: State }) {
     return map;
   }, [state]);
 
-  // Cálculo dinámico del catálogo proyectado
+  // Cálculo dinámico del catálogo proyectado (excluyendo licores / tragos)
   const catalog = useMemo<CatalogItem[]>(() => {
-    return (rawCatalog as any[]).map(item => {
+    return (rawCatalog as any[])
+      .filter(item => !isTrago(item.nombre, item.categoria))
+      .map(item => {
       const live = stockMap.get(norm(item.nombre));
       const liveStock = live ? live.stock : item.stockActual;
       const liveMin = live ? live.minimum : item.stockMinimo;
@@ -214,6 +223,25 @@ export default function ProjectionDashboard({ state }: { state?: State }) {
     });
     return ['TODAS', ...Array.from(set).sort()];
   }, []);
+
+  const recipeCategories = useMemo(() => {
+    const set = new Set<string>();
+    Object.values(rawRecipes as any).forEach((r: any) => {
+      if (r.categoria) set.add(r.categoria);
+    });
+    return ['TODAS', ...Array.from(set).sort()];
+  }, []);
+
+  const filteredRecipes = useMemo(() => {
+    return Object.entries(rawRecipes as any).filter(([dishName, r]: [string, any]) => {
+      const matchesSearch =
+        recipeSearch === '' ||
+        dishName.toLowerCase().includes(recipeSearch.toLowerCase()) ||
+        (r.insumos && r.insumos.some((ins: any) => ins.insumo.toLowerCase().includes(recipeSearch.toLowerCase())));
+      const matchesCat = recipeCategory === 'TODAS' || r.categoria === recipeCategory;
+      return matchesSearch && matchesCat;
+    });
+  }, [recipeCategory, recipeSearch]);
 
   const currentDayStats = useMemo(() => {
     if (selectedDay === 'ALL') {
@@ -756,6 +784,138 @@ export default function ProjectionDashboard({ state }: { state?: State }) {
             </div>
           </div>
 
+          {/* Botones de filtro rápido por categoría */}
+          <div className="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs">
+            <button
+              onClick={() => setDishCategory('TODAS')}
+              className={`px-3 py-1.5 rounded-xl font-bold whitespace-nowrap transition ${
+                dishCategory === 'TODAS'
+                  ? 'bg-neutral-900 text-white dark:bg-neutral-100 dark:text-neutral-900 shadow-sm'
+                  : 'bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-200'
+              }`}
+            >
+              ⭐ Todas las Categorías
+            </button>
+            <button
+              onClick={() => setDishCategory('COCTELES')}
+              className={`px-3 py-1.5 rounded-xl font-bold whitespace-nowrap transition flex items-center gap-1.5 ${
+                dishCategory === 'COCTELES'
+                  ? 'bg-purple-600 text-white shadow-sm ring-2 ring-purple-400'
+                  : 'bg-purple-50 dark:bg-purple-950/40 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800 hover:bg-purple-100'
+              }`}
+            >
+              <Wine className="w-3.5 h-3.5" />
+              🍹 Solo Cócteles (124 und • S/ 2,664)
+            </button>
+            <button
+              onClick={() => setDishCategory('POSTRES')}
+              className={`px-3 py-1.5 rounded-xl font-bold whitespace-nowrap transition flex items-center gap-1.5 ${
+                dishCategory === 'POSTRES'
+                  ? 'bg-pink-600 text-white shadow-sm ring-2 ring-pink-400'
+                  : 'bg-pink-50 dark:bg-pink-950/40 text-pink-700 dark:text-pink-300 border border-pink-200 dark:border-pink-800 hover:bg-pink-100'
+              }`}
+            >
+              <Cake className="w-3.5 h-3.5" />
+              🍰 Postres (Cheesecake & Puchikurimo)
+            </button>
+            <button
+              onClick={() => setDishCategory('MAKIS')}
+              className={`px-3 py-1.5 rounded-xl font-bold whitespace-nowrap transition ${
+                dishCategory === 'MAKIS'
+                  ? 'bg-red-600 text-white shadow-sm'
+                  : 'bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-200'
+              }`}
+            >
+              🍱 Makis
+            </button>
+            <button
+              onClick={() => setDishCategory('RAMEN')}
+              className={`px-3 py-1.5 rounded-xl font-bold whitespace-nowrap transition ${
+                dishCategory === 'RAMEN'
+                  ? 'bg-amber-600 text-white shadow-sm'
+                  : 'bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-200'
+              }`}
+            >
+              🍜 Ramen
+            </button>
+            <button
+              onClick={() => setDishCategory('FONDOS')}
+              className={`px-3 py-1.5 rounded-xl font-bold whitespace-nowrap transition ${
+                dishCategory === 'FONDOS'
+                  ? 'bg-neutral-900 text-white dark:bg-neutral-100 dark:text-neutral-900 shadow-sm'
+                  : 'bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-200'
+              }`}
+            >
+              🍛 Fondos
+            </button>
+            <button
+              onClick={() => setDishCategory('COMBOS')}
+              className={`px-3 py-1.5 rounded-xl font-bold whitespace-nowrap transition ${
+                dishCategory === 'COMBOS'
+                  ? 'bg-neutral-900 text-white dark:bg-neutral-100 dark:text-neutral-900 shadow-sm'
+                  : 'bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-200'
+              }`}
+            >
+              📦 Combos
+            </button>
+          </div>
+
+          {/* Banner de Cócteles */}
+          {dishCategory === 'COCTELES' && (
+            <div className="bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-amber-500/10 border border-purple-200 dark:border-purple-800/50 rounded-xl p-3.5 flex flex-col md:flex-row md:items-center justify-between gap-3">
+              <div className="flex items-start gap-2.5">
+                <div className="p-2 rounded-lg bg-purple-500/20 text-purple-600 dark:text-purple-300">
+                  <Wine className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="text-xs md:text-sm font-bold text-neutral-900 dark:text-white flex items-center gap-2">
+                    🍹 Venta Exclusiva de Cócteles (124 unidades • S/ 2,664.00)
+                  </h3>
+                  <p className="text-[11px] text-neutral-600 dark:text-neutral-400 mt-0.5">
+                    Filtro exclusivo para coctelería de autor y clásicos. <strong>Se excluyeron al 100% las gaseosas, jugos, aguas y tés</strong>.
+                    Incluye Tokyo Mule (40), Sakerinha (26), Mojito (23), Dragon Tonic (17) y Chilcanos (18).
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 self-start md:self-auto">
+                <span className="px-3 py-1 rounded-xl bg-purple-100 dark:bg-purple-950/60 border border-purple-200 dark:border-purple-800 text-purple-900 dark:text-purple-200 text-xs font-black">
+                  124 cócteles
+                </span>
+                <span className="px-3 py-1 rounded-xl bg-emerald-100 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 text-emerald-900 dark:text-emerald-200 font-mono text-xs font-bold">
+                  S/ 2,664.00
+                </span>
+              </div>
+            </div>
+          )}
+
+          {/* Banner de Postres */}
+          {dishCategory === 'POSTRES' && (
+            <div className="bg-gradient-to-r from-pink-500/10 via-rose-500/10 to-amber-500/10 border border-pink-200 dark:border-pink-800/50 rounded-xl p-3.5 flex flex-col md:flex-row md:items-center justify-between gap-3">
+              <div className="flex items-start gap-2.5">
+                <div className="p-2 rounded-lg bg-pink-500/20 text-pink-600 dark:text-pink-300">
+                  <Cake className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="text-xs md:text-sm font-bold text-neutral-900 dark:text-white flex items-center gap-2">
+                    🍰 Postres Considerados: Cheesecake Japonés y Púchikurimu
+                  </h3>
+                  <p className="text-[11px] text-neutral-600 dark:text-neutral-400 mt-0.5">
+                    Integrados con su receta oficial en el catálogo para el cálculo automático de consumos hacia Planta.
+                    Cheesecake Japonés (48 und • S/ 1,200.00) y Púchikurimu (17 und • S/ 255.00).
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 self-start md:self-auto">
+                <span className="px-3 py-1 rounded-xl bg-pink-100 dark:bg-pink-950/60 border border-pink-200 dark:border-pink-800 text-pink-900 dark:text-pink-200 text-xs font-black">
+                  65 postres
+                </span>
+                <span className="px-3 py-1 rounded-xl bg-emerald-100 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 text-emerald-900 dark:text-emerald-200 font-mono text-xs font-bold">
+                  S/ 1,455.00
+                </span>
+              </div>
+            </div>
+          )}
+
           {/* Selector de Día y Filtros de Platos */}
           <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-neutral-100 dark:border-neutral-800">
             <div className="flex items-center gap-1.5">
@@ -853,18 +1013,60 @@ export default function ProjectionDashboard({ state }: { state?: State }) {
       {/* TAB 3: ESCANDALLO / INSUMOS POR PLATO */}
       {activeTab === 'recetas' && (
         <div className="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-4 shadow-sm space-y-4">
-          <div>
-            <h2 className="text-sm md:text-base font-bold text-neutral-900 dark:text-white flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-amber-500" />
-              Escandallo Oficial: Insumos que Lleva Cada Plato
-            </h2>
-            <p className="text-xs text-neutral-500 mt-0.5">
-              Fórmula de consumo de 49 recetas maestras cruzadas con las ventas día a día para calcular el consumo exacto proyectado a Planta.
-            </p>
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
+            <div>
+              <h2 className="text-sm md:text-base font-bold text-neutral-900 dark:text-white flex items-center gap-2">
+                <Sparkles className="w-4 h-4 text-amber-500" />
+                Escandallo Oficial: Insumos que Lleva Cada Plato ({Object.keys(rawRecipes).length} recetas)
+              </h2>
+              <p className="text-xs text-neutral-500 mt-0.5">
+                Fórmula de consumo de recetas maestras (incluye Cheesecake, Púchikurimo y Cócteles) cruzadas con las ventas día a día.
+              </p>
+            </div>
+
+            <div className="flex items-center gap-2 text-xs">
+              <span className="px-2.5 py-1 rounded-lg bg-amber-100 dark:bg-amber-950/40 text-amber-800 dark:text-amber-300 font-bold">
+                {filteredRecipes.length} de {Object.keys(rawRecipes).length} recetas
+              </span>
+            </div>
+          </div>
+
+          {/* Filtros de recetas */}
+          <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-neutral-100 dark:border-neutral-800">
+            <div className="relative">
+              <Search className="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400" />
+              <input
+                type="text"
+                placeholder="Buscar receta o insumo..."
+                value={recipeSearch}
+                onChange={e => setRecipeSearch(e.target.value)}
+                className="pl-8 pr-3 py-1.5 text-xs bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-xl w-60 focus:outline-none focus:ring-2 focus:ring-amber-500"
+              />
+            </div>
+
+            <div className="flex items-center gap-1 overflow-x-auto py-1">
+              {['TODAS', 'Postres', 'Coctelería', 'Ramen', 'Makis'].map(cat => (
+                <button
+                  key={cat}
+                  onClick={() => setRecipeCategory(cat)}
+                  className={`px-2.5 py-1 rounded-lg text-xs font-bold transition whitespace-nowrap ${
+                    recipeCategory === cat
+                      ? 'bg-amber-600 text-white shadow-sm'
+                      : 'bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-200'
+                  }`}
+                >
+                  {cat === 'TODAS' ? '⭐ Todas' : cat === 'Postres' ? '🍰 Postres' : cat === 'Coctelería' ? '🍹 Cócteles' : cat}
+                </button>
+              ))}
+            </div>
+
+            <span className="text-[11px] text-neutral-400 ml-auto font-medium">
+              Mostrando {filteredRecipes.length} recetas
+            </span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-h-[650px] overflow-y-auto pr-1">
-            {Object.entries(rawRecipes as any).map(([dishName, recipe]: [string, any]) => (
+            {filteredRecipes.map(([dishName, recipe]: [string, any]) => (
               <div
                 key={dishName}
                 className="border border-neutral-200 dark:border-neutral-800 rounded-xl p-3 space-y-2 bg-neutral-50/50 dark:bg-neutral-800/30"
@@ -873,7 +1075,13 @@ export default function ProjectionDashboard({ state }: { state?: State }) {
                   <span className="font-black text-xs text-neutral-900 dark:text-white truncate" title={dishName}>
                     {dishName}
                   </span>
-                  <span className="text-[9px] font-bold px-2 py-0.5 rounded bg-red-100 dark:bg-red-950 text-red-700 dark:text-red-300">
+                  <span className={`text-[9px] font-bold px-2 py-0.5 rounded ${
+                    recipe.categoria === 'Postres'
+                      ? 'bg-pink-100 dark:bg-pink-950 text-pink-700 dark:text-pink-300'
+                      : recipe.categoria === 'Coctelería'
+                      ? 'bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300'
+                      : 'bg-red-100 dark:bg-red-950 text-red-700 dark:text-red-300'
+                  }`}>
                     {recipe.categoria}
                   </span>
                 </div>

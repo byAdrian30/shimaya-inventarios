@@ -140,7 +140,7 @@
         {
           "name": "TOKYO MULE",
           "sku": "TM",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 4,
           "monto": 112
@@ -188,7 +188,7 @@
         {
           "name": "TOKYO MULE 50% L-V",
           "sku": "TM2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 3,
           "monto": 42
@@ -196,7 +196,7 @@
         {
           "name": "SAKERINHA",
           "sku": "SK",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 3,
           "monto": 84
@@ -332,7 +332,7 @@
         {
           "name": "SAKHERINHA  50% L-V",
           "sku": "SK2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 2,
           "monto": 28
@@ -340,7 +340,7 @@
         {
           "name": "MOJITO CLASICO 50% L-V",
           "sku": "MC2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 2,
           "monto": 23
@@ -396,7 +396,7 @@
         {
           "name": "DRAGON TONIC",
           "sku": "dragon-tonic",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 2,
           "monto": 60
@@ -580,7 +580,7 @@
         {
           "name": "Cheesecake japones",
           "sku": "cheecake-jap",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 1,
           "monto": 25
@@ -1060,7 +1060,7 @@
         {
           "name": "TOKYO MULE",
           "sku": "TM",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 3,
           "monto": 84
@@ -1108,7 +1108,7 @@
         {
           "name": "CHILCANO MARACUYA  50% L-V",
           "sku": "CM2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 3,
           "monto": 34.5
@@ -1196,7 +1196,7 @@
         {
           "name": "MOJITO CLASICO 50% L-V",
           "sku": "MC2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 2,
           "monto": 23
@@ -1324,7 +1324,7 @@
         {
           "name": "SAKERINHA",
           "sku": "SK",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 2,
           "monto": 56
@@ -1452,7 +1452,7 @@
         {
           "name": "MOJITO CLASICO",
           "sku": "MC",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 23
@@ -1492,7 +1492,7 @@
         {
           "name": "Cheesecake japones",
           "sku": "cheecake-jap",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 1,
           "monto": 25
@@ -1532,7 +1532,7 @@
         {
           "name": "CHILCANO LYCHEE",
           "sku": "CL",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 28
@@ -1604,7 +1604,7 @@
         {
           "name": "TOKYO MULE 50% L-V",
           "sku": "TM2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 14
@@ -1620,7 +1620,7 @@
         {
           "name": "CHILCANO MARACUYÁ",
           "sku": "CM",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 23
@@ -1780,7 +1780,7 @@
         {
           "name": "DRAGON TONIC",
           "sku": "dragon-tonic",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 30
@@ -1788,7 +1788,7 @@
         {
           "name": "SAKHERINHA  50% L-V",
           "sku": "SK2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 14
@@ -2196,7 +2196,7 @@
         {
           "name": "Cheesecake japones",
           "sku": "cheecake-jap",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 3,
           "monto": 75
@@ -3428,7 +3428,7 @@
         {
           "name": "Puchi Kurimu",
           "sku": "crema-volteada",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 1,
           "monto": 15
@@ -3524,7 +3524,7 @@
         {
           "name": "Cheesecake japones",
           "sku": "cheecake-jap",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 1,
           "monto": 25
@@ -3860,7 +3860,7 @@
         {
           "name": "Cheesecake japones",
           "sku": "cheecake-jap",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 4,
           "monto": 100
@@ -4036,7 +4036,7 @@
         {
           "name": "DRAGON TONIC",
           "sku": "dragon-tonic",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 2,
           "monto": 60
@@ -4044,7 +4044,7 @@
         {
           "name": "TOKYO MULE 50% L-V",
           "sku": "TM2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 2,
           "monto": 28
@@ -4052,7 +4052,7 @@
         {
           "name": "TOKYO MULE",
           "sku": "TM",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 2,
           "monto": 56
@@ -4364,7 +4364,7 @@
         {
           "name": "SAKHERINHA  50% L-V",
           "sku": "SK2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 14
@@ -4388,7 +4388,7 @@
         {
           "name": "MOJITO CLASICO 50% L-V",
           "sku": "MC2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 11.5
@@ -4988,7 +4988,7 @@
         {
           "name": "DRAGON TONIC",
           "sku": "dragon-tonic",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 30
@@ -4996,7 +4996,7 @@
         {
           "name": "SAKHERINHA  50% L-V",
           "sku": "SK2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 14
@@ -5020,7 +5020,7 @@
         {
           "name": "TOKYO MULE",
           "sku": "TM",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 28
@@ -5028,7 +5028,7 @@
         {
           "name": "TOKYO MULE 50% L-V",
           "sku": "TM2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 14
@@ -5052,7 +5052,7 @@
         {
           "name": "Puchi Kurimu",
           "sku": "crema-volteada",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 1,
           "monto": 15
@@ -5868,7 +5868,7 @@
         {
           "name": "CHILCANO MARACUYÁ",
           "sku": "CM",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 23
@@ -6228,7 +6228,7 @@
         {
           "name": "Cheesecake japones",
           "sku": "cheecake-jap",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 3,
           "monto": 75
@@ -6316,7 +6316,7 @@
         {
           "name": "SAKERINHA",
           "sku": "SK",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 2,
           "monto": 56
@@ -6468,7 +6468,7 @@
         {
           "name": "CHILCANO LYCHEE  50% L-V",
           "sku": "CL2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 14
@@ -6476,7 +6476,7 @@
         {
           "name": "DRAGON TONIC",
           "sku": "dragon-tonic",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 30
@@ -6580,7 +6580,7 @@
         {
           "name": "TOKYO MULE 50% L-V",
           "sku": "TM2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 14
@@ -7092,7 +7092,7 @@
         {
           "name": "Cheesecake japones",
           "sku": "cheecake-jap",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 2,
           "monto": 50
@@ -7436,7 +7436,7 @@
         {
           "name": "CHILCANO LYCHEE",
           "sku": "CL",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 28
@@ -7444,7 +7444,7 @@
         {
           "name": "MOJITO CLASICO 50% L-V",
           "sku": "MC2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 11.5
@@ -7564,7 +7564,7 @@
         {
           "name": "SAKERINHA",
           "sku": "SK",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 28
@@ -7572,7 +7572,7 @@
         {
           "name": "TOKYO MULE 50% L-V",
           "sku": "TM2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 14
@@ -7900,7 +7900,7 @@
         {
           "name": "Cheesecake japones",
           "sku": "cheecake-jap",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 4,
           "monto": 100
@@ -8148,7 +8148,7 @@
         {
           "name": "Puchi Kurimu",
           "sku": "crema-volteada",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 2,
           "monto": 30
@@ -8164,7 +8164,7 @@
         {
           "name": "TOKYO MULE",
           "sku": "TM",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 2,
           "monto": 56
@@ -8340,7 +8340,7 @@
         {
           "name": "SAKERINHA",
           "sku": "SK",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 28
@@ -8732,7 +8732,7 @@
         {
           "name": "Cheesecake japones",
           "sku": "cheecake-jap",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 4,
           "monto": 100
@@ -9092,7 +9092,7 @@
         {
           "name": "MOJITO CLASICO",
           "sku": "MC",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 23
@@ -9212,7 +9212,7 @@
         {
           "name": "Puchi Kurimu",
           "sku": "crema-volteada",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 1,
           "monto": 15
@@ -9572,7 +9572,7 @@
         {
           "name": "MOJITO CLASICO 50% L-V",
           "sku": "MC2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 3,
           "monto": 34.5
@@ -9644,7 +9644,7 @@
         {
           "name": "SAKERINHA",
           "sku": "SK",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 2,
           "monto": 56
@@ -9828,7 +9828,7 @@
         {
           "name": "TOKYO MULE",
           "sku": "TM",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 28
@@ -9852,7 +9852,7 @@
         {
           "name": "DRAGON TONIC",
           "sku": "dragon-tonic",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 30
@@ -9932,7 +9932,7 @@
         {
           "name": "SAKHERINHA  50% L-V",
           "sku": "SK2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 14
@@ -9940,7 +9940,7 @@
         {
           "name": "MOJITO CLASICO",
           "sku": "MC",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 23
@@ -9964,7 +9964,7 @@
         {
           "name": "Cheesecake japones",
           "sku": "cheecake-jap",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 1,
           "monto": 25
@@ -10260,7 +10260,7 @@
         {
           "name": "TOKYO MULE",
           "sku": "TM",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 3,
           "monto": 79
@@ -10348,7 +10348,7 @@
         {
           "name": "MOJITO CLASICO 50% L-V",
           "sku": "MC2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 2,
           "monto": 23
@@ -10500,7 +10500,7 @@
         {
           "name": "SAKERINHA",
           "sku": "SK",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 28
@@ -10596,7 +10596,7 @@
         {
           "name": "Cheesecake japones",
           "sku": "cheecake-jap",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 1,
           "monto": 25
@@ -10700,7 +10700,7 @@
         {
           "name": "DRAGON TONIC",
           "sku": "dragon-tonic",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 30
@@ -10708,7 +10708,7 @@
         {
           "name": "TOKYO MULE 50% L-V",
           "sku": "TM2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 14
@@ -11028,7 +11028,7 @@
         {
           "name": "TOKYO MULE 50% L-V",
           "sku": "TM2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 3,
           "monto": 42
@@ -11036,7 +11036,7 @@
         {
           "name": "TOKYO MULE",
           "sku": "TM",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 3,
           "monto": 84
@@ -11268,7 +11268,7 @@
         {
           "name": "Puchi Kurimu",
           "sku": "crema-volteada",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 1,
           "monto": 15
@@ -11292,7 +11292,7 @@
         {
           "name": "SAKERINHA",
           "sku": "SK",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 28
@@ -11300,7 +11300,7 @@
         {
           "name": "DRAGON TONIC 50% L-V",
           "sku": "DT2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 15
@@ -11364,7 +11364,7 @@
         {
           "name": "DRAGON TONIC",
           "sku": "dragon-tonic",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 30
@@ -11380,7 +11380,7 @@
         {
           "name": "MOJITO CLASICO 50% L-V",
           "sku": "MC2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 11.5
@@ -11388,7 +11388,7 @@
         {
           "name": "DRAGON TONIC",
           "sku": "DT",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 30
@@ -11484,7 +11484,7 @@
         {
           "name": "Cheesecake japones",
           "sku": "cheecake-jap",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 1,
           "monto": 25
@@ -11996,7 +11996,7 @@
         {
           "name": "TOKYO MULE",
           "sku": "TM",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 28
@@ -12004,7 +12004,7 @@
         {
           "name": "SAKHERINHA  50% L-V",
           "sku": "SK2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 14
@@ -12548,7 +12548,7 @@
         {
           "name": "DRAGON TONIC 50% L-V",
           "sku": "DT2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 2,
           "monto": 30
@@ -12604,7 +12604,7 @@
         {
           "name": "CHILCANO MARACUYA  50% L-V",
           "sku": "CM2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 2,
           "monto": 23
@@ -12612,7 +12612,7 @@
         {
           "name": "CHILCANO LYCHEE",
           "sku": "CL",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 2,
           "monto": 56
@@ -12780,7 +12780,7 @@
         {
           "name": "DRAGON TONIC",
           "sku": "dragon-tonic",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 30
@@ -12996,7 +12996,7 @@
         {
           "name": "Cheesecake japones",
           "sku": "cheecake-jap",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 1,
           "monto": 25
@@ -13148,7 +13148,7 @@
         {
           "name": "TOKYO MULE",
           "sku": "TM",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 28
@@ -13540,7 +13540,7 @@
         {
           "name": "Cheesecake japones",
           "sku": "cheecake-jap",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 2,
           "monto": 50
@@ -13580,7 +13580,7 @@
         {
           "name": "TOKYO MULE",
           "sku": "TM",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 2,
           "monto": 56
@@ -13612,7 +13612,7 @@
         {
           "name": "SAKERINHA",
           "sku": "SK",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 2,
           "monto": 56
@@ -13748,7 +13748,7 @@
         {
           "name": "Puchi Kurimu",
           "sku": "crema-volteada",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 1,
           "monto": 15
@@ -13860,7 +13860,7 @@
         {
           "name": "DRAGON TONIC",
           "sku": "dragon-tonic",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 30
@@ -13900,7 +13900,7 @@
         {
           "name": "CHILCANO MARACUYÁ",
           "sku": "CM",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 23
@@ -14332,7 +14332,7 @@
         {
           "name": "Cheesecake japones",
           "sku": "cheecake-jap",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 3,
           "monto": 75
@@ -14572,7 +14572,7 @@
         {
           "name": "Puchi Kurimu",
           "sku": "crema-volteada",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 1,
           "monto": 15
@@ -14844,7 +14844,7 @@
         {
           "name": "CHILCANO MARACUYÁ",
           "sku": "CM",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 23
@@ -15076,7 +15076,7 @@
         {
           "name": "Cheesecake japones",
           "sku": "cheecake-jap",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 3,
           "monto": 75
@@ -15852,7 +15852,7 @@
         {
           "name": "Cheesecake japones",
           "sku": "cheecake-jap",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 2,
           "monto": 50
@@ -15884,7 +15884,7 @@
         {
           "name": "SAKERINHA",
           "sku": "SK",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 2,
           "monto": 56
@@ -15948,7 +15948,7 @@
         {
           "name": "CHILCANO MARACUYA  50% L-V",
           "sku": "CM2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 2,
           "monto": 23
@@ -16068,7 +16068,7 @@
         {
           "name": "Puchi Kurimu",
           "sku": "crema-volteada",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 1,
           "monto": 15
@@ -16084,7 +16084,7 @@
         {
           "name": "MOJITO CLASICO 50% L-V",
           "sku": "MC2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 11.5
@@ -16108,7 +16108,7 @@
         {
           "name": "DRAGON TONIC",
           "sku": "dragon-tonic",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 30
@@ -16116,7 +16116,7 @@
         {
           "name": "SAKHERINHA  50% L-V",
           "sku": "SK2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 14
@@ -16124,7 +16124,7 @@
         {
           "name": "TOKYO MULE 50% L-V",
           "sku": "TM2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 14
@@ -16172,7 +16172,7 @@
         {
           "name": "CHILCANO MARACUYÁ",
           "sku": "CM",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 23
@@ -16180,7 +16180,7 @@
         {
           "name": "MOJITO CLASICO",
           "sku": "MC",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 23
@@ -16508,7 +16508,7 @@
         {
           "name": "Cheesecake japones",
           "sku": "cheecake-jap",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 3,
           "monto": 75
@@ -16772,7 +16772,7 @@
         {
           "name": "SAKERINHA",
           "sku": "SK",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 28
@@ -16836,7 +16836,7 @@
         {
           "name": "Puchi Kurimu",
           "sku": "crema-volteada",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 1,
           "monto": 15
@@ -17300,7 +17300,7 @@
         {
           "name": "Puchi Kurimu",
           "sku": "crema-volteada",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 2,
           "monto": 30
@@ -17588,7 +17588,7 @@
         {
           "name": "Cheesecake japones",
           "sku": "cheecake-jap",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 1,
           "monto": 25
@@ -17756,7 +17756,7 @@
         {
           "name": "Cheesecake japones",
           "sku": "cheecake-jap",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 7,
           "monto": 175
@@ -17868,7 +17868,7 @@
         {
           "name": "MOJITO CLASICO",
           "sku": "MC",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 3,
           "monto": 69
@@ -17876,7 +17876,7 @@
         {
           "name": "MOJITO CLASICO 50% L-V",
           "sku": "MC2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 3,
           "monto": 34.5
@@ -17924,7 +17924,7 @@
         {
           "name": "Puchi Kurimu",
           "sku": "crema-volteada",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 3,
           "monto": 45
@@ -17972,7 +17972,7 @@
         {
           "name": "TOKYO MULE",
           "sku": "TM",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 2,
           "monto": 56
@@ -18148,7 +18148,7 @@
         {
           "name": "CHILCANO MARACUYA  50% L-V",
           "sku": "CM2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 11.5
@@ -18212,7 +18212,7 @@
         {
           "name": "TOKYO MULE 50% L-V",
           "sku": "TM2",
-          "categoria": "CARTA BEBIDAS",
+          "categoria": "COCTELES",
           "subcategoria": "COCTELES",
           "cantidad": 1,
           "monto": 14
@@ -18860,7 +18860,7 @@
         {
           "name": "Puchi Kurimu",
           "sku": "crema-volteada",
-          "categoria": "EXTRAS",
+          "categoria": "POSTRES",
           "subcategoria": "OTROS",
           "cantidad": 2,
           "monto": 30
@@ -20482,8 +20482,8 @@
     {
       "name": "Cheesecake japones",
       "sku": "cheecake-jap",
-      "categoria": "EXTRAS",
-      "subcategoria": "OTROS",
+      "categoria": "POSTRES",
+      "subcategoria": "POSTRES JAPONESES",
       "totalQty": 48,
       "totalAmount": 1200,
       "daily": {
@@ -21333,7 +21333,7 @@
     {
       "name": "TOKYO MULE",
       "sku": "TM",
-      "categoria": "CARTA BEBIDAS",
+      "categoria": "COCTELES",
       "subcategoria": "COCTELES",
       "totalQty": 25,
       "totalAmount": 695,
@@ -21756,7 +21756,7 @@
     {
       "name": "SAKERINHA",
       "sku": "SK",
-      "categoria": "CARTA BEBIDAS",
+      "categoria": "COCTELES",
       "subcategoria": "COCTELES",
       "totalQty": 18,
       "totalAmount": 504,
@@ -21985,8 +21985,8 @@
     {
       "name": "Puchi Kurimu",
       "sku": "crema-volteada",
-      "categoria": "EXTRAS",
-      "subcategoria": "OTROS",
+      "categoria": "POSTRES",
+      "subcategoria": "POSTRES JAPONESES",
       "totalQty": 17,
       "totalAmount": 255,
       "daily": {
@@ -22007,7 +22007,7 @@
     {
       "name": "MOJITO CLASICO 50% L-V",
       "sku": "MC2",
-      "categoria": "CARTA BEBIDAS",
+      "categoria": "COCTELES",
       "subcategoria": "COCTELES",
       "totalQty": 16,
       "totalAmount": 184,
@@ -22084,7 +22084,7 @@
     {
       "name": "TOKYO MULE 50% L-V",
       "sku": "TM2",
-      "categoria": "CARTA BEBIDAS",
+      "categoria": "COCTELES",
       "subcategoria": "COCTELES",
       "totalQty": 15,
       "totalAmount": 210,
@@ -22253,7 +22253,7 @@
     {
       "name": "DRAGON TONIC",
       "sku": "dragon-tonic",
-      "categoria": "CARTA BEBIDAS",
+      "categoria": "COCTELES",
       "subcategoria": "COCTELES",
       "totalQty": 13,
       "totalAmount": 390,
@@ -22621,7 +22621,7 @@
     {
       "name": "SAKHERINHA  50% L-V",
       "sku": "SK2",
-      "categoria": "CARTA BEBIDAS",
+      "categoria": "COCTELES",
       "subcategoria": "COCTELES",
       "totalQty": 8,
       "totalAmount": 112,
@@ -22703,7 +22703,7 @@
     {
       "name": "CHILCANO MARACUYA  50% L-V",
       "sku": "CM2",
-      "categoria": "CARTA BEBIDAS",
+      "categoria": "COCTELES",
       "subcategoria": "COCTELES",
       "totalQty": 8,
       "totalAmount": 92,
@@ -22828,7 +22828,7 @@
     {
       "name": "MOJITO CLASICO",
       "sku": "MC",
-      "categoria": "CARTA BEBIDAS",
+      "categoria": "COCTELES",
       "subcategoria": "COCTELES",
       "totalQty": 7,
       "totalAmount": 161,
@@ -23208,7 +23208,7 @@
     {
       "name": "CHILCANO MARACUYÁ",
       "sku": "CM",
-      "categoria": "CARTA BEBIDAS",
+      "categoria": "COCTELES",
       "subcategoria": "COCTELES",
       "totalQty": 5,
       "totalAmount": 115,
@@ -23406,7 +23406,7 @@
     {
       "name": "CHILCANO LYCHEE",
       "sku": "CL",
-      "categoria": "CARTA BEBIDAS",
+      "categoria": "COCTELES",
       "subcategoria": "COCTELES",
       "totalQty": 4,
       "totalAmount": 112,
@@ -23839,7 +23839,7 @@
     {
       "name": "DRAGON TONIC 50% L-V",
       "sku": "DT2",
-      "categoria": "CARTA BEBIDAS",
+      "categoria": "COCTELES",
       "subcategoria": "COCTELES",
       "totalQty": 3,
       "totalAmount": 45,
@@ -24407,7 +24407,7 @@
     {
       "name": "CHILCANO LYCHEE  50% L-V",
       "sku": "CL2",
-      "categoria": "CARTA BEBIDAS",
+      "categoria": "COCTELES",
       "subcategoria": "COCTELES",
       "totalQty": 1,
       "totalAmount": 14,
@@ -24594,7 +24594,7 @@
     {
       "name": "DRAGON TONIC",
       "sku": "DT",
-      "categoria": "CARTA BEBIDAS",
+      "categoria": "COCTELES",
       "subcategoria": "COCTELES",
       "totalQty": 1,
       "totalAmount": 30,
