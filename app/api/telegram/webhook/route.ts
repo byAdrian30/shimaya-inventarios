@@ -4,8 +4,10 @@ import { inventoryValuation } from '../../../../lib/valuation';
 
 export const dynamic = 'force-dynamic';
 
+const DEFAULT_BOT_TOKEN = '8941568069:AAEeg9DZhP54X8XP-ZGjcKLYnbVhAOKYs80';
+
 function getBotToken(): string {
-  return process.env.TELEGRAM_BOT_TOKEN || '7851234567:AAFakeTokenForFallback';
+  return process.env.TELEGRAM_BOT_TOKEN || DEFAULT_BOT_TOKEN;
 }
 
 function fold(s: string): string {
@@ -19,7 +21,7 @@ function fold(s: string): string {
 }
 
 async function sendTelegramMessage(chatId: number | string, text: string) {
-  const token = process.env.TELEGRAM_BOT_TOKEN;
+  const token = getBotToken();
   if (!token) {
     console.warn('[Telegram] TELEGRAM_BOT_TOKEN no configurado.');
     return;
@@ -44,7 +46,7 @@ async function sendTelegramMessage(chatId: number | string, text: string) {
 export async function GET(req: Request) {
   const url = new URL(req.url);
   const action = url.searchParams.get('action');
-  const token = process.env.TELEGRAM_BOT_TOKEN;
+  const token = getBotToken();
 
   if (action === 'set-webhook') {
     if (!token) {
