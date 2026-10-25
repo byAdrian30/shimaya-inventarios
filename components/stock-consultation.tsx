@@ -1,7 +1,7 @@
 'use client';
 import {useEffect,useRef,useState} from 'react';
 import {ChevronLeft,ChevronRight,LoaderCircle,RefreshCw,Search,ShieldCheck} from 'lucide-react';
-import {normalize,isTrago} from '../lib/inventory';
+import {normalize} from '../lib/inventory';
 import type {StockItem,StockSnapshot} from '../lib/stock-types';
 const fmt=(value:number)=>new Intl.NumberFormat('es-PE',{maximumFractionDigits:4}).format(value);
 export default function StockConsultation({revision}:{revision:number}){
@@ -21,7 +21,7 @@ export default function StockConsultation({revision}:{revision:number}){
 }
 export function StockList({items,loading=false,error='',updatedAt='',onReload}:{items:StockItem[];loading?:boolean;error?:string;updatedAt?:string;onReload:()=>void}){
  const [query,setQuery]=useState(''),[filter,setFilter]=useState('todos'),[page,setPage]=useState(1);
- const rows=items.filter(i=>!isTrago(i.name,i.category)&&normalize(i.name+' '+i.category).includes(normalize(query))&&(filter==='todos'||filter==='positivo'&&i.stock>0||filter==='cero'&&i.stock===0||filter==='negativo'&&i.stock<0));
+ const rows=items.filter(i=>normalize(i.name+' '+i.category).includes(normalize(query))&&(filter==='todos'||filter==='positivo'&&i.stock>0||filter==='cero'&&i.stock===0||filter==='negativo'&&i.stock<0));
  const pages=Math.max(1,Math.ceil(rows.length/25)),current=Math.min(page,pages);
  return <><div className="hint"><ShieldCheck size={18}/><p>Solo lectura. Consulta cuánto queda en el almacén. Los saldos negativos indican faltantes por abastecer.</p></div>{error&&<div className="error" role="alert">{error}</div>}
  <section className="panel inventory-panel"><div className="section-title"><div><h2>Stock disponible <span className="count">{items.length}</span></h2><p>Actualización automática cada 15 segundos.{updatedAt?' Última consulta: '+updatedAt+'.':''}</p></div><button className="btn secondary" disabled={loading} onClick={onReload}>{loading?<LoaderCircle className="spin" size={16}/>:<RefreshCw size={16}/>}Actualizar stock</button></div>

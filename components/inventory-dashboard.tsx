@@ -3,22 +3,21 @@ import {useState} from 'react';
 import {Boxes,AlertTriangle,ClipboardList,PackageCheck,Search,FileSpreadsheet,CalendarDays,ChevronLeft,ChevronRight,ArrowUpRight} from 'lucide-react';
 import {soles} from './valuation-dashboard';
 import type {Valuation} from '../lib/valuation-types';
-import {configured,normalize,isTrago,type State,type Movement} from '../lib/inventory';
+import {configured,normalize,type State,type Movement} from '../lib/inventory';
 import {dailyActivity,recentDeductions,deductionReason} from '../lib/activity';
 const fmt=(n:number)=>new Intl.NumberFormat('es-PE',{maximumFractionDigits:4}).format(n);
 const day=(date:string)=>new Intl.DateTimeFormat('es-PE',{day:'numeric',month:'short',year:'numeric'}).format(new Date(date+'T12:00:00'));
 
 export default function InventoryDashboard({state,valuation,date,busy,onImport,onQuery,onInventory,onMovement,readOnly=false}:{state:State;valuation?:Valuation|null;date:string;busy:boolean;onImport:()=>void;onQuery:()=>void;onInventory:()=>void;onMovement:(movement:Movement)=>void;readOnly?:boolean}){
  const [query,setQuery]=useState(''),[filter,setFilter]=useState('todos'),[page,setPage]=useState(1);
- const activeIngredients=state.ingredients.filter(i=>!isTrago(i.name,i.category));
- const rows=activeIngredients.filter(i=>normalize(i.name+' '+i.category).includes(normalize(query))&&(filter==='todos'||filter==='disponible'&&i.stock>0||filter==='cero'&&i.stock===0||filter==='negativo'&&i.stock<0||filter==='unidad'&&!configured(i)));
+ const rows=state.ingredients.filter(i=>normalize(i.name+' '+i.category).includes(normalize(query))&&(filter==='todos'||filter==='disponible'&&i.stock>0||filter==='cero'&&i.stock===0||filter==='negativo'&&i.stock<0||filter==='unidad'&&!configured(i)));
  const pages=Math.max(1,Math.ceil(rows.length/25)),current=Math.min(page,pages),visible=rows.slice((current-1)*25,current*25);
  const deductions=recentDeductions(state,10),report=dailyActivity(state,date);
  const pending=(state.requests||[]).filter(r=>!r.deleted&&!r.closed&&r.lines.some(l=>l.delivered<l.quantity)).length;
  return <>
   <div className="stats">
-   <Metric icon={Boxes} label="Insumos con stock" value={activeIngredients.filter(i=>i.stock>0).length} foot={`${activeIngredients.length} insumos en el inventario`}/>
-   <Metric icon={AlertTriangle} label="Stock negativo" value={activeIngredients.filter(i=>i.stock<0).length} foot="Faltantes por regularizar" warning={activeIngredients.some(i=>i.stock<0)}/>
+   <Metric icon={Boxes} label="Insumos con stock" value={state.ingredients.filter(i=>i.stock>0).length} foot={`${state.ingredients.length} insumos en el inventario`}/>
+   <Metric icon={AlertTriangle} label="Stock negativo" value={state.ingredients.filter(i=>i.stock<0).length} foot="Faltantes por regularizar" warning={state.ingredients.some(i=>i.stock<0)}/>
    <Metric icon={ClipboardList} label="Pedidos pendientes" value={pending} foot="De todas las áreas"/>
    <Metric icon={PackageCheck} label="Despachos de la fecha" value={report.activeDispatches} foot={day(date)}/>
   </div>

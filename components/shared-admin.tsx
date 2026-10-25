@@ -5,7 +5,7 @@ import InventoryDashboard from './inventory-dashboard';
 import DailyActivity from './daily-activity';
 import ValuationDashboard,{ValuationSummary,soles} from './valuation-dashboard';
 import {RequestDetails} from './requests-dashboard';
-import {configured,normalize,isTrago,type State,type Movement} from '../lib/inventory';
+import {configured,normalize,type State,type Movement} from '../lib/inventory';
 import {requestStatus} from '../lib/requests';
 import {TEAM_AREAS} from '../lib/team-access';
 import type {SharedSnapshot,SharedMember} from '../lib/shared-types';
@@ -80,7 +80,7 @@ function Paging({total,page,size,onPage}:{total:number;page:number;size:number;o
 }
 export function SharedStock({state,valuation}:{state:State;valuation:Valuation}){
  const [query,setQuery]=useState(''),[filter,setFilter]=useState('todos'),[page,setPage]=useState(1);
- const rows=state.ingredients.filter(i=>!isTrago(i.name,i.category)&&normalize(i.name+' '+i.category+' '+(i.aliases||'')).includes(normalize(query))&&(filter==='todos'||filter==='positivo'&&i.stock>0||filter==='cero'&&i.stock===0||filter==='negativo'&&i.stock<0||filter==='pendiente'&&!configured(i)||filter==='noOrder'&&i.noOrder));
+ const rows=state.ingredients.filter(i=>normalize(i.name+' '+i.category+' '+(i.aliases||'')).includes(normalize(query))&&(filter==='todos'||filter==='positivo'&&i.stock>0||filter==='cero'&&i.stock===0||filter==='negativo'&&i.stock<0||filter==='pendiente'&&!configured(i)||filter==='noOrder'&&i.noOrder));
  const current=Math.min(page,Math.max(1,Math.ceil(rows.length/25))),costs=new Map(valuation.rows.map(r=>[r.ingredientId,r]));
  return <section className="panel inventory-panel"><div className="section-title"><div><h2>Stock y catálogo completo</h2><p>{state.ingredients.length} insumos · cantidades y unidades actuales.</p></div><button className="btn secondary" onClick={()=>downloadData(csv([['Insumo','Categoría','Unidad','Stock','Mínimo','No pedir','Alias'],...state.ingredients.map(i=>[i.name,i.category,i.unit,i.stock,i.minimum,i.noOrder?'Sí':'No',i.aliases])]),'shimaya-stock-'+today()+'.csv')}><Download size={16}/>Exportar inventario</button></div>
  <div className="toolbar"><div className="search"><Search size={17}/><input aria-label="Buscar en el catálogo" placeholder="Buscar insumo…" value={query} onChange={e=>{setQuery(e.target.value);setPage(1)}}/></div><select aria-label="Filtrar stock" value={filter} onChange={e=>{setFilter(e.target.value);setPage(1)}}><option value="todos">Todos los insumos</option><option value="positivo">Con stock</option><option value="cero">Stock en cero</option><option value="negativo">Stock negativo</option><option value="pendiente">Por configurar</option><option value="noOrder">Marcados NO PEDIR</option></select></div>

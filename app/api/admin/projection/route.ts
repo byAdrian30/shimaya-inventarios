@@ -1,7 +1,6 @@
 import { getChatGPTUser } from '../../../chatgpt-auth';
 import { workspaceFor } from '../../../../lib/workspace';
 import { inventoryFor } from '../../../../lib/inventory-store';
-import { isTrago } from '../../../../lib/inventory';
 import initialCatalog from '../../../../data/catalogo_proyeccion.json';
 import initialDishes from '../../../../data/ventas_platos_01_14_octubre.json';
 import initialDailyDishes from '../../../../data/ventas_platos_diarios_compact.json';
@@ -44,10 +43,8 @@ export async function GET(req: Request) {
       }
     });
 
-    // Update catalog items with live stock and current holidayFactor (excluyendo tragos/licores)
-    const catalog = (initialCatalog as any[])
-      .filter(item => !isTrago(item.nombre, item.categoria))
-      .map(item => {
+    // Update catalog items with live stock and current holidayFactor
+    const catalog = (initialCatalog as any[]).map(item => {
       const match = stockMap.get(norm(item.nombre));
       const liveStock = match ? match.stock : item.stockActual;
       const liveMin = match ? match.minimum : item.stockMinimo;
