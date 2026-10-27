@@ -1,6 +1,7 @@
 'use client';
 import {useState} from 'react';
-import {Boxes,AlertTriangle,ClipboardList,PackageCheck,Search,FileSpreadsheet,CalendarDays,ChevronLeft,ChevronRight,ArrowUpRight} from 'lucide-react';
+import {Boxes,AlertTriangle,ClipboardList,PackageCheck,Search,FileSpreadsheet,CalendarDays,ChevronLeft,ChevronRight,ArrowUpRight,Printer} from 'lucide-react';
+import {generateMasterPdf} from '../lib/generate-master-pdf';
 import {soles} from './valuation-dashboard';
 import type {Valuation} from '../lib/valuation-types';
 import {configured,normalize,type State,type Movement} from '../lib/inventory';
@@ -21,7 +22,7 @@ export default function InventoryDashboard({state,valuation,date,busy,onImport,o
    <Metric icon={ClipboardList} label="Pedidos pendientes" value={pending} foot="De todas las áreas"/>
    <Metric icon={PackageCheck} label="Despachos de la fecha" value={report.activeDispatches} foot={day(date)}/>
   </div>
-  <div className="dashboard-actions">{!readOnly&&<button className="btn" disabled={busy} onClick={onImport}><FileSpreadsheet size={17}/> Cargar mi inventario</button>}<button className="btn secondary" onClick={onQuery}><CalendarDays size={17}/> Consultar por fecha</button></div>
+  <div className="dashboard-actions">{!readOnly&&<button className="btn" disabled={busy} onClick={onImport}><FileSpreadsheet size={17}/> Cargar mi inventario</button>}<button className="btn secondary" onClick={onQuery}><CalendarDays size={17}/> Consultar por fecha</button><button className="btn secondary" disabled={busy||!state.ingredients.length} onClick={()=>generateMasterPdf(state.ingredients, { locationName: 'Chiclayo' })} title="Descargar PDF de todo el stock con cuadro de conteo físico para almacén"><Printer size={17}/> Imprimir maestro</button></div>
   <div className="inventory-overview">
    <section className="panel inventory-panel dashboard-stock">
     <div className="section-title"><div><h2>Mi inventario actual</h2><p className="small-text muted">Saldo disponible después de las entradas y descuentos.</p></div><button className="text-btn" onClick={onInventory}>{readOnly?'Ver inventario':'Registrar stock'} <ArrowUpRight size={15}/></button></div>
