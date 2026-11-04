@@ -40,7 +40,7 @@ export default function LoginScreen({ onSuccess, initialError = '' }: LoginScree
         if (TEAM_OPTIONS.some((o) => o.key === key)) {
           setSelectedUser(key);
           if (params.get('require_pass')) {
-            setError('Ingresa la contraseña de socio para acceder a este enlace.');
+            setError('La sesión en Control de Gastos no está abierta. Ingresa la contraseña de socio para acceder:');
           }
         }
       }

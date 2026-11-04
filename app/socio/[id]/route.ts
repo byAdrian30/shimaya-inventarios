@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
-import { AUTH_USERS, SOCIO_PASSWORD } from '@/lib/auth-users';
+import { AUTH_USERS } from '@/lib/auth-users';
+import { verifySsoTicket } from '@/lib/sso';
 
 const SLUG_MAP: Record<string, string> = {
   daniel: 'socio_daniel',
@@ -24,43 +25,49 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
     return NextResponse.redirect(targetUrl);
   }
 
-  // Validación: Solo pueden entrar directamente si provienen del login de la página de gastos
-  const referer = request.headers.get('referer') || '';
-  const fromParam = (url.searchParams.get('from') || '').toLowerCase();
-  const tokenParam = url.searchParams.get('token') || url.searchParams.get('auth') || '';
+  // Comprobar parámetros de verificación
+  const verified = url.searchParams.get('verified');
+  const ticket = url.searchParams.get('ticket');
+  const requirePass = url.searchParams.get('require_pass');
 
-  const isFromGastos =
-    referer.includes('control-gastos') ||
-    referer.includes('shimaya-control-gastos') ||
-    referer.includes('localhost:3000') ||
-    (fromParam === 'gastos' && tokenParam === SOCIO_PASSWORD) ||
-    tokenParam === SOCIO_PASSWORD;
+  // CASO 1: Viene con sesión verificada exitosamente desde Control de Gastos
+  if (verified === '1' && ticket) {
+    const verifiedUserKey = verifySsoTicket(ticket);
+    if (verifiedUserKey) {
+      // Sesión en control-gastos confirmada activa
+      const response = NextResponse.redirect(targetUrl);
+      const cookieVal = AUTH_USERS[userKey] ? userKey : rawKey;
 
-  if (!isFromGastos) {
-    // Si no proviene de la página de gastos autorizada, redirige al apartado de cuentas solicitando contraseña
+      response.cookies.set('auth_user', cookieVal, {
+        path: '/',
+        maxAge: 60 * 60 * 24 * 365,
+        sameSite: 'lax',
+        httpOnly: false,
+      });
+
+      response.cookies.set('__sites_local_auth', cookieVal, {
+        path: '/',
+        maxAge: 60 * 60 * 24 * 365,
+        sameSite: 'lax',
+        httpOnly: false,
+      });
+
+      return response;
+    }
+  }
+
+  // CASO 2: Se determinó que la sesión en Control de Gastos NO está abierta
+  if (requirePass === '1' || verified === '0') {
     const loginTarget = new URL('/', url.origin);
     loginTarget.searchParams.set('socio', rawKey);
     loginTarget.searchParams.set('require_pass', '1');
     return NextResponse.redirect(loginTarget);
   }
 
-  const response = NextResponse.redirect(targetUrl);
-  const cookieVal = AUTH_USERS[userKey] ? userKey : rawKey;
+  // CASO 3: Acceso inicial al enlace. Redirigir a Control de Gastos para validar si la sesión está abierta
+  const checkUrl = new URL('https://shimaya-control-gastos.vercel.app/api/auth/verify-session');
+  checkUrl.searchParams.set('socio', rawKey);
+  checkUrl.searchParams.set('return_to', url.origin + url.pathname);
 
-  // Cookie válida por 1 año
-  response.cookies.set('auth_user', cookieVal, {
-    path: '/',
-    maxAge: 60 * 60 * 24 * 365,
-    sameSite: 'lax',
-    httpOnly: false,
-  });
-
-  response.cookies.set('__sites_local_auth', cookieVal, {
-    path: '/',
-    maxAge: 60 * 60 * 24 * 365,
-    sameSite: 'lax',
-    httpOnly: false,
-  });
-
-  return response;
+  return NextResponse.redirect(checkUrl);
 }
