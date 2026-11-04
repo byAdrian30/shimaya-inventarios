@@ -9,6 +9,13 @@ const SLUG_MAP: Record<string, string> = {
   javier: 'socio_javier',
   riki: 'socio_riki',
   ricky: 'socio_riki',
+  adrian: 'admin',
+  admin: 'admin',
+  administrador: 'admin',
+  socio_daniel: 'socio_daniel',
+  socio_jhony: 'socio_jhony',
+  socio_javier: 'socio_javier',
+  socio_riki: 'socio_riki',
 };
 
 export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
@@ -21,7 +28,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
   const targetUrl = new URL('/', url.origin);
 
   if (!user) {
-    // Si no coincide con ningún socio registrado, redirige al inicio
+    // Si no coincide con ningún socio o admin registrado, redirige al inicio
     return NextResponse.redirect(targetUrl);
   }
 
@@ -35,8 +42,36 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
     const verifiedUserKey = verifySsoTicket(ticket);
     if (verifiedUserKey) {
       // Sesión en control-gastos confirmada activa
-      const response = NextResponse.redirect(targetUrl);
-      const cookieVal = AUTH_USERS[userKey] ? userKey : rawKey;
+      const cookieVal = AUTH_USERS[userKey] ? userKey : (AUTH_USERS[rawKey] ? rawKey : verifiedUserKey);
+
+      // Limpiar shimaya_cache_v1 en el navegador para evitar que cargue datos del usuario anterior
+      const html = `<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Accediendo a Inventarios...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    try {
+      localStorage.removeItem('shimaya_cache_v1');
+    } catch(e) {}
+    window.location.replace('/');
+  </script>
+</head>
+<body style="font-family:system-ui,sans-serif;display:grid;place-items:center;min-height:100vh;margin:0;background:#fbfcfb;color:#2c4030;">
+  <div style="text-align:center;">
+    <p style="font-weight:600;font-size:16px;">Conectando a Inventarios…</p>
+    <p style="font-size:13px;color:#687766;">Ingresando como ${user.fullName}...</p>
+  </div>
+</body>
+</html>`;
+
+      const response = new NextResponse(html, {
+        headers: {
+          'Content-Type': 'text/html; charset=utf-8',
+          'Cache-Control': 'no-store, no-cache, must-revalidate, max-age=0',
+        },
+      });
 
       response.cookies.set('auth_user', cookieVal, {
         path: '/',
