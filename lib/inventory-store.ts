@@ -51,7 +51,7 @@ export async function inventoryFor(ownerId:string){
  throw Error('El inventario cambió en otro dispositivo. Actualiza los datos.');
 }
 export function visibleInventory(state:State,role:string,userId:string,area=''):State{
- if(role==='admin')return state;
+ if(role==='admin'||role==='viewer')return state;
  if(role==='dispatch'||role==='operator'){
   const requests=(state.requests||[]).filter(r=>!r.deleted),itemIds=new Set(requests.flatMap(r=>r.lines.map(l=>l.itemId))),areaItems=(state.areaItems||[]).filter(i=>itemIds.has(i.id)||role==='operator'&&i.active!==false&&(!area||i.area===area));
   const stockIds=new Set(requests.flatMap(r=>r.lines.map(l=>dispatchIngredientId(state,l)))),ingredientIds=new Set([...stockIds,...(role==='operator'?areaItems.flatMap(i=>[i.ingredientId,...(i.ingredientOptions||[])]):[])]);

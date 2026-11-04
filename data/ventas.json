@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T04:00:10.929Z",
+  "generatedAt": "2026-11-04T17:15:47.187Z",
   "source": "ID POS (pos.idbi.pe) - SHIMAYA-CHICLAYO",
   "days": [
     {
@@ -169,7 +169,35 @@
       "ventaSinIgv": 9078.64,
       "igv": 1634.16,
       "ventaConIgv": 10712.8
+    },
+    {
+      "date": "2026-10-29",
+      "ordersCount": 68,
+      "ventaSinIgv": 4204.66,
+      "igv": 756.84,
+      "ventaConIgv": 4961.5
+    },
+    {
+      "date": "2026-10-31",
+      "ordersCount": 98,
+      "ventaSinIgv": 8329.07,
+      "igv": 1499.23,
+      "ventaConIgv": 9828.3
+    },
+    {
+      "date": "2026-11-01",
+      "ordersCount": 96,
+      "ventaSinIgv": 6841.44,
+      "igv": 1231.46,
+      "ventaConIgv": 8072.9
+    },
+    {
+      "date": "2026-11-04",
+      "ordersCount": 1,
+      "ventaSinIgv": 32.2,
+      "igv": 5.8,
+      "ventaConIgv": 38
     }
   ],
-  "lastSyncDate": "2026-10-24"
+  "lastSyncDate": "2026-11-04"
 }

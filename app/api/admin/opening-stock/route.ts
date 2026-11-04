@@ -8,7 +8,7 @@ import {loadOpeningStock} from '../../../../lib/load-opening-stock';
 export const dynamic='force-dynamic';
 export async function GET(){
  const user=await getChatGPTUser();if(!user)return Response.json({error:'Inicia sesión.'},{status:401});
- const scope=await workspaceFor(user);if(scope.role!=='admin')return Response.json({error:'Solo administración puede revisar esta carga.'},{status:403});
+ const scope=await workspaceFor(user);if(scope.role!=='admin'&&scope.role!=='viewer')return Response.json({error:'Solo administración y socios pueden revisar esta carga.'},{status:403});
  const data=await inventoryFor(scope.ownerId);return Response.json(data.state.stockLoadVersion?openingStockSummary(data.state):{loaded:false},{headers:{'Cache-Control':'no-store'}});
 }
 export async function POST(request:Request){

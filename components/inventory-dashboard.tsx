@@ -9,7 +9,7 @@ import {dailyActivity,recentDeductions,deductionReason} from '../lib/activity';
 const fmt=(n:number)=>new Intl.NumberFormat('es-PE',{maximumFractionDigits:4}).format(n);
 const day=(date:string)=>new Intl.DateTimeFormat('es-PE',{day:'numeric',month:'short',year:'numeric'}).format(new Date(date+'T12:00:00'));
 
-export default function InventoryDashboard({state,valuation,date,busy,onImport,onQuery,onInventory,onMovement,readOnly=false}:{state:State;valuation?:Valuation|null;date:string;busy:boolean;onImport:()=>void;onQuery:()=>void;onInventory:()=>void;onMovement:(movement:Movement)=>void;readOnly?:boolean}){
+export default function InventoryDashboard({state,valuation,date,busy,onImport,onQuery,onInventory,onMovement,readOnly=false}:{state:State;valuation?:Valuation|null;date:string;busy:boolean;onImport?:()=>void;onQuery:()=>void;onInventory:()=>void;onMovement:(movement:Movement)=>void;readOnly?:boolean}){
  const [query,setQuery]=useState(''),[filter,setFilter]=useState('todos'),[page,setPage]=useState(1);
  const rows=state.ingredients.filter(i=>normalize(i.name+' '+i.category).includes(normalize(query))&&(filter==='todos'||filter==='disponible'&&i.stock>0||filter==='cero'&&i.stock===0||filter==='negativo'&&i.stock<0||filter==='unidad'&&!configured(i)));
  const pages=Math.max(1,Math.ceil(rows.length/25)),current=Math.min(page,pages),visible=rows.slice((current-1)*25,current*25);

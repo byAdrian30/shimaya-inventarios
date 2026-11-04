@@ -14,7 +14,7 @@ async function costBook(ownerId:string){
 }
 export async function GET(){
  const user=await getChatGPTUser();if(!user)return Response.json({error:'Inicia sesión.'},{status:401,headers});
- try{const scope=await workspaceFor(user);if(scope.role!=='admin')return Response.json({error:'Solo el usuario maestro puede consultar los costos.'},{status:403,headers});
+ try{const scope=await workspaceFor(user);if(scope.role!=='admin'&&scope.role!=='viewer')return Response.json({error:'Solo el usuario maestro y socios pueden consultar los costos.'},{status:403,headers});
  const inventory=await inventoryFor(scope.ownerId),book=await costBook(scope.ownerId);return Response.json(inventoryValuation(inventory.state,book.overrides,book.revision,inventory.revision),{headers});
  }catch(e){return Response.json({error:e instanceof Error?e.message:'No se pudieron cargar los costos.'},{status:500,headers})}
 }

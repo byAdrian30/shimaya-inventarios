@@ -6,7 +6,7 @@ export const dynamic='force-dynamic';
 export async function GET(request:Request){
  const user=await getChatGPTUser();if(!user)return Response.json({error:'Inicia sesión.'},{status:401});
  try{
-  const scope=await workspaceFor(user);if(scope.role!=='admin')return Response.json({error:'Solo administración puede descargar el reporte.'},{status:403});
+  const scope=await workspaceFor(user);if(scope.role!=='admin'&&scope.role!=='viewer')return Response.json({error:'Solo administración y socios pueden descargar el reporte.'},{status:403});
   const date=new URL(request.url).searchParams.get('date')||'';
   if(!/^\d{4}-\d{2}-\d{2}$/.test(date)||Number.isNaN(Date.parse(date+'T12:00:00Z'))||new Date(date+'T12:00:00Z').toISOString().slice(0,10)!==date)throw Error('Selecciona una fecha válida.');
   const {state}=await inventoryFor(scope.ownerId),pdf=buildDailyPdf(state,date);

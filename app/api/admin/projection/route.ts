@@ -23,7 +23,7 @@ export async function GET(req: Request) {
 
   try {
     const scope = await workspaceFor(user);
-    if (scope.role !== 'admin') {
+    if (scope.role !== 'admin' && scope.role !== 'viewer') {
       return Response.json({ error: 'Solo administración puede ver la proyección de pedidos.' }, { status: 403 });
     }
 

@@ -9,6 +9,19 @@ export async function workspaceFor(user:ChatGPTUser){
  const row=await env.DB!.prepare('SELECT data FROM inventory_state WHERE id=?').bind(key).first<{data:string}>();
  if(!row)throw Error('Administración debe abrir el sitio para activar el espacio de Shimaya.');
  const settings=JSON.parse(row.data),{ownerId}=settings;if(typeof ownerId!=='string'||!ownerId)throw Error('Espacio inválido.');
+
+ // Socios verificados: acceso directo en solo lectura vinculado al espacio oficial
+ if (user.userId.startsWith('socio-') || email.startsWith('socio.') || (user.displayName && user.displayName.startsWith('SOCIO '))) {
+  return {
+   ownerId,
+   role: 'viewer',
+   email,
+   area: '',
+   status: 'active',
+   displayName: user.fullName || user.displayName,
+  };
+ }
+
  // Actualización de permisos solicitada: conserva cuentas, áreas y suspensiones.
  if(settings.teamAccessVersion!=='pedido-despacho-v1')await env.DB!.batch([
   env.DB!.prepare('UPDATE team_members SET role=? WHERE role IN (?,?)').bind('operator','staff','dispatch'),

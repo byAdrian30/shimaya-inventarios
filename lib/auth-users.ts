@@ -2,7 +2,7 @@ export const ADMIN_PASSWORD = "A30b07c01";
 
 export const AUTH_USERS: Record<
   string,
-  { userId: string; email: string; fullName: string; role: "admin" | "operator" }
+  { userId: string; email: string; fullName: string; role: "admin" | "operator" | "viewer" }
 > = {
   admin: {
     userId: "wNhManJrwsi8DIq0POByz4Rf2f8TNv8J143HJdh7RdMRewC1cNtQmS",
@@ -34,6 +34,68 @@ export const AUTH_USERS: Record<
     fullName: "Doris Yanela Rojas Chilcon",
     role: "operator",
   },
+  // Socios con rol viewer (visualización total, cero mutaciones)
+  socio_daniel: {
+    userId: "socio-daniel-shimaya",
+    email: "socio.daniel@shimaya.pe",
+    fullName: "SOCIO DANIEL",
+    role: "viewer",
+  },
+  socio_jhony: {
+    userId: "socio-jhony-shimaya",
+    email: "socio.jhony@shimaya.pe",
+    fullName: "SOCIO JHONY",
+    role: "viewer",
+  },
+  socio_javier: {
+    userId: "socio-javier-shimaya",
+    email: "socio.javier@shimaya.pe",
+    fullName: "SOCIO JAVIER",
+    role: "viewer",
+  },
+  socio_riki: {
+    userId: "socio-riki-shimaya",
+    email: "socio.riki@shimaya.pe",
+    fullName: "SOCIO RIKI",
+    role: "viewer",
+  },
+  // Alias directos por slug
+  daniel: {
+    userId: "socio-daniel-shimaya",
+    email: "socio.daniel@shimaya.pe",
+    fullName: "SOCIO DANIEL",
+    role: "viewer",
+  },
+  jhony: {
+    userId: "socio-jhony-shimaya",
+    email: "socio.jhony@shimaya.pe",
+    fullName: "SOCIO JHONY",
+    role: "viewer",
+  },
+  johnny: {
+    userId: "socio-jhony-shimaya",
+    email: "socio.jhony@shimaya.pe",
+    fullName: "SOCIO JHONY",
+    role: "viewer",
+  },
+  javier: {
+    userId: "socio-javier-shimaya",
+    email: "socio.javier@shimaya.pe",
+    fullName: "SOCIO JAVIER",
+    role: "viewer",
+  },
+  riki: {
+    userId: "socio-riki-shimaya",
+    email: "socio.riki@shimaya.pe",
+    fullName: "SOCIO RIKI",
+    role: "viewer",
+  },
+  ricky: {
+    userId: "socio-riki-shimaya",
+    email: "socio.riki@shimaya.pe",
+    fullName: "SOCIO RIKI",
+    role: "viewer",
+  },
 };
 
 export const TEAM_OPTIONS = [
@@ -42,6 +104,10 @@ export const TEAM_OPTIONS = [
   { key: "axl", name: "Axl Llontop", isAdmin: false, role: "operator" },
   { key: "celular", name: "Celular Tienda", isAdmin: false, role: "operator" },
   { key: "doris", name: "Doris Yanela Rojas Chilcon", isAdmin: false, role: "operator" },
+  { key: "socio_daniel", name: "SOCIO DANIEL", isAdmin: false, role: "viewer" },
+  { key: "socio_jhony", name: "SOCIO JHONY", isAdmin: false, role: "viewer" },
+  { key: "socio_javier", name: "SOCIO JAVIER", isAdmin: false, role: "viewer" },
+  { key: "socio_riki", name: "SOCIO RIKI", isAdmin: false, role: "viewer" },
 ];
 
 export const DEFAULT_AUTH_USER = AUTH_USERS.admin;

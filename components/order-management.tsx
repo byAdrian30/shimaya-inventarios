@@ -6,9 +6,9 @@ import {orderRestocks,requestStatus} from '../lib/requests';
 import {RequestDetails} from './requests-dashboard';
 
 const fmt=(n:number)=>new Intl.NumberFormat('es-PE',{maximumFractionDigits:4}).format(n);
-type Props={state:State;busy:boolean;save:(action:any)=>Promise<boolean>};
+type Props={state:State;busy:boolean;save:(action:any)=>Promise<boolean>;readOnly?:boolean};
 
-export default function OrderManagement({state,busy,save}:Props){
+export default function OrderManagement({state,busy,save,readOnly=false}:Props){
  const [query,setQuery]=useState(''),[area,setArea]=useState(''),[view,setView]=useState('activas'),[page,setPage]=useState(1);
  const [selectedId,setSelectedId]=useState(''),[deleting,setDeleting]=useState(false),[note,setNote]=useState(''),[checked,setChecked]=useState(false);
  const requests=state.requests||[],areas=[...new Set(requests.map(r=>r.area))];
@@ -37,7 +37,7 @@ export default function OrderManagement({state,busy,save}:Props){
    {rows.length?<div className="table-wrap"><table><thead><tr><th scope="col">ORDEN / FECHA</th><th scope="col">ÁREA</th><th scope="col">SOLICITADO POR</th><th scope="col">INSUMOS</th><th scope="col">ESTADO</th><th scope="col">ACCIONES</th></tr></thead><tbody>{rows.map(r=><tr key={r.id}>
     <td data-label="Orden / fecha"><strong>{r.number}</strong><small>{r.date}</small></td><td data-label="Área">{r.area}</td><td data-label="Solicitado por">{r.requester}</td><td data-label="Insumos">{r.lines.length}</td>
     <td data-label="Estado"><span className={'status '+(r.deleted?'low':r.closed?'neutral':'ok')}>{requestStatus(r)}</span>{r.deleted&&<small>Por {r.deleted.by} · {r.deleted.date}</small>}</td>
-    <td data-label="Acciones"><div className="order-actions"><button className="text-btn" disabled={busy} onClick={()=>open(r.id)}>Ver detalle</button>{!r.deleted?<button className="text-btn red" disabled={busy} aria-label={'Eliminar orden '+r.number} onClick={()=>open(r.id,true)}><Trash2 size={16}/>Eliminar</button>:<button className="text-btn" style={{color:'#16a34a',fontWeight:600}} disabled={busy} onClick={()=>save({type:'restaurar-orden',requestId:r.id})}>Restaurar</button>}</div></td>
+    <td data-label="Acciones"><div className="order-actions"><button className="text-btn" disabled={busy} onClick={()=>open(r.id)}>Ver detalle</button>{!readOnly && (!r.deleted?<button className="text-btn red" disabled={busy} aria-label={'Eliminar orden '+r.number} onClick={()=>open(r.id,true)}><Trash2 size={16}/>Eliminar</button>:<button className="text-btn" style={{color:'#16a34a',fontWeight:600}} disabled={busy} onClick={()=>save({type:'restaurar-orden',requestId:r.id})}>Restaurar</button>)}</div></td>
    </tr>)}</tbody></table></div>:<div className="request-empty"><ClipboardList size={30}/><h3>No hay órdenes en esta vista</h3><p>Los pedidos enviados aparecerán aquí.</p></div>}
    {visible.length>20&&<div className="table-footer"><span>Página {currentPage} de {pages}</span><button className="text-btn" disabled={currentPage<=1} onClick={()=>setPage(currentPage-1)}>Anterior</button><button className="text-btn" disabled={currentPage>=pages} onClick={()=>setPage(currentPage+1)}>Siguiente</button></div>}
   </section>

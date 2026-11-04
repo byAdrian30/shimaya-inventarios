@@ -28,7 +28,7 @@ const soles = (n: number, d = 2) =>
 const pct = (n: number) =>
   new Intl.NumberFormat('es-PE', { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(n) + '%';
 
-export default function PerformanceDashboard() {
+export default function PerformanceDashboard({ readOnly = false }: { readOnly?: boolean } = {}) {
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -193,7 +193,7 @@ export default function PerformanceDashboard() {
             style={{ display: 'none' }}
             onChange={e => handleExcelUpload(e.target.files?.[0])}
           />
-          <button
+          {!readOnly && <button
             className="btn secondary"
             disabled={busy}
             onClick={() => fileInputRef.current?.click()}
@@ -202,7 +202,7 @@ export default function PerformanceDashboard() {
             <Upload size={15} />
             <span className="hide-mobile">Cargar ventas Excel</span>
             <span className="show-mobile">Subir Excel</span>
-          </button>
+          </button>}
           <button className="btn secondary" onClick={exportCSV} title="Descargar reporte en CSV">
             <ArrowDownToLine size={15} />
             <span>Exportar</span>

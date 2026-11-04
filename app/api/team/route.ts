@@ -6,7 +6,7 @@ import {cleanEmail,cleanArea,cleanRole} from '../../../lib/team-access';
 export const dynamic='force-dynamic';
 export async function GET(){
  const u=await getChatGPTUser();if(!u)return Response.json({error:'Inicia sesión.'},{status:401});
- try{const scope=await workspaceFor(u);if(scope.role!=='admin')return Response.json({role:scope.role,status:scope.status,email:scope.email,area:scope.area});
+ try{const scope=await workspaceFor(u);if(scope.role!=='admin'&&scope.role!=='viewer')return Response.json({role:scope.role,status:scope.status,email:scope.email,area:scope.area});
   const list=await env.DB!.prepare('SELECT email,user_id AS userId,name,area,role,status,created_at AS createdAt,updated_at AS updatedAt FROM team_members ORDER BY CASE status WHEN ? THEN 0 WHEN ? THEN 1 ELSE 2 END,created_at DESC').bind('pending','active').all();return Response.json({members:list.results,ownerEmail:scope.email},{headers:{'Cache-Control':'no-store'}});
  }catch{return Response.json({error:'No se pudo cargar el equipo.'},{status:500})}
 }

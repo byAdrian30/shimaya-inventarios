@@ -43,8 +43,8 @@ export async function GET() {
 
   try {
     const scope = await workspaceFor(user);
-    if (scope.role !== 'admin') {
-      return Response.json({ error: 'Solo administración puede ver el rendimiento.' }, { status: 403 });
+    if (scope.role !== 'admin' && scope.role !== 'viewer') {
+      return Response.json({ error: 'Solo administración y socios pueden ver el rendimiento.' }, { status: 403 });
     }
 
     const inventory = await inventoryFor(scope.ownerId);
