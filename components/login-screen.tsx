@@ -157,7 +157,7 @@ export default function LoginScreen({ onSuccess, initialError = '' }: LoginScree
               <option value="">-- Selecciona tu usuario --</option>
               {TEAM_OPTIONS.map((member) => (
                 <option key={member.key} value={member.key}>
-                  {member.isAdmin ? '👑 ' : member.role === 'viewer' ? '👁️ ' : '👤 '} {member.name}
+                  {member.role === 'viewer' ? '👁️ ' : '👤 '} {member.name}
                 </option>
               ))}
             </select>

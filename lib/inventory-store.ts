@@ -52,10 +52,15 @@ export async function inventoryFor(ownerId:string){
 }
 export function visibleInventory(state:State,role:string,userId:string,area=''):State{
  if(role==='admin'||role==='viewer')return state;
- if(role==='dispatch'||role==='operator'){
-  const requests=(state.requests||[]).filter(r=>!r.deleted),itemIds=new Set(requests.flatMap(r=>r.lines.map(l=>l.itemId))),areaItems=(state.areaItems||[]).filter(i=>itemIds.has(i.id)||role==='operator'&&i.active!==false&&(!area||i.area===area));
-  const stockIds=new Set(requests.flatMap(r=>r.lines.map(l=>dispatchIngredientId(state,l)))),ingredientIds=new Set([...stockIds,...(role==='operator'?areaItems.flatMap(i=>[i.ingredientId,...(i.ingredientOptions||[])]):[])]);
+ if(role==='dispatch'){
+  const requests=(state.requests||[]).filter(r=>!r.deleted),itemIds=new Set(requests.flatMap(r=>r.lines.map(l=>l.itemId))),areaItems=(state.areaItems||[]).filter(i=>itemIds.has(i.id));
+  const stockIds=new Set(requests.flatMap(r=>r.lines.map(l=>dispatchIngredientId(state,l)))),ingredientIds=new Set([...stockIds]);
   return {...state,ingredients:state.ingredients.filter(i=>ingredientIds.has(i.id)).map(i=>({...i,stock:stockIds.has(i.id)?i.stock:0,minimum:0})),areaItems,requests,movements:[]};
+ }
+ if(role==='operator'){
+  const requests=(state.requests||[]).filter(r=>!r.deleted),itemIds=new Set(requests.flatMap(r=>r.lines.map(l=>l.itemId))),areaItems=(state.areaItems||[]).filter(i=>itemIds.has(i.id)||i.active!==false&&(!area||i.area===area));
+  const ingredientIds=new Set([...(requests.flatMap(r=>r.lines.map(l=>dispatchIngredientId(state,l)))),...areaItems.flatMap(i=>[i.ingredientId,...(i.ingredientOptions||[])])]);
+  return {...state,ingredients:state.ingredients.filter(i=>ingredientIds.has(i.id)).map(i=>({...i,stock:0,minimum:0})),areaItems,requests,movements:[]};
  }
  return {...state,ingredients:state.ingredients.map(i=>({...i,stock:0,minimum:0})),areaItems:state.areaItems?.filter(i=>i.active!==false&&(!area||i.area===area)),requests:state.requests?.filter(r=>!r.deleted&&r.actorId===userId&&(!area||r.area===area)),movements:[]};
 }
