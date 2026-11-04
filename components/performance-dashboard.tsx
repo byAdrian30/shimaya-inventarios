@@ -33,26 +33,47 @@ export default function PerformanceDashboard({ readOnly = false }: { readOnly?: 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [viewMode, setViewMode] = useState<'cycles' | 'daily'>('cycles');
+  const [selectedMonth, setSelectedMonth] = useState<string>('2026-11');
   const [selectedCycle, setSelectedCycle] = useState<any>(null);
   const [busy, setBusy] = useState(false);
   const [uploadToast, setUploadToast] = useState('');
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  async function loadData() {
+  async function loadData(targetMonth?: string) {
     setLoading(true);
     setError('');
     try {
-      const res = await fetch('/api/admin/performance', { cache: 'no-store' });
+      const monthToFetch = targetMonth || selectedMonth;
+      const res = await fetch(`/api/admin/performance?month=${encodeURIComponent(monthToFetch)}`, { cache: 'no-store' });
       const json = (await res.json()) as any;
       if (!res.ok) throw new Error(json.error || 'No se pudo cargar el análisis de rendimiento.');
       setData(json);
-      if (json.cycles && json.cycles.length > 0 && !selectedCycle) {
-        setSelectedCycle(json.cycles[0]);
+
+      const activeMonthId = targetMonth || json.selectedMonth || '2026-11';
+      setSelectedMonth(activeMonthId);
+
+      const activeP = (json.periods && json.periods[activeMonthId]) ? json.periods[activeMonthId] : json;
+      if (activeP.cycles && activeP.cycles.length > 0) {
+        setSelectedCycle(activeP.cycles[0]);
+      } else {
+        setSelectedCycle(null);
       }
     } catch (e: any) {
       setError(e.message || 'Error al obtener rendimiento.');
     } finally {
       setLoading(false);
+    }
+  }
+
+  function handleMonthChange(newMonthId: string) {
+    setSelectedMonth(newMonthId);
+    if (data?.periods && data.periods[newMonthId]) {
+      const p = data.periods[newMonthId];
+      if (p.cycles && p.cycles.length > 0) {
+        setSelectedCycle(p.cycles[0]);
+      } else {
+        setSelectedCycle(null);
+      }
     }
   }
 
@@ -111,23 +132,34 @@ export default function PerformanceDashboard({ readOnly = false }: { readOnly?: 
     }
   }
 
+  const activePeriod = (data?.periods && data.periods[selectedMonth])
+    ? data.periods[selectedMonth]
+    : { summary: data?.summary, cycles: data?.cycles, daily: data?.daily };
+
+  const s = activePeriod?.summary || data?.summary || {};
+  const currentCycles = activePeriod?.cycles || [];
+  const currentDaily = activePeriod?.daily || [];
+  const availableMonths = data?.availableMonths || [];
+
   function exportCSV() {
     if (!data) return;
-    const s = data.summary || {};
     const rows = [
       ['--- REPORTE DE RENDIMIENTO Y RENTABILIDAD SHIMAYA RAMEN ---'],
-      ['Metodologia', 'Insumos promediados al 50% por dia de ciclo de 2 dias. Calculado desde inicio de despachos.'],
-      ['Ventas Periodo Activo Sin IGV (S/)', s.totalVentaSinIgv],
+      ['Periodo', s.periodName || 'Mensual'],
+      ['Rango', s.periodRange || ''],
+      ['Metodologia', s.periodDescription || 'Insumos promediados al 50% por dia de ciclo de 2 dias.'],
+      ['Ventas Periodo Sin IGV (S/)', s.totalVentaSinIgv],
       ['IGV 18% (S/)', s.totalIgv],
-      ['Ventas Periodo Activo Con IGV (S/)', s.totalVentaConIgv],
+      ['Ventas Periodo Con IGV (S/)', s.totalVentaConIgv],
       ['Insumos Consumidos Neto (S/)', s.totalCostoSinIgv],
+      ['Insumos Consumidos Bruto (+IGV) (S/)', s.totalCostoConIgv],
       ['Utilidad Bruta (S/)', s.totalUtilidadSinIgv],
       ['Margen Promedio (%)', `${s.margenPromedio}%`],
       ['Food Cost Promedio (%)', `${s.foodCostPromedio}%`],
       [],
       ['--- CICLOS DE ABASTECIMIENTO DE ALMACEN (2 DIAS) ---'],
       ['Ciclo', 'Venta Sin IGV (S/)', 'IGV 18% (S/)', 'Venta Con IGV (S/)', 'Pedido Insumos (S/)', 'Promedio Diario 50% (S/)', 'Utilidad (S/)', 'Margen (%)', 'Food Cost (%)'],
-      ...(data.cycles || []).map((c: any) => [
+      ...currentCycles.map((c: any) => [
         `"${c.label}"`,
         c.ventaSinIgv,
         c.igv,
@@ -141,7 +173,7 @@ export default function PerformanceDashboard({ readOnly = false }: { readOnly?: 
       [],
       ['--- DETALLE DIA POR DIA CON PROMEDIO DE INSUMOS ---'],
       ['Fecha', 'Ciclo', 'Dia en Ciclo', 'Venta Sin IGV (S/)', 'Venta Con IGV (S/)', 'Insumos Promediados 50% (S/)', 'Utilidad Diaria (S/)', 'Margen Dia (%)', 'Food Cost Dia (%)', 'Margen Ciclo 2 Dias (%)'],
-      ...(data.daily || []).map((d: any) => [
+      ...currentDaily.map((d: any) => [
         d.date,
         `"${d.cycleLabel}"`,
         `${d.dayInCycle}/2`,
@@ -159,7 +191,7 @@ export default function PerformanceDashboard({ readOnly = false }: { readOnly?: 
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `shimaya-rendimiento-rentabilidad-${new Date().toISOString().slice(0, 10)}.csv`;
+    a.download = `shimaya-rendimiento-${selectedMonth}-${new Date().toISOString().slice(0, 10)}.csv`;
     a.click();
     URL.revokeObjectURL(url);
   }
@@ -172,8 +204,6 @@ export default function PerformanceDashboard({ readOnly = false }: { readOnly?: 
       </section>
     );
   }
-
-  const s = data?.summary || {};
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
@@ -207,7 +237,7 @@ export default function PerformanceDashboard({ readOnly = false }: { readOnly?: 
             <ArrowDownToLine size={15} />
             <span>Exportar</span>
           </button>
-          <button className="icon-btn" onClick={loadData} disabled={busy || loading} title="Actualizar datos">
+          <button className="icon-btn" onClick={() => loadData()} disabled={busy || loading} title="Actualizar datos">
             <RefreshCw size={17} />
           </button>
         </div>
@@ -227,13 +257,91 @@ export default function PerformanceDashboard({ readOnly = false }: { readOnly?: 
         </div>
       )}
 
+      {/* Selector de Período / Mes para Rentabilidad */}
+      <div
+        className="perf-period-bar"
+        style={{
+          background: '#fff',
+          border: '1px solid var(--line)',
+          borderRadius: '11px',
+          padding: '16px 20px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '12px',
+        }}
+      >
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <Calendar size={18} style={{ color: 'var(--green)' }} />
+            <strong style={{ fontSize: '13px', color: 'var(--ink)' }}>
+              Período de Rentabilidad (Por Mes Calendario):
+            </strong>
+          </div>
+          <span style={{ fontSize: '12px', color: 'var(--muted)' }}>
+            {s.periodRange ? `Rango: ${s.periodRange}` : ''} {s.totalDays ? `· ${s.totalDays} días registrados` : ''}
+          </span>
+        </div>
+
+        <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', alignItems: 'center' }}>
+          {availableMonths.map((m: any) => {
+            const isSelected = selectedMonth === m.id;
+            return (
+              <button
+                key={m.id}
+                type="button"
+                onClick={() => handleMonthChange(m.id)}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  padding: '9px 16px',
+                  borderRadius: '8px',
+                  fontSize: '12px',
+                  fontWeight: isSelected ? 600 : 500,
+                  border: isSelected ? '1px solid var(--green)' : '1px solid #dce1d6',
+                  background: isSelected ? 'var(--green)' : '#fff',
+                  color: isSelected ? '#fff' : '#334133',
+                  cursor: 'pointer',
+                  transition: 'all 0.15s ease',
+                  boxShadow: isSelected ? '0 2px 6px rgba(61,101,80,0.22)' : 'none',
+                }}
+              >
+                <span>{m.label}</span>
+                {m.isCurrent && (
+                  <span
+                    style={{
+                      fontSize: '9px',
+                      fontWeight: 700,
+                      padding: '2px 6px',
+                      borderRadius: '4px',
+                      background: isSelected ? 'rgba(255,255,255,0.25)' : '#e7f0e5',
+                      color: isSelected ? '#fff' : '#2d683b',
+                      letterSpacing: '0.3px',
+                      textTransform: 'uppercase',
+                    }}
+                  >
+                    Mes Actual
+                  </span>
+                )}
+                {isSelected && <Check size={14} />}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
       {/* Banner Informativo de Metodología */}
       <div className="hint" style={{ background: '#f0f5fb', borderColor: '#bcd2ec', color: '#1a4971', margin: 0 }}>
         <TrendingUp size={18} />
         <div>
-          <strong>Cálculo de Rentabilidad desde el 11 de Octubre (Inicio de Despachos de Almacén)</strong>
+          <strong>
+            {selectedMonth === 'all'
+              ? 'Consolidado Histórico Completo de Rentabilidad'
+              : `Rentabilidad de ${s.periodName || 'Período'} · Del ${s.periodRange || 'mes'}`}
+          </strong>
           <p style={{ margin: '3px 0 0', fontSize: '12px', opacity: 0.9 }}>
-            Cada pedido a almacén abastece un ciclo de 2 días: el costo de insumos se promedia al 50% diario para reflejar la rentabilidad real de ambos días de venta continuos, sin días vacíos.
+            {s.periodDescription ||
+              'Cada pedido a almacén abastece un ciclo de 2 días: el costo de insumos se promedia al 50% diario para reflejar la rentabilidad real de ambos días de venta continuos, arrancando desde el primer día del mes.'}
           </p>
         </div>
       </div>
@@ -242,7 +350,7 @@ export default function PerformanceDashboard({ readOnly = false }: { readOnly?: 
       <div className="stats">
         <section className="stat">
           <div>
-            <span>VENTAS PERÍODO ACTIVO</span>
+            <span>VENTAS {s.periodName ? s.periodName.toUpperCase() : 'PERÍODO ACTIVO'}</span>
             <DollarSign size={18} />
           </div>
           <strong>{soles(s.totalVentaConIgv || 0)}</strong>
@@ -258,7 +366,7 @@ export default function PerformanceDashboard({ readOnly = false }: { readOnly?: 
           </div>
           <strong style={{ color: '#ad492d' }}>{soles(s.totalCostoConIgv || 0)}</strong>
           <small>
-            Neto: {soles(s.totalCostoSinIgv || 0)} · Total traído: {soles(s.totalCostoDespachadoSinIgv || 0)}
+            Neto: {soles(s.totalCostoSinIgv || 0)} · Total despachado: {soles(s.totalCostoDespachadoSinIgv || 0)}
           </small>
         </section>
 
@@ -307,8 +415,11 @@ export default function PerformanceDashboard({ readOnly = false }: { readOnly?: 
           <section className="panel">
             <div className="section-title">
               <div>
-                <h2>Rentabilidad por Ciclos de Abastecimiento (2 Días)</h2>
-                <p>Cruce directo entre la mercadería traída en cada pedido y las ventas acumuladas del ciclo.</p>
+                <h2>Rentabilidad por Ciclos de Abastecimiento · {s.periodName || '2 Días'}</h2>
+                <p>
+                  {s.periodRange ? `Período: ${s.periodRange}. ` : ''}
+                  Cruce directo entre mercadería de almacén y ventas acumuladas del ciclo de 2 días.
+                </p>
               </div>
             </div>
             <div className="table-wrap">
@@ -327,53 +438,61 @@ export default function PerformanceDashboard({ readOnly = false }: { readOnly?: 
                   </tr>
                 </thead>
                 <tbody>
-                  {(data.cycles || []).map((c: any) => {
-                    const isSelected = selectedCycle?.id === c.id;
-                    const margin = c.margenPct;
-                    const statusClass = margin >= 75 ? 'ok' : margin >= 60 ? 'neutral' : 'low';
+                  {currentCycles.length === 0 ? (
+                    <tr>
+                      <td colSpan={9} style={{ textAlign: 'center', padding: '30px', color: 'var(--muted)' }}>
+                        No hay ciclos de abastecimiento registrados para este período.
+                      </td>
+                    </tr>
+                  ) : (
+                    currentCycles.map((c: any) => {
+                      const isSelected = selectedCycle?.id === c.id;
+                      const margin = c.margenPct;
+                      const statusClass = margin >= 75 ? 'ok' : margin >= 60 ? 'neutral' : 'low';
 
-                    return (
-                      <tr
-                        key={c.id}
-                        style={{ background: isSelected ? '#f5f9f3' : undefined, cursor: 'pointer' }}
-                        onClick={() => setSelectedCycle(c)}
-                      >
-                        <td data-label="Ciclo">
-                          <strong>{c.label}</strong>
-                          <small>{c.ordersCount} órdenes {c.isEnCurso && '· En curso'}</small>
-                        </td>
-                        <td data-label="Venta sin IGV"><strong>{soles(c.ventaSinIgv)}</strong></td>
-                        <td data-label="IGV 18%"><span style={{ color: 'var(--muted)' }}>{soles(c.igv)}</span></td>
-                        <td data-label="Venta con IGV"><strong>{soles(c.ventaConIgv)}</strong></td>
-                        <td data-label="Pedido Insumos" style={{ color: '#ad492d' }}>
-                          <strong>{soles(c.costoSinIgv)}</strong>
-                          <small>Bruto: {soles(c.costoConIgv)}</small>
-                        </td>
-                        <td data-label="Promedio Diario">
-                          <span style={{ fontSize: '11px', color: '#1a4971', fontWeight: 600 }}>{soles(c.costoPromedioPorDia)} / día</span>
-                          <small>50% por día</small>
-                        </td>
-                        <td data-label="Utilidad Bruta" style={{ color: '#2b6338' }}>
-                          <strong>{soles(c.utilidadSinIgv)}</strong>
-                        </td>
-                        <td data-label="Margen %">
-                          <strong style={{ fontSize: '13px' }}>{pct(c.margenPct)}</strong>
-                          <small>Food cost: {pct(c.foodCostPct)}</small>
-                        </td>
-                        <td data-label="Detalle">
-                          <button
-                            className="text-btn"
-                            onClick={e => {
-                              e.stopPropagation();
-                              setSelectedCycle(c);
-                            }}
-                          >
-                            Ver insumos <ChevronRight size={14} />
-                          </button>
-                        </td>
-                      </tr>
-                    );
-                  })}
+                      return (
+                        <tr
+                          key={c.id}
+                          style={{ background: isSelected ? '#f5f9f3' : undefined, cursor: 'pointer' }}
+                          onClick={() => setSelectedCycle(c)}
+                        >
+                          <td data-label="Ciclo">
+                            <strong>{c.label}</strong>
+                            <small>{c.ordersCount} órdenes {c.isEnCurso && '· En curso'}</small>
+                          </td>
+                          <td data-label="Venta sin IGV"><strong>{soles(c.ventaSinIgv)}</strong></td>
+                          <td data-label="IGV 18%"><span style={{ color: 'var(--muted)' }}>{soles(c.igv)}</span></td>
+                          <td data-label="Venta con IGV"><strong>{soles(c.ventaConIgv)}</strong></td>
+                          <td data-label="Pedido Insumos" style={{ color: '#ad492d' }}>
+                            <strong>{soles(c.costoSinIgv)}</strong>
+                            <small>Bruto: {soles(c.costoConIgv)}</small>
+                          </td>
+                          <td data-label="Promedio Diario">
+                            <span style={{ fontSize: '11px', color: '#1a4971', fontWeight: 600 }}>{soles(c.costoPromedioPorDia)} / día</span>
+                            <small>50% por día</small>
+                          </td>
+                          <td data-label="Utilidad Bruta" style={{ color: '#2b6338' }}>
+                            <strong>{soles(c.utilidadSinIgv)}</strong>
+                          </td>
+                          <td data-label="Margen %">
+                            <strong style={{ fontSize: '13px' }}>{pct(c.margenPct)}</strong>
+                            <small>Food cost: {pct(c.foodCostPct)}</small>
+                          </td>
+                          <td data-label="Detalle">
+                            <button
+                              className="text-btn"
+                              onClick={e => {
+                                e.stopPropagation();
+                                setSelectedCycle(c);
+                              }}
+                            >
+                              Ver insumos <ChevronRight size={14} />
+                            </button>
+                          </td>
+                        </tr>
+                      );
+                    })
+                  )}
                 </tbody>
               </table>
             </div>
@@ -456,8 +575,9 @@ export default function PerformanceDashboard({ readOnly = false }: { readOnly?: 
         <section className="panel">
           <div className="section-title">
             <div>
-              <h2>Ventas Diarias con Rentabilidad Promediada de Insumos</h2>
+              <h2>Ventas Diarias · {s.periodName || 'Período Activo'}</h2>
               <p>
+                {s.periodRange ? `Período: ${s.periodRange}. ` : ''}
                 Cada pedido de 2 días se divide al 50% entre ambos días para calcular el margen y food cost real de cada jornada.
               </p>
             </div>
@@ -479,45 +599,53 @@ export default function PerformanceDashboard({ readOnly = false }: { readOnly?: 
                 </tr>
               </thead>
               <tbody>
-                {(data.daily || []).map((d: any) => (
-                  <tr key={d.date}>
-                    <td data-label="Fecha">
-                      <strong>{d.date}</strong>
-                      <small style={{ display: 'block', color: 'var(--muted)' }}>
-                        {d.cycleLabel} (Día {d.dayInCycle}/2)
-                      </small>
-                    </td>
-                    <td data-label="Órdenes">{d.ordersCount}</td>
-                    <td data-label="Venta sin IGV"><strong>{soles(d.ventaSinIgv)}</strong></td>
-                    <td data-label="Venta con IGV"><strong>{soles(d.ventaConIgv)}</strong></td>
-                    <td data-label="Insumos Imputados" style={{ color: '#ad492d' }}>
-                      <strong>{soles(d.costoSinIgv)}</strong>
-                      <small>50% del pedido</small>
-                    </td>
-                    <td data-label="Utilidad Diaria" style={{ color: '#2b6338' }}>
-                      <strong>{soles(d.utilidadSinIgv)}</strong>
-                    </td>
-                    <td data-label="Margen Día %">
-                      <strong style={{ fontSize: '13px' }}>{pct(d.margenPct)}</strong>
-                    </td>
-                    <td data-label="Food Cost Día %">
-                      <span>{pct(d.foodCostPct)}</span>
-                    </td>
-                    <td data-label="Margen Ciclo (2 días)">
-                      <strong style={{ color: '#1a4971' }}>{pct(d.cycleMargenPromedio)}</strong>
-                      <small>Promedio período</small>
-                    </td>
-                    <td data-label="Recepción Física">
-                      {d.pedidoFisicoLlegado ? (
-                        <span className="status ok" title={`Llegó pedido físico de almacén por ${soles(d.pedidoFisicoMontoNeto)}`}>
-                          📦 Llegó pedido: {soles(d.pedidoFisicoMontoNeto)}
-                        </span>
-                      ) : (
-                        <span style={{ fontSize: '11px', color: 'var(--muted)' }}>Abastecido por ciclo</span>
-                      )}
+                {currentDaily.length === 0 ? (
+                  <tr>
+                    <td colSpan={10} style={{ textAlign: 'center', padding: '30px', color: 'var(--muted)' }}>
+                      No hay registros diarios de venta para este período.
                     </td>
                   </tr>
-                ))}
+                ) : (
+                  currentDaily.map((d: any) => (
+                    <tr key={d.date}>
+                      <td data-label="Fecha">
+                        <strong>{d.date}</strong>
+                        <small style={{ display: 'block', color: 'var(--muted)' }}>
+                          {d.cycleLabel} (Día {d.dayInCycle}/2)
+                        </small>
+                      </td>
+                      <td data-label="Órdenes">{d.ordersCount}</td>
+                      <td data-label="Venta sin IGV"><strong>{soles(d.ventaSinIgv)}</strong></td>
+                      <td data-label="Venta con IGV"><strong>{soles(d.ventaConIgv)}</strong></td>
+                      <td data-label="Insumos Imputados" style={{ color: '#ad492d' }}>
+                        <strong>{soles(d.costoSinIgv)}</strong>
+                        <small>50% del pedido</small>
+                      </td>
+                      <td data-label="Utilidad Diaria" style={{ color: '#2b6338' }}>
+                        <strong>{soles(d.utilidadSinIgv)}</strong>
+                      </td>
+                      <td data-label="Margen Día %">
+                        <strong style={{ fontSize: '13px' }}>{pct(d.margenPct)}</strong>
+                      </td>
+                      <td data-label="Food Cost Día %">
+                        <span>{pct(d.foodCostPct)}</span>
+                      </td>
+                      <td data-label="Margen Ciclo (2 días)">
+                        <strong style={{ color: '#1a4971' }}>{pct(d.cycleMargenPromedio)}</strong>
+                        <small>Promedio período</small>
+                      </td>
+                      <td data-label="Recepción Física">
+                        {d.pedidoFisicoLlegado ? (
+                          <span className="status ok" title={`Llegó pedido físico de almacén por ${soles(d.pedidoFisicoMontoNeto)}`}>
+                            📦 Llegó pedido: {soles(d.pedidoFisicoMontoNeto)}
+                          </span>
+                        ) : (
+                          <span style={{ fontSize: '11px', color: 'var(--muted)' }}>Abastecido por ciclo</span>
+                        )}
+                      </td>
+                    </tr>
+                  ))
+                )}
               </tbody>
             </table>
           </div>
