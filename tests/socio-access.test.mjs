@@ -11,7 +11,7 @@ registerHooks({
   }
 });
 
-const { AUTH_USERS } = await import('../lib/auth-users.ts');
+const { AUTH_USERS, SOCIO_PASSWORD } = await import('../lib/auth-users.ts');
 const { allowedTabs, canViewStock } = await import('../lib/team-access.ts');
 const { canPerform } = await import('../lib/requests.ts');
 const { visibleInventory } = await import('../lib/inventory-store.ts');
@@ -24,6 +24,8 @@ test('Los 4 socios existen en AUTH_USERS con rol viewer y nombre exacto', () => 
     { key: 'socio_javier', name: 'SOCIO JAVIER', slug: 'javier' },
     { key: 'socio_riki', name: 'SOCIO RIKI', slug: 'riki' },
   ];
+
+  assert.equal(SOCIO_PASSWORD, 'SocioChiclashi');
 
   for (const s of socios) {
     const user = AUTH_USERS[s.key];

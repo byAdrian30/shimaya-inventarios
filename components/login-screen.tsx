@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ShieldCheck, Lock, ArrowRight, LoaderCircle, AlertTriangle, Eye, EyeOff, UserCheck } from 'lucide-react';
 import { TEAM_OPTIONS } from '../lib/auth-users';
 
@@ -27,6 +27,25 @@ export default function LoginScreen({ onSuccess, initialError = '' }: LoginScree
 
   const currentUser = TEAM_OPTIONS.find((u) => u.key === selectedUser);
   const isAdmin = currentUser?.isAdmin || selectedUser === 'admin';
+  const isSocio = currentUser?.role === 'viewer' || selectedUser.startsWith('socio_');
+  const needsPassword = isAdmin || isSocio;
+
+  useEffect(() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const socioParam = params.get('socio') || params.get('socio_login');
+      if (socioParam) {
+        const clean = socioParam.toLowerCase().trim();
+        const key = clean.startsWith('socio_') ? clean : `socio_${clean}`;
+        if (TEAM_OPTIONS.some((o) => o.key === key)) {
+          setSelectedUser(key);
+          if (params.get('require_pass')) {
+            setError('Ingresa la contraseña de socio para acceder a este enlace.');
+          }
+        }
+      }
+    } catch (_) {}
+  }, []);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -42,6 +61,11 @@ export default function LoginScreen({ onSuccess, initialError = '' }: LoginScree
       return;
     }
 
+    if (isSocio && !password.trim()) {
+      setError('Por favor ingresa la contraseña de Socio.');
+      return;
+    }
+
     setBusy(true);
     try {
       const res = await fetch('/api/auth/login', {
@@ -49,7 +73,7 @@ export default function LoginScreen({ onSuccess, initialError = '' }: LoginScree
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           userKey: selectedUser,
-          password: isAdmin ? password : '',
+          password: needsPassword ? password : '',
         }),
       });
 
@@ -133,22 +157,22 @@ export default function LoginScreen({ onSuccess, initialError = '' }: LoginScree
               <option value="">-- Selecciona tu usuario --</option>
               {TEAM_OPTIONS.map((member) => (
                 <option key={member.key} value={member.key}>
-                  {member.isAdmin ? '👑 ' : '👤 '} {member.name}
+                  {member.isAdmin ? '👑 ' : member.role === 'viewer' ? '👁️ ' : '👤 '} {member.name}
                 </option>
               ))}
             </select>
           </div>
 
-          {/* Campo de Contraseña SOLO para ADMIN */}
-          {isAdmin && (
+          {/* Campo de Contraseña para ADMIN y SOCIOS */}
+          {needsPassword && (
             <div className="field" style={{ marginTop: '16px' }}>
               <span style={{ fontSize: '12px', fontWeight: '600', color: '#333' }}>
-                Contraseña de Administrador:
+                {isAdmin ? 'Contraseña de Administrador:' : 'Contraseña de Socio:'}
               </span>
               <div style={{ position: 'relative' }}>
                 <input
                   type={showPassword ? 'text' : 'password'}
-                  placeholder="Ingresa la contraseña"
+                  placeholder={isAdmin ? 'Ingresa la contraseña de administrador' : 'Ingresa la contraseña de socio'}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   autoFocus
@@ -182,13 +206,15 @@ export default function LoginScreen({ onSuccess, initialError = '' }: LoginScree
                 </button>
               </div>
               <small style={{ color: 'var(--muted)', fontSize: '11px', marginTop: '6px', display: 'block' }}>
-                Acceso maestro con todas las opciones del sistema.
+                {isAdmin
+                  ? 'Acceso maestro con todas las opciones del sistema.'
+                  : 'Acceso autorizado para socios con todas las opciones de visualización (solo lectura).'}
               </small>
             </div>
           )}
 
           {/* Mensaje informativo para usuarios del equipo (sin contraseña) */}
-          {selectedUser && !isAdmin && (
+          {selectedUser && !needsPassword && (
             <div
               style={{
                 marginTop: '16px',

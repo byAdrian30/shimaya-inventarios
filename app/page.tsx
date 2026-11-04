@@ -96,17 +96,6 @@ async function logout(){
 }
 useEffect(()=>{
   try{
-    const urlParams = new URLSearchParams(window.location.search);
-    const socioParam = urlParams.get('socio');
-    if (socioParam) {
-      const clean = socioParam.toLowerCase().trim();
-      const key = clean.startsWith('socio_') ? clean : 'socio_' + clean;
-      document.cookie = 'auth_user=' + key + '; path=/; max-age=31536000; SameSite=Lax';
-      document.cookie = '__sites_local_auth=' + key + '; path=/; max-age=31536000; SameSite=Lax';
-      window.history.replaceState({}, '', window.location.pathname);
-    }
-  }catch(_){}
-  try{
     const raw=localStorage.getItem('shimaya_cache_v1');
     if(raw){
       const cached=JSON.parse(raw);

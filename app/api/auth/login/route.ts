@@ -1,11 +1,11 @@
 import { NextResponse } from "next/server";
-import { AUTH_USERS, ADMIN_PASSWORD } from "@/lib/auth-users";
+import { AUTH_USERS, ADMIN_PASSWORD, SOCIO_PASSWORD } from "@/lib/auth-users";
 
 export async function POST(req: Request) {
   try {
     const body = (await req.json()) as any;
     const userKey = (body.userKey || body.username || "").trim().toLowerCase();
-    const password = body.password || "";
+    const password = (body.password || "").trim();
 
     const user = AUTH_USERS[userKey];
     if (!user) {
@@ -19,6 +19,15 @@ export async function POST(req: Request) {
       if (password !== ADMIN_PASSWORD) {
         return NextResponse.json(
           { error: "Contraseña incorrecta. Por favor ingresa la contraseña válida de Administrador." },
+          { status: 401 }
+        );
+      }
+    }
+
+    if (user.role === "viewer" || userKey.startsWith("socio_")) {
+      if (password !== SOCIO_PASSWORD) {
+        return NextResponse.json(
+          { error: "Contraseña incorrecta de Socio. Por favor ingresa la contraseña válida de Socio." },
           { status: 401 }
         );
       }

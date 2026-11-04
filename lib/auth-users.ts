@@ -1,4 +1,5 @@
 export const ADMIN_PASSWORD = "A30b07c01";
+export const SOCIO_PASSWORD = "SocioChiclashi";
 
 export const AUTH_USERS: Record<
   string,
