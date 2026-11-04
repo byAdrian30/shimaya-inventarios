@@ -231,7 +231,7 @@ export default function LoginScreen({ onSuccess, initialError = '' }: LoginScree
             >
               <UserCheck size={18} style={{ flexShrink: 0 }} />
               <span>
-                <strong>Acceso sin contraseña:</strong> Tendrás habilitadas las opciones de <strong>Pedido</strong>, <strong>Despacho</strong> y <strong>Stock</strong>.
+                <strong>Acceso sin contraseña:</strong> Tendrás habilitadas las opciones de <strong>Pedido</strong> y <strong>Despacho</strong>.
               </span>
             </div>
           )}

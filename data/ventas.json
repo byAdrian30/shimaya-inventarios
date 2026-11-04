@@ -1,6 +1,7 @@
 {
-  "generatedAt": "2026-11-04T17:15:47.187Z",
-  "source": "ID POS (pos.idbi.pe) - SHIMAYA-CHICLAYO",
+  "generatedAt": "2026-11-04T19:02:09.712Z",
+  "lastSyncDate": "2026-11-03",
+  "totalDays": 34,
   "days": [
     {
       "date": "2026-10-01",
@@ -171,6 +172,34 @@
       "ventaConIgv": 10712.8
     },
     {
+      "date": "2026-10-25",
+      "ordersCount": 119,
+      "ventaSinIgv": 9422.88,
+      "igv": 1696.12,
+      "ventaConIgv": 11119
+    },
+    {
+      "date": "2026-10-26",
+      "ordersCount": 70,
+      "ventaSinIgv": 4430.34,
+      "igv": 797.46,
+      "ventaConIgv": 5227.8
+    },
+    {
+      "date": "2026-10-27",
+      "ordersCount": 71,
+      "ventaSinIgv": 4203.81,
+      "igv": 756.69,
+      "ventaConIgv": 4960.5
+    },
+    {
+      "date": "2026-10-28",
+      "ordersCount": 66,
+      "ventaSinIgv": 4618.05,
+      "igv": 831.25,
+      "ventaConIgv": 5449.3
+    },
+    {
       "date": "2026-10-29",
       "ordersCount": 68,
       "ventaSinIgv": 4204.66,
@@ -178,26 +207,39 @@
       "ventaConIgv": 4961.5
     },
     {
+      "date": "2026-10-30",
+      "ordersCount": 96,
+      "ventaSinIgv": 6321.02,
+      "igv": 1137.78,
+      "ventaConIgv": 7458.8
+    },
+    {
       "date": "2026-10-31",
-      "ordersCount": 98,
-      "ventaSinIgv": 8329.07,
-      "igv": 1499.23,
-      "ventaConIgv": 9828.3
+      "ordersCount": 101,
+      "ventaSinIgv": 8445.93,
+      "igv": 1520.27,
+      "ventaConIgv": 9966.2
     },
     {
       "date": "2026-11-01",
-      "ordersCount": 96,
-      "ventaSinIgv": 6841.44,
-      "igv": 1231.46,
-      "ventaConIgv": 8072.9
+      "ordersCount": 97,
+      "ventaSinIgv": 6898.22,
+      "igv": 1241.68,
+      "ventaConIgv": 8139.9
     },
     {
-      "date": "2026-11-04",
-      "ordersCount": 1,
-      "ventaSinIgv": 32.2,
-      "igv": 5.8,
-      "ventaConIgv": 38
+      "date": "2026-11-02",
+      "ordersCount": 77,
+      "ventaSinIgv": 4618.47,
+      "igv": 831.33,
+      "ventaConIgv": 5449.8
+    },
+    {
+      "date": "2026-11-03",
+      "ordersCount": 68,
+      "ventaSinIgv": 4442.37,
+      "igv": 799.63,
+      "ventaConIgv": 5242
     }
-  ],
-  "lastSyncDate": "2026-11-04"
+  ]
 }
