@@ -4,31 +4,9 @@ import { inventoryFor } from '../../../../lib/inventory-store';
 import { inventoryValuation } from '../../../../lib/valuation';
 import type { CostOverride } from '../../../../lib/valuation-types';
 import { env } from 'cloudflare:workers';
-import initialSales from '../../../../data/ventas.json';
-import { existsSync, readFileSync, writeFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { getOrAutoSyncSales, saveDayToDb } from '../../../../lib/sales-service';
 
 export const dynamic = 'force-dynamic';
-
-const tmpSalesPath = process.platform === 'win32'
-  ? join(process.env.TEMP || 'C:\\Windows\\Temp', 'shimaya_ventas.json')
-  : '/tmp/shimaya_ventas.json';
-
-function getSalesData() {
-  if (existsSync(tmpSalesPath)) {
-    try {
-      const data = JSON.parse(readFileSync(tmpSalesPath, 'utf8'));
-      if (data && Array.isArray(data.days)) return data;
-    } catch (_) {}
-  }
-  return initialSales;
-}
-
-function saveSalesData(data: any) {
-  try {
-    writeFileSync(tmpSalesPath, JSON.stringify(data, null, 2), 'utf8');
-  } catch (_) {}
-}
 
 async function costBook(ownerId: string) {
   await env.DB!.prepare('INSERT OR IGNORE INTO inventory_costs(owner_id,revision,data) VALUES(?,0,?)').bind(ownerId, JSON.stringify({ overrides: [] })).run();
@@ -118,9 +96,12 @@ export async function GET(req: Request) {
         });
       });
 
-    // Sales data
-    const sales = getSalesData();
-    const allDays: any[] = (sales.days || []).slice().sort((a: any, b: any) => a.date.localeCompare(b.date));
+    const url = new URL(req.url);
+    const forceSync = url.searchParams.get('sync') === 'true';
+
+    // Sales data con On-Demand Auto-Sync autónomo desde ID POS y PostgreSQL
+    const salesResult = await getOrAutoSyncSales(forceSync);
+    const allDays: any[] = (salesResult.days || []).slice().sort((a: any, b: any) => a.date.localeCompare(b.date));
 
     const monthNames: Record<string, string> = {
       '01': 'Enero', '02': 'Febrero', '03': 'Marzo', '04': 'Abril',
@@ -426,6 +407,8 @@ export async function GET(req: Request) {
       summary: activePeriod.summary,
       cycles: activePeriod.cycles,
       daily: activePeriod.daily,
+      lastSyncAt: salesResult.lastSyncAt,
+      wasAutoSynced: salesResult.wasAutoSynced,
       generatedAt: new Date().toISOString(),
     });
   } catch (err: any) {
@@ -445,11 +428,9 @@ export async function POST(req: Request) {
 
     const body = (await req.json()) as any;
     if (body.type === 'update-sales' && Array.isArray(body.days)) {
-      const data = {
-        generatedAt: new Date().toISOString(),
-        days: body.days,
-      };
-      saveSalesData(data);
+      for (const d of body.days) {
+        await saveDayToDb(d);
+      }
       return Response.json({ success: true, count: body.days.length });
     }
 

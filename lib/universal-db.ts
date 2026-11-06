@@ -33,7 +33,7 @@ function getPostgresUrl(): string | undefined {
   return adaptSupabaseUrl(raw);
 }
 
-function getPostgres() {
+export function getPostgres() {
   const url = getPostgresUrl();
   if (!url) return null;
   if (!postgresClient) {

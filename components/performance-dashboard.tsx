@@ -36,15 +36,17 @@ export default function PerformanceDashboard({ readOnly = false }: { readOnly?: 
   const [selectedMonth, setSelectedMonth] = useState<string>('2026-11');
   const [selectedCycle, setSelectedCycle] = useState<any>(null);
   const [busy, setBusy] = useState(false);
+  const [syncing, setSyncing] = useState(false);
   const [uploadToast, setUploadToast] = useState('');
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  async function loadData(targetMonth?: string) {
+  async function loadData(targetMonth?: string, forceSync = false) {
     setLoading(true);
     setError('');
     try {
       const monthToFetch = targetMonth || selectedMonth;
-      const res = await fetch(`/api/admin/performance?month=${encodeURIComponent(monthToFetch)}`, { cache: 'no-store' });
+      const url = `/api/admin/performance?month=${encodeURIComponent(monthToFetch)}${forceSync ? '&sync=true' : ''}`;
+      const res = await fetch(url, { cache: 'no-store' });
       const json = (await res.json()) as any;
       if (!res.ok) throw new Error(json.error || 'No se pudo cargar el análisis de rendimiento.');
       setData(json);
@@ -62,6 +64,23 @@ export default function PerformanceDashboard({ readOnly = false }: { readOnly?: 
       setError(e.message || 'Error al obtener rendimiento.');
     } finally {
       setLoading(false);
+    }
+  }
+
+  async function handleSyncIdPos() {
+    setSyncing(true);
+    setError('');
+    try {
+      const res = await fetch('/api/admin/performance?sync=true', { cache: 'no-store' });
+      const json = (await res.json()) as any;
+      if (!res.ok) throw new Error(json.error || 'Error al sincronizar con ID POS');
+      setData(json);
+      setUploadToast('¡Ventas sincronizadas exitosamente en vivo con ID POS!');
+      setTimeout(() => setUploadToast(''), 4500);
+    } catch (e: any) {
+      setError(e.message || 'Error al conectar con ID POS.');
+    } finally {
+      setSyncing(false);
     }
   }
 
@@ -213,6 +232,11 @@ export default function PerformanceDashboard({ readOnly = false }: { readOnly?: 
           <h2 style={{ fontSize: '20px', fontWeight: 600 }}>Análisis de Rendimiento y Rentabilidad</h2>
           <p style={{ color: 'var(--muted)', fontSize: '12px', marginTop: '4px' }}>
             Cruce de ventas diarias (+18% IGV) contra insumos despachados de almacén cada 2 días.
+            {data?.lastSyncAt && (
+              <span style={{ display: 'inline-block', marginLeft: '8px', color: 'var(--green)', fontWeight: 500 }}>
+                · Sincronizado: {new Date(data.lastSyncAt).toLocaleTimeString('es-PE', { hour: '2-digit', minute: '2-digit' })}
+              </span>
+            )}
           </p>
         </div>
         <div className="perf-actions">
@@ -223,9 +247,22 @@ export default function PerformanceDashboard({ readOnly = false }: { readOnly?: 
             style={{ display: 'none' }}
             onChange={e => handleExcelUpload(e.target.files?.[0])}
           />
+          {!readOnly && (
+            <button
+              className="btn"
+              disabled={syncing || busy || loading}
+              onClick={handleSyncIdPos}
+              title="Sincronizar ventas en vivo directamente desde ID POS"
+              style={{ background: '#204735', borderColor: '#204735' }}
+            >
+              <RefreshCw size={15} className={syncing ? 'spin' : ''} />
+              <span className="hide-mobile">{syncing ? 'Sincronizando ID POS…' : 'Sincronizar ID POS'}</span>
+              <span className="show-mobile">{syncing ? 'Sincronizando…' : 'ID POS'}</span>
+            </button>
+          )}
           {!readOnly && <button
             className="btn secondary"
-            disabled={busy}
+            disabled={busy || syncing}
             onClick={() => fileInputRef.current?.click()}
             title="Subir nuevo Excel de ventas diarias"
           >
@@ -237,7 +274,7 @@ export default function PerformanceDashboard({ readOnly = false }: { readOnly?: 
             <ArrowDownToLine size={15} />
             <span>Exportar</span>
           </button>
-          <button className="icon-btn" onClick={() => loadData()} disabled={busy || loading} title="Actualizar datos">
+          <button className="icon-btn" onClick={() => loadData()} disabled={busy || loading || syncing} title="Actualizar datos">
             <RefreshCw size={17} />
           </button>
         </div>
