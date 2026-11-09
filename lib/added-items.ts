@@ -1,6 +1,6 @@
 import { normalize, type State } from './inventory.ts';
 
-export const addedItemsVersion = 'manual-items-2026-10-17-v7-pulpa-mango-unificada';
+export const addedItemsVersion = 'manual-items-2026-11-08-v8-contometros';
 
 export function withAddedItems(current: State): State {
   if (current.addedItemsVersion === addedItemsVersion) return current;
@@ -258,6 +258,20 @@ export function withAddedItems(current: State): State {
 
   // Asegurar otros items previos
   addOrUpdate('manual-area-barra-pulpa-tamarindo', 'Barra', 'Pulpas', 'PULPA DE TAMARINDO', 'catalog-217', 'und');
+
+  // CONTOMETROS en Salón (Empaques) con stock inicial 15
+  addOrUpdate('manual-salon-contometros', 'Salón', 'Empaques', 'CONTOMETROS', 'catalog-contometros', 'und');
+  const contoIng = s.ingredients.find((i) => i.id === 'catalog-contometros');
+  if (contoIng && (contoIng.stock === 0 || contoIng.stock === undefined)) {
+    contoIng.stock = 15;
+  }
+
+  // LICOR en Barra (Tragos) con stock inicial 3
+  addOrUpdate('manual-barra-licor', 'Barra', 'Tragos', 'LICOR', 'catalog-licor', 'und');
+  const licorIng = s.ingredients.find((i) => i.id === 'catalog-licor');
+  if (licorIng && (licorIng.stock === 0 || licorIng.stock === undefined)) {
+    licorIng.stock = 3;
+  }
 
   s.addedItemsVersion = addedItemsVersion;
   return s;
