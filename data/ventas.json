@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-06T02:05:16.611Z",
-  "lastSyncDate": "2026-11-05",
+  "generatedAt": "2026-11-08T04:26:40.452Z",
+  "lastSyncDate": "2026-11-07",
   "totalDays": 34,
   "days": [
     {
@@ -250,10 +250,24 @@
     },
     {
       "date": "2026-11-05",
-      "ordersCount": 50,
-      "ventaSinIgv": 2775.85,
-      "igv": 499.65,
-      "ventaConIgv": 3275.5
+      "ordersCount": 63,
+      "ventaSinIgv": 3731.02,
+      "igv": 671.58,
+      "ventaConIgv": 4402.6
+    },
+    {
+      "date": "2026-11-06",
+      "ordersCount": 100,
+      "ventaSinIgv": 7139.83,
+      "igv": 1285.17,
+      "ventaConIgv": 8425
+    },
+    {
+      "date": "2026-11-07",
+      "ordersCount": 119,
+      "ventaSinIgv": 9123.14,
+      "igv": 1642.16,
+      "ventaConIgv": 10765.3
     }
   ]
 }
