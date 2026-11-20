@@ -26,6 +26,7 @@ export default function LoginScreen({ onSuccess, initialError = '' }: LoginScree
   const [error, setError] = useState(initialError);
 
   const currentUser = TEAM_OPTIONS.find((u) => u.key === selectedUser);
+  const isDoris = selectedUser === 'doris';
   const isAdmin = currentUser?.isAdmin || selectedUser === 'admin';
   const isSocio = currentUser?.role === 'viewer' || selectedUser.startsWith('socio_');
   const needsPassword = isAdmin || isSocio;
@@ -56,7 +57,12 @@ export default function LoginScreen({ onSuccess, initialError = '' }: LoginScree
       return;
     }
 
-    if (isAdmin && !password.trim()) {
+    if (isDoris && !password.trim()) {
+      setError('Por favor ingresa tu contraseña de acceso.');
+      return;
+    }
+
+    if (isAdmin && !isDoris && !password.trim()) {
       setError('Por favor ingresa la contraseña de Administrador.');
       return;
     }
@@ -163,16 +169,22 @@ export default function LoginScreen({ onSuccess, initialError = '' }: LoginScree
             </select>
           </div>
 
-          {/* Campo de Contraseña para ADMIN y SOCIOS */}
+          {/* Campo de Contraseña para ADMIN, DORIS y SOCIOS */}
           {needsPassword && (
             <div className="field" style={{ marginTop: '16px' }}>
               <span style={{ fontSize: '12px', fontWeight: '600', color: '#333' }}>
-                {isAdmin ? 'Contraseña de Administrador:' : 'Contraseña de Socio:'}
+                {isDoris ? 'Contraseña de acceso:' : isAdmin ? 'Contraseña de Administrador:' : 'Contraseña de Socio:'}
               </span>
               <div style={{ position: 'relative' }}>
                 <input
                   type={showPassword ? 'text' : 'password'}
-                  placeholder={isAdmin ? 'Ingresa la contraseña de administrador' : 'Ingresa la contraseña de socio'}
+                  placeholder={
+                    isDoris
+                      ? 'Ingresa tu contraseña de acceso'
+                      : isAdmin
+                      ? 'Ingresa la contraseña de administrador'
+                      : 'Ingresa la contraseña de socio'
+                  }
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   autoFocus
@@ -206,7 +218,9 @@ export default function LoginScreen({ onSuccess, initialError = '' }: LoginScree
                 </button>
               </div>
               <small style={{ color: 'var(--muted)', fontSize: '11px', marginTop: '6px', display: 'block' }}>
-                {isAdmin
+                {isDoris
+                  ? 'Acceso total con todas las opciones del sistema.'
+                  : isAdmin
                   ? 'Acceso maestro con todas las opciones del sistema.'
                   : 'Acceso autorizado para socios con todas las opciones de visualización (solo lectura).'}
               </small>
@@ -258,7 +272,9 @@ export default function LoginScreen({ onSuccess, initialError = '' }: LoginScree
             ) : (
               <>
                 <span>
-                  {isAdmin
+                  {isDoris
+                    ? 'Ingresar como Doris Rojas'
+                    : isAdmin
                     ? 'Ingresar como Administrador'
                     : selectedUser
                     ? `Ingresar como ${currentUser?.name || selectedUser}`

@@ -25,12 +25,22 @@ test('Adrian Barranzuela no tiene corona en la lista de usuarios y los chicos so
   assert.equal(renderedIcon, '👤 ');
   assert.equal(renderedIcon.includes('👑'), false, 'No debe tener corona');
 
-  const chicos = ['ale', 'axl', 'celular', 'doris'];
+  const chicos = ['ale', 'axl', 'celular'];
   for (const c of chicos) {
     const user = AUTH_USERS[c];
     assert.ok(user, `Existe usuario ${c}`);
     assert.equal(user.role, 'operator', `${c} debe tener rol operator`);
   }
+
+  // Doris Rojas: acceso total equivalente a admin sin llevar la palabra admin en su nombre
+  const dorisUser = AUTH_USERS.doris;
+  assert.ok(dorisUser, 'Existe usuario doris');
+  assert.equal(dorisUser.role, 'admin', 'Doris debe tener rol admin');
+  assert.equal(dorisUser.fullName.toLowerCase().includes('admin'), false, 'Doris no debe llevar la palabra admin');
+  const dorisOption = TEAM_OPTIONS.find(t => t.key === 'doris');
+  assert.ok(dorisOption, 'Existe opción de doris');
+  assert.equal(dorisOption.isAdmin, true, 'Doris debe tener isAdmin true');
+  assert.equal(dorisOption.name.toLowerCase().includes('admin'), false, 'Doris no debe contener la palabra admin en opciones');
 });
 
 test('Los operadores no tienen acceso al stock ni en permisos ni en navegación', () => {

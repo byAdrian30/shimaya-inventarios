@@ -1,5 +1,6 @@
-export const ADMIN_PASSWORD = "A30b07c01";
-export const SOCIO_PASSWORD = "SocioChiclashi";
+export const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || process.env.AUTH_ADMIN_PASSWORD || "A30b07c01";
+export const DORIS_PASSWORD = process.env.AUTH_PASSWORD_DORIS || "75178486";
+export const SOCIO_PASSWORD = process.env.SOCIO_PASSWORD || "SocioChiclashi";
 
 export const AUTH_USERS: Record<
   string,
@@ -33,7 +34,7 @@ export const AUTH_USERS: Record<
     userId: "zIEqlW3sklm75keZGvuUbOtBiHnbxVdIhzExS089MQ8EiEKtxs3E1J",
     email: "drojaschilcon@gmail.com",
     fullName: "Doris Yanela Rojas Chilcon",
-    role: "operator",
+    role: "admin",
   },
   // Socios con rol viewer (visualización total, cero mutaciones)
   socio_daniel: {
@@ -104,7 +105,7 @@ export const TEAM_OPTIONS = [
   { key: "ale", name: "Ale Campos", isAdmin: false, role: "operator" },
   { key: "axl", name: "Axl Llontop", isAdmin: false, role: "operator" },
   { key: "celular", name: "Celular Tienda", isAdmin: false, role: "operator" },
-  { key: "doris", name: "Doris Yanela Rojas Chilcon", isAdmin: false, role: "operator" },
+  { key: "doris", name: "Doris Yanela Rojas Chilcon", isAdmin: true, role: "admin" },
   { key: "socio_daniel", name: "SOCIO DANIEL", isAdmin: false, role: "viewer" },
   { key: "socio_jhony", name: "SOCIO JHONY", isAdmin: false, role: "viewer" },
   { key: "socio_javier", name: "SOCIO JAVIER", isAdmin: false, role: "viewer" },

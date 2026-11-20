@@ -22,6 +22,22 @@ export async function workspaceFor(user:ChatGPTUser){
   };
  }
 
+ // Doris Rojas: acceso total al espacio oficial con permisos completos
+ if (
+   email === 'drojaschilcon@gmail.com' ||
+   user.userId === 'zIEqlW3sklm75keZGvuUbOtBiHnbxVdIhzExS089MQ8EiEKtxs3E1J' ||
+   (user.displayName && user.displayName.toLowerCase().includes('doris'))
+ ) {
+  return {
+   ownerId,
+   role: 'admin',
+   email,
+   area: '',
+   status: 'active',
+   displayName: user.fullName || user.displayName || 'Doris Yanela Rojas Chilcon',
+  };
+ }
+
  // Actualización de permisos solicitada: conserva cuentas, áreas y suspensiones.
  if(settings.teamAccessVersion!=='pedido-despacho-v1')await env.DB!.batch([
   env.DB!.prepare('UPDATE team_members SET role=? WHERE role IN (?,?)').bind('operator','staff','dispatch'),

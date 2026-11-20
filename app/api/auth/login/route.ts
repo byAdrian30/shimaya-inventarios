@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { AUTH_USERS, ADMIN_PASSWORD, SOCIO_PASSWORD } from "@/lib/auth-users";
+import { AUTH_USERS, ADMIN_PASSWORD, DORIS_PASSWORD, SOCIO_PASSWORD } from "@/lib/auth-users";
 
 export async function POST(req: Request) {
   try {
@@ -19,6 +19,15 @@ export async function POST(req: Request) {
       if (password !== ADMIN_PASSWORD) {
         return NextResponse.json(
           { error: "Contraseña incorrecta. Por favor ingresa la contraseña válida de Administrador." },
+          { status: 401 }
+        );
+      }
+    }
+
+    if (userKey === "doris") {
+      if (password !== DORIS_PASSWORD) {
+        return NextResponse.json(
+          { error: "Contraseña incorrecta. Por favor ingresa tu contraseña válida de acceso." },
           { status: 401 }
         );
       }
