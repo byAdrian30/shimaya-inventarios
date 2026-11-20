@@ -15,7 +15,66 @@
 #pedido-resumen{scroll-margin-top:20px}
 
 @media(max-width:850px){
- .sidebar{position:sticky;top:0;z-index:90;padding:10px 14px 6px;width:100%;background:var(--sidebar);box-shadow:0 2px 12px rgba(0,0,0,0.2)}
+ .shell{display:block !important;min-height:100vh !important;width:100% !important}
+ .sidebar{
+  position:sticky !important;
+  top:0 !important;
+  left:0 !important;
+  right:0 !important;
+  bottom:auto !important;
+  inset:auto !important;
+  width:100% !important;
+  height:auto !important;
+  min-height:0 !important;
+  max-height:none !important;
+  padding:8px 12px 6px !important;
+  background:var(--sidebar) !important;
+  box-shadow:0 2px 12px rgba(0,0,0,0.2) !important;
+  z-index:90 !important;
+  overflow-y:visible !important;
+  overflow-x:hidden !important;
+  display:flex !important;
+  flex-direction:column !important;
+ }
+ .sidebar.collapsed{
+  width:100% !important;
+  height:auto !important;
+  min-height:0 !important;
+  max-height:none !important;
+  padding:8px 12px 6px !important;
+ }
+ .sidebar.collapsed .brand{
+  padding:0 2px 8px !important;
+  justify-content:space-between !important;
+ }
+ .sidebar.collapsed .brand>div{
+  display:block !important;
+ }
+ .sidebar.collapsed nav{
+  display:flex !important;
+  flex-direction:row !important;
+ }
+ .sidebar.collapsed nav button{
+  justify-content:flex-start !important;
+  padding:8px 14px !important;
+  border-radius:20px !important;
+  width:auto !important;
+ }
+ .sidebar.collapsed nav button span{
+  display:inline !important;
+ }
+ .brand-toggle,
+ .sidebar-toggle-btn{
+  display:none !important;
+ }
+ .shell.sidebar-collapsed main,
+ .shell>main,
+ main{
+  width:100% !important;
+  max-width:100% !important;
+  margin:0 !important;
+  margin-left:0 !important;
+ }
  .brand{display:flex;align-items:center;justify-content:space-between;padding:0 2px 8px;gap:8px}
  .brand>div{font-size:18px;letter-spacing:1.5px;line-height:1.2}
  .brand small{font-size:8px;letter-spacing:1.5px;margin-top:2px}
@@ -26,7 +85,6 @@
  .sidebar nav button svg{flex-shrink:0;width:15px;height:15px}
  .sidebar nav button.active{background:var(--red);color:#fff;font-weight:600;border-color:var(--red);box-shadow:0 2px 8px rgba(182,55,42,0.45)}
  .sidebar nav button>svg:last-child:not(:first-child){display:none}
- .shell>main{width:100%;max-width:100%;margin:0}
  .content{padding:18px 12px;max-width:100%}
  .topbar{height:auto;min-height:48px;padding:8px 12px;gap:8px;flex-wrap:nowrap;justify-content:space-between}
  .top-actions{gap:8px;flex-shrink:0}
@@ -43,8 +101,8 @@
 @media(max-width:700px){
  h1,.page-head h1{font-size:25px;letter-spacing:-.6px}
  .content{padding:20px 12px}
- .brand>div{font-size:21px}
- .brand{padding-bottom:14px}
+ .brand>div{font-size:18px}
+ .brand{padding-bottom:6px}
  .btn,.text-btn,.icon-btn{min-height:44px;font-size:12px}
  .btn{white-space:normal;line-height:1.5;text-align:center;max-width:100%;padding:12px 14px}
  .icon-btn{min-width:44px}
